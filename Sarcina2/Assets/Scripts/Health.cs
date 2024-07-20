@@ -60,7 +60,6 @@ public class Health : MonoBehaviour
         
         if (gameObject.name.Contains("Enemy") && other.tag == "Arrow")
         {
-            Debug.Log(gameObject.name);
             ApplyDamage();
         }
 
@@ -87,13 +86,27 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+
+
             Destroy(gameObject);
             Destroy(healthBar);
 
             if (gameObject.name == "Player")
             {
+                Store.ResetCoins();
                 SceneManager.LoadScene("Game");
             }
+            else if (gameObject.name.Contains("Boss"))
+            {
+                Debug.Log("boss");
+                DropCoin(CoinType.Purple);
+            }
+            else if (gameObject.name.Contains("Enemy")) 
+            {
+                DropCoin(CoinType.Yellow);
+            }
+            
+            
         }
     }
 
@@ -102,6 +115,15 @@ public class Health : MonoBehaviour
     {
         healthBarForeground.fillAmount = currentHealth / maxHealth;
     }
+
+
+    void DropCoin(CoinType coinType)
+    {
+        Coin coin = Instantiate(Resources.Load<GameObject>("Coin"), transform.position, Quaternion.identity).GetComponent<Coin>();
+        coin.coinType = coinType;
+    }
+
+
 
 
 }

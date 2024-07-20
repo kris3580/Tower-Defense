@@ -45,6 +45,7 @@ public class StartGameButtons : MonoBehaviour
         gameManager.ChangeCameraToTopDown();
         gameManager.MoveWavesToSpawnPoint();
         gameManager.SpawnWave();
+        gameManager.wasSpawnPlacementSelected = true;
 
         Destroy(GameObject.Find("StartGameChoices").gameObject); ;
 

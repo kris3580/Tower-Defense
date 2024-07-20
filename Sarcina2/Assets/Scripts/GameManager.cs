@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] List<CinemachineVirtualCamera> cameras;
-
     public int enemySpawnPointIndex;
-
     [SerializeField] public List<GameObject> waves;
-
     private int spawnedWaves = 0;
+    public bool wasSpawnPlacementSelected = false;
+
+
+
+
     public void SpawnWave()
     {
         try
@@ -23,14 +25,9 @@ public class GameManager : MonoBehaviour
 
         catch 
         {
+            Store.ResetCoins();
             SceneManager.LoadScene("Game");
         }
-        
-    }
-
-
-    private void Update()
-    {
         
     }
 

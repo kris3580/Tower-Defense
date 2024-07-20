@@ -7,6 +7,7 @@ public class EnemyFollow : MonoBehaviour
     private GameObject player;
 
     [SerializeField] float speed;
+    [SerializeField]
 
     private void Awake()
     {
@@ -23,8 +24,13 @@ public class EnemyFollow : MonoBehaviour
 
     void FollowPlayer()
     {
-        agent.speed = speed;
-        agent.SetDestination(player.transform.position);
+
+        if (player != null)
+        {
+            agent.speed = speed;
+            agent.SetDestination(player.transform.position);
+        }
+            
     }
 
 
