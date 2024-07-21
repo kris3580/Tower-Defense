@@ -18,12 +18,12 @@ public class Store : MonoBehaviour
         inGamePanel.SetActive(false);
         SetStartGameChoicesAvailability(false);
         Time.timeScale = 0;
-
     }
 
     public void ExitStoreButton()
     {
-        joystick.SetActive(true);
+        
+        joystick.SetActive(gameManager.wasSpawnPlacementSelected);
         storePanel.SetActive(false);
         inGamePanel.SetActive(true);
         SetStartGameChoicesAvailability(true);
@@ -47,7 +47,7 @@ public class Store : MonoBehaviour
 
 
 
-    public static int currentYellowCoins = 0;
+    public static int currentYellowCoins = 8;
     public static int currentRedCoins = 0;
     public static int currentPurpleCoins = 0;
 

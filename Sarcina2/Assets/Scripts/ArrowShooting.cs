@@ -122,10 +122,6 @@ public class ArrowShooting : MonoBehaviour
 
         }
 
-        if (closestEnemy == null)
-        {
-            gameManager.SpawnWave();
-        }
     }
 
 

@@ -6,12 +6,15 @@ public class StartGameButtons : MonoBehaviour
 {
     [SerializeField] GameObject player;
     [SerializeField] GameObject joystick;
+    
     private GameManager gameManager;
 
     private void Awake()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
     }
+
 
 
     private void OnMouseDown()
@@ -42,12 +45,15 @@ public class StartGameButtons : MonoBehaviour
 
         joystick.SetActive(true);
         player.SetActive(true);
+        gameManager.fightButton.SetActive(true);
         gameManager.ChangeCameraToTopDown();
         gameManager.MoveWavesToSpawnPoint();
-        gameManager.SpawnWave();
         gameManager.wasSpawnPlacementSelected = true;
-
-        Destroy(GameObject.Find("StartGameChoices").gameObject); ;
+        Destroy(GameObject.Find("StartGameChoices").gameObject); 
 
     }
+
+
+
+
 }

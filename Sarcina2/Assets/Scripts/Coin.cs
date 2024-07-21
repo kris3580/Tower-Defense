@@ -33,30 +33,29 @@ public class Coin : MonoBehaviour
                 currentMesh.material = coinMaterials[2];
                 break;
         }
+
+        Invoke("GetCoin", 0.5f);
+
     }
 
-
-
-
-    private void OnTriggerEnter(Collider other)
+    void GetCoin()
     {
-
-        if (other.tag == "Player")
+        switch (coinType)
         {
-            switch (coinType)
-            {
-                case CoinType.Yellow:
-                    Store.currentYellowCoins++;
-                    break;
-                case CoinType.Red:
-                    // Store.currentRedCoins++;
-                    break;
-                case CoinType.Purple:
-                    Store.currentPurpleCoins++;
-                    break;
-            }
-
-            Destroy(gameObject);
+            case CoinType.Yellow:
+                Store.currentYellowCoins++;
+                break;
+            case CoinType.Red:
+                // Store.currentRedCoins++;
+                break;
+            case CoinType.Purple:
+                Store.currentPurpleCoins++;
+                break;  
         }
+
+        Destroy(gameObject);
+
     }
+
+
 }

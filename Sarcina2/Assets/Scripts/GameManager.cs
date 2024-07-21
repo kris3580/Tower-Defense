@@ -11,12 +11,26 @@ public class GameManager : MonoBehaviour
     [SerializeField] public List<GameObject> waves;
     private int spawnedWaves = 0;
     public bool wasSpawnPlacementSelected = false;
+    [SerializeField] GameObject startGameButtons;
+    public GameObject fightButton;
+
+    private void Start()
+    {
+        startGameButtons.SetActive(true);
+    }
+
+    private void Update()
+    {
+
+    }
 
 
+    //SpawnWave();
 
 
     public void SpawnWave()
     {
+        Debug.Log(1212);
         try
         {
             waves[spawnedWaves].SetActive(true);
@@ -66,4 +80,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
 }
+
