@@ -373,8 +373,8 @@ RectTransform:
   m_GameObject: {fileID: 2274603938688531389}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0.118}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.42, y: 1.42, z: 1.42}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3577709643341674052}
   - {fileID: 2614007210231950629}
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 2398367666074565937}
   - component: {fileID: 2407654133474348393}
   m_Layer: 5
-  m_Name: BuildingTitleAndLevel
+  m_Name: BuildingNameAndLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 1312452409224333409}
   - component: {fileID: 421863240590518198}
   m_Layer: 5
-  m_Name: BuildingTitle
+  m_Name: BuildingName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -950,8 +950,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

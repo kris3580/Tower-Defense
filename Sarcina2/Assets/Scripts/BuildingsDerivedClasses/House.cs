@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class House : BuildingBase
 {
-    private void Awake()
+    public override void DefaultStatsSetup()
     {
+        buildingType = BuildingType.House;
+        currentLevel = 0;
+
         hpPerLevel = new int[] { 50, 60 };
         upgradePrices = new int[] { 2, 2 };
 
         profitPerLevel = new int[] { 1, 2 };
+    }
+
+    private void Awake()
+    {
+        DefaultStatsSetup();
     }
 
 

@@ -7,6 +7,7 @@ TagManager:
   - EnemyPosition
   - Enemy
   - Arrow
+  - BuildingHandle
   layers:
   - Default
   - TransparentFX

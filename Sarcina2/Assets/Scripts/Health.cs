@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     private GameObject healthBarPrefab;
     private GameObject healthBar;
     private Image healthBarForeground;
-    private Canvas healthBarsCanvas;
+    private Canvas canvas;
     [SerializeField] Vector3 healthBarPositionOffset;
 
 
@@ -27,10 +27,10 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
 
         healthBarPrefab = Resources.Load<GameObject>("HealthBar");
-        healthBarsCanvas = GameObject.Find("HealthBarsCanvas").GetComponent<Canvas>();
+        canvas = GameObject.Find("WorldSpaceCanvas").GetComponent<Canvas>();
         
 
-        healthBar = Instantiate(healthBarPrefab, healthBarsCanvas.transform);
+        healthBar = Instantiate(healthBarPrefab, canvas.transform);
         healthBarForeground = healthBar.transform.Find("Foreground").GetComponent<Image>();
 
         healthBar.name = $"{gameObject.name}HealthBar"; 
@@ -50,6 +50,9 @@ public class Health : MonoBehaviour
         {
             delayDamageTimerCurrent -= Time.deltaTime;
         }
+
+        healthBar.SetActive(currentHealth != maxHealth);
+        
 
 
     }

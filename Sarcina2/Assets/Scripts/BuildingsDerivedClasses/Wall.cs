@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Wall : BuildingBase
 {
-    private void Awake()
+    public override void DefaultStatsSetup()
     {
+        buildingType = BuildingType.Wall;
+        currentLevel = 0;
+
         hpPerLevel = new int[] { 100, 110 };
         upgradePrices = new int[] { 4, 12 };
+        
+    }
+
+    private void Awake()
+    {
+        DefaultStatsSetup();
     }
 
 }
