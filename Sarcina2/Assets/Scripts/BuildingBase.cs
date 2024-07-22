@@ -33,6 +33,7 @@ public abstract class BuildingBase : MonoBehaviour
     {
         buildingInfoPopUp.GetComponent<RectTransform>().position = transform.position + buildingInfoPositionOffset;
         LoadTaskLoadingCircleComponent();
+        BuildingModelHandler();
     }
 
 
@@ -48,18 +49,55 @@ public abstract class BuildingBase : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ShowBuildingInfoPopUp(true);
-        taskLoadingCircle.ShowTaskLoadingCircle(true);
-        taskLoadingCircle.isTimerActive = true;
-    }
+        if(other.tag == "Player")
+        {
+            ShowBuildingInfoPopUp(true);
+            taskLoadingCircle.ShowTaskLoadingCircle(true);
+            taskLoadingCircle.isTimerActive = true;
+            isPlayerInRange = true;
+        }
+
+
+
+}
 
 
     private void OnTriggerExit(Collider other)
     {
-        ShowBuildingInfoPopUp(false);
-        taskLoadingCircle.ShowTaskLoadingCircle(false);
-        taskLoadingCircle.isTimerActive = false;
+        if (other.tag == "Player")
+        {
+            ShowBuildingInfoPopUp(false);
+            taskLoadingCircle.ShowTaskLoadingCircle(false);
+            taskLoadingCircle.isTimerActive = false;
+            isPlayerInRange = false;
+        } 
+}
+
+
+    //BUILDING SPAWNER
+
+    private bool isPlayerInRange = false;
+    private GameObject buildingModelHandle;
+    private GameObject buildingShowcase;
+
+    private void BuildingModelHandler()
+    {
+        if (isPlayerInRange && taskLoadingCircle.isTimeOut) 
+        {
+            buildingModelHandle.SetActive(true);
+            buildingShowcase.SetActive(false);
+        }
     }
+
+
+
+
+
+
+
+
+
+
 
 
     // TASK LOADING CIRCLE STUFF
@@ -98,6 +136,9 @@ public abstract class BuildingBase : MonoBehaviour
         buildingInfoPrefab = Resources.Load<GameObject>("BuildingInfoPopUp");
         buildingInfoPopUp = Instantiate(buildingInfoPrefab, canvas.transform);
         buildingInfoPopUp.SetActive(false);
+        buildingModelHandle = transform.Find("BuildingModelHandle").gameObject;
+        buildingModelHandle.SetActive(false);
+        buildingShowcase = transform.Find("BuildingTypeInfo").gameObject;
 
         text_buildingCost = buildingInfoPopUp.transform.Find("BuildingCost").transform.Find("CoinText").GetComponent<TextMeshProUGUI>();
         text_buildingName = buildingInfoPopUp.transform.Find("BuildingNameAndLevel").transform.Find("BuildingName").GetComponent<TextMeshProUGUI>();

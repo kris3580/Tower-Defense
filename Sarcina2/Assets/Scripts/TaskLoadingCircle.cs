@@ -44,16 +44,16 @@ public class TaskLoadingCircle : MonoBehaviour
     [SerializeField] float timeForActionCompletion = 2f;
     float timePassed = 0f;
     public bool isTimerActive = false;
+
+    public bool isTimeOut = false;
     void CircleTimer()
     {
-        Debug.Log(timePassed);
-
         if (timePassed >= timeForActionCompletion)
         {
             timePassed = 0f;
-            taskLoadingCircleObject.SetActive(false);
+            isTimeOut = true;
         }
-
+        else isTimeOut = false;
 
         if (isTimerActive)
         {
