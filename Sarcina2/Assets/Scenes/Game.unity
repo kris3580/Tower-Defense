@@ -7440,6 +7440,8 @@ MonoBehaviour:
   damagePerLevel: 
   attackSpeed: 1
   attackSpeedPerLevel: 
+  buildingType: 0
+  taskLoadingCircle: {fileID: 0}
 --- !u!4 &220930096
 Transform:
   m_ObjectHideFlags: 0
@@ -10120,6 +10122,8 @@ MonoBehaviour:
   damagePerLevel: 
   attackSpeed: 1
   attackSpeedPerLevel: 
+  buildingType: 0
+  taskLoadingCircle: {fileID: 0}
 --- !u!4 &326961806
 Transform:
   m_ObjectHideFlags: 0
@@ -10129,7 +10133,7 @@ Transform:
   m_GameObject: {fileID: 326961804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.13, y: 0.83, z: -1.09}
+  m_LocalPosition: {x: -0.47, y: 0.83, z: 0.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16239,6 +16243,8 @@ MonoBehaviour:
   damagePerLevel: 
   attackSpeed: 1
   attackSpeedPerLevel: 
+  buildingType: 0
+  taskLoadingCircle: {fileID: 0}
 --- !u!4 &531414493
 Transform:
   m_ObjectHideFlags: 0
@@ -26462,6 +26468,8 @@ MonoBehaviour:
   damagePerLevel: 
   attackSpeed: 1
   attackSpeedPerLevel: 
+  buildingType: 0
+  taskLoadingCircle: {fileID: 0}
 --- !u!4 &898951692
 Transform:
   m_ObjectHideFlags: 0
@@ -28202,6 +28210,8 @@ MonoBehaviour:
   damagePerLevel: 
   attackSpeed: 1
   attackSpeedPerLevel: 
+  buildingType: 0
+  taskLoadingCircle: {fileID: 0}
 --- !u!4 &955367407
 Transform:
   m_ObjectHideFlags: 0
@@ -38020,6 +38030,8 @@ MonoBehaviour:
   damagePerLevel: 
   attackSpeed: 1
   attackSpeedPerLevel: 
+  buildingType: 0
+  taskLoadingCircle: {fileID: 0}
 --- !u!4 &1262624023
 Transform:
   m_ObjectHideFlags: 0
@@ -56068,6 +56080,8 @@ MonoBehaviour:
   damagePerLevel: 
   attackSpeed: 1
   attackSpeedPerLevel: 
+  buildingType: 0
+  taskLoadingCircle: {fileID: 0}
 --- !u!65 &2056865502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58281,6 +58295,7 @@ GameObject:
   - component: {fileID: 6408632761116392479}
   - component: {fileID: 4057656253650365484}
   - component: {fileID: 629138197699197757}
+  - component: {fileID: 6408632761116392480}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -58437,6 +58452,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 45
+--- !u!114 &6408632761116392480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3372590364981305468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4331e5c30ccf15a439ad2361443b41a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskLoadingCircleObject: {fileID: 0}
+  taskLoadingCirclePositionOffset: {x: -0.6, y: 3, z: -0.6}
+  timeForActionCompletion: 2
 --- !u!65 &6767271260180851591
 BoxCollider:
   m_ObjectHideFlags: 0

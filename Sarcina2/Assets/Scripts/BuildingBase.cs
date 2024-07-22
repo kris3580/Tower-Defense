@@ -32,25 +32,50 @@ public abstract class BuildingBase : MonoBehaviour
     private void Update()
     {
         buildingInfoPopUp.GetComponent<RectTransform>().position = transform.position + buildingInfoPositionOffset;
+        LoadTaskLoadingCircleComponent();
     }
+
+
+
+
     private void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         BuildingInfoPopUpSetup();
-
     }
+
+
 
     private void OnTriggerEnter(Collider other)
     {
         ShowBuildingInfoPopUp(true);
+        taskLoadingCircle.ShowTaskLoadingCircle(true);
+        taskLoadingCircle.isTimerActive = true;
     }
+
 
     private void OnTriggerExit(Collider other)
     {
         ShowBuildingInfoPopUp(false);
+        taskLoadingCircle.ShowTaskLoadingCircle(false);
+        taskLoadingCircle.isTimerActive = false;
     }
 
 
+    // TASK LOADING CIRCLE STUFF
+    public TaskLoadingCircle taskLoadingCircle;
+    bool isTaskCircleLoadingComponentLoaded = false;
+    private GameManager gameManager;
 
+    public void LoadTaskLoadingCircleComponent()
+    {
+        if (!isTaskCircleLoadingComponentLoaded & gameManager.wasSpawnPlacementSelected)
+        {
+            taskLoadingCircle = GameObject.Find("Player").GetComponent<TaskLoadingCircle>();
+            isTaskCircleLoadingComponentLoaded = true;
+        }
+
+    }
 
 
     // BUILDING POP UP INFO STUFF
@@ -103,7 +128,7 @@ public abstract class BuildingBase : MonoBehaviour
                 break;
         }
 
-        if (!isBuildingNonProfit())
+        if (!isBuildingNonDescriptive())
         {
             buildingInfoPopUp.transform.Find("UpgradeDescription").gameObject.SetActive(false);
             buildingInfoPopUp.transform.Find("BuildingNameAndLevel").GetComponent<RectTransform>().localPosition = new Vector3(122, -6.66f, 0);
@@ -120,32 +145,24 @@ public abstract class BuildingBase : MonoBehaviour
 
     public void SetBuildingInfo()
     {
-
-        Debug.Log(currentLevel);
         text_buildingCost.text = upgradePrices[currentLevel].ToString();
         text_buildingName.text = buildingType.ToString().ToUpper();
         text_buildingLevel.text = $"LVL {currentLevel}";
 
-        if (isBuildingNonProfit())
+        if (isBuildingNonDescriptive())
         {
             text_upgradeInfo.text = $"+ {profitPerLevel[currentLevel]}";
         }
         
         
-            
-        
-        
-
-
-        
     }
 
 
-    bool isBuildingNonProfit()
+    bool isBuildingNonDescriptive()
     {
         switch (buildingType)
         {
-            case BuildingType.Castle: case BuildingType.House: case BuildingType.Mill: return true;
+            case BuildingType.Castle: case BuildingType.House: case BuildingType.Mill: case BuildingType.Barracks: case BuildingType.Archery: return true;
             default: return false;
         }
     }

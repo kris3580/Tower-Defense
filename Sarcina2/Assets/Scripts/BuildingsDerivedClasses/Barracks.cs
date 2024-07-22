@@ -10,7 +10,7 @@ public class Barracks : BuildingBase
         currentLevel = 0;
 
         // de aflat cat hp trebuie ca atare
-        hpPerLevel = new int[] { 100, 110, 120 };
+        hpPerLevel = new int[] { 50, 60, 70 };
         upgradePrices = new int[] { 4, 8, 16 };
 
         profitPerLevel = new int[] { 4, 8, 12 };
