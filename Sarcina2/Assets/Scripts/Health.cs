@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
     {
         healthBar.GetComponent<RectTransform>().position = transform.position + healthBarPositionOffset;
 
-        if (gameObject.name == "Player")
+        if (gameObject.name == "Player" || gameObject.name == "BuildingModelHandle")
         {
             delayDamageTimerCurrent -= Time.deltaTime;
         }
@@ -60,7 +60,12 @@ public class Health : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (gameObject.name.Contains("Enemy") && other.tag == "Enemy")
+        {
+            return;
+        }
+
+
         if (gameObject.name.Contains("Enemy") && other.tag == "Arrow")
         {
             ApplyDamage();
@@ -70,7 +75,15 @@ public class Health : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Enemy" && gameObject.name == "Player")
+
+        if (gameObject.name.Contains("Enemy") && other.tag == "Enemy")
+        {
+            return;
+        }
+
+
+
+        if (other.tag == "Enemy")
         {
             if ( delayDamageTimerCurrent <= 0)
             {
@@ -90,25 +103,31 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
 
-
-            Destroy(gameObject);
-            Destroy(healthBar);
-
             if (gameObject.name == "Player")
             {
+                Destroy(gameObject);
+                Destroy(healthBar);
                 Store.ResetCoins();
                 SceneManager.LoadScene("Game");
             }
             else if (gameObject.name.Contains("Boss"))
             {
+                Destroy(gameObject);
+                Destroy(healthBar);
                 Debug.Log("boss");
                 DropCoin(CoinType.Purple);
             }
             else if (gameObject.name.Contains("Enemy")) 
             {
+                Destroy(gameObject);
+                Destroy(healthBar);
                 DropCoin(CoinType.Yellow);
             }
-            
+            else if (gameObject.name == "BuildingModelHandle")
+            {
+                healthBar.SetActive(false);
+                gameObject.SetActive(false);
+            }
             
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Castle : BuildingBase
 {
-
+    private ArrowShooting arrowShooting;
     public override void DefaultStatsSetup()
     {
         buildingType = BuildingType.Castle;
@@ -25,6 +25,5 @@ public class Castle : BuildingBase
     {
         DefaultStatsSetup();
     }
-
 
 }

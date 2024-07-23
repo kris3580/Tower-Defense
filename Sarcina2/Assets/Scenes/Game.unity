@@ -7441,6 +7441,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackSpeedPerLevel: 
   buildingType: 0
+  isBuilt: 0
   taskLoadingCircle: {fileID: 0}
 --- !u!4 &220930096
 Transform:
@@ -10227,6 +10228,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackSpeedPerLevel: 
   buildingType: 0
+  isBuilt: 0
   taskLoadingCircle: {fileID: 0}
 --- !u!4 &326961806
 Transform:
@@ -16538,6 +16540,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackSpeedPerLevel: 
   buildingType: 0
+  isBuilt: 0
   taskLoadingCircle: {fileID: 0}
 --- !u!4 &531414493
 Transform:
@@ -26554,6 +26557,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackSpeedPerLevel: 
   buildingType: 0
+  isBuilt: 0
   taskLoadingCircle: {fileID: 0}
 --- !u!4 &898951692
 Transform:
@@ -28160,6 +28164,7 @@ GameObject:
   - component: {fileID: 947948100}
   - component: {fileID: 947948102}
   - component: {fileID: 947948101}
+  - component: {fileID: 947948103}
   m_Layer: 0
   m_Name: BuildingModelHandle
   m_TagString: Untagged
@@ -28222,6 +28227,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &947948103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947948099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fba4e34acb0b4a43a1c3a771003b260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
+  maxHealth: 5
+  currentHealth: 5
+  delayDamageTimerDefault: 0.6
 --- !u!1 &951600041
 GameObject:
   m_ObjectHideFlags: 0
@@ -28368,6 +28389,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackSpeedPerLevel: 
   buildingType: 0
+  isBuilt: 0
   taskLoadingCircle: {fileID: 0}
 --- !u!4 &955367407
 Transform:
@@ -30045,6 +30067,8 @@ GameObject:
   - component: {fileID: 996698034}
   - component: {fileID: 996698036}
   - component: {fileID: 996698035}
+  - component: {fileID: 996698037}
+  - component: {fileID: 996698038}
   m_Layer: 0
   m_Name: BuildingModelHandle
   m_TagString: Untagged
@@ -30107,6 +30131,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &996698037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996698033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a44be0be56d7a46a6d9c48bbe9af3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  radius: 6.3
+  currentArrowTimer: 0.4
+  defaultArrowTimer: 0.6
+  arrowSpeed: 10
+--- !u!114 &996698038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996698033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fba4e34acb0b4a43a1c3a771003b260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
+  maxHealth: 5
+  currentHealth: 5
+  delayDamageTimerDefault: 0.6
 --- !u!1 &997391850
 GameObject:
   m_ObjectHideFlags: 0
@@ -32904,6 +32961,7 @@ GameObject:
   - component: {fileID: 1080485478}
   - component: {fileID: 1080485480}
   - component: {fileID: 1080485479}
+  - component: {fileID: 1080485481}
   m_Layer: 0
   m_Name: BuildingModelHandle
   m_TagString: Untagged
@@ -32966,6 +33024,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1080485481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080485477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fba4e34acb0b4a43a1c3a771003b260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
+  maxHealth: 5
+  currentHealth: 5
+  delayDamageTimerDefault: 0.6
 --- !u!1 &1085993473
 GameObject:
   m_ObjectHideFlags: 0
@@ -37302,9 +37376,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1351508224}
-        m_TargetAssemblyTypeName: Store, Assembly-CSharp
-        m_MethodName: GoToStoreButton
+      - m_Target: {fileID: 1951204908}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SpawnWave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38334,6 +38408,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackSpeedPerLevel: 
   buildingType: 0
+  isBuilt: 0
   taskLoadingCircle: {fileID: 0}
 --- !u!4 &1262624023
 Transform:
@@ -42702,6 +42777,8 @@ GameObject:
   - component: {fileID: 1477839568}
   - component: {fileID: 1477839570}
   - component: {fileID: 1477839569}
+  - component: {fileID: 1477839571}
+  - component: {fileID: 1477839572}
   m_Layer: 0
   m_Name: BuildingModelHandle
   m_TagString: Untagged
@@ -42764,6 +42841,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1477839571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477839567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a44be0be56d7a46a6d9c48bbe9af3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  radius: 6.3
+  currentArrowTimer: 0.4
+  defaultArrowTimer: 0.6
+  arrowSpeed: 10
+--- !u!114 &1477839572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477839567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fba4e34acb0b4a43a1c3a771003b260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
+  maxHealth: 5
+  currentHealth: 5
+  delayDamageTimerDefault: 0.6
 --- !u!1 &1479443792
 GameObject:
   m_ObjectHideFlags: 0
@@ -47286,6 +47396,7 @@ GameObject:
   - component: {fileID: 1652969481}
   - component: {fileID: 1652969483}
   - component: {fileID: 1652969482}
+  - component: {fileID: 1652969484}
   m_Layer: 0
   m_Name: BuildingModelHandle
   m_TagString: Untagged
@@ -47348,6 +47459,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1652969484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652969480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fba4e34acb0b4a43a1c3a771003b260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
+  maxHealth: 5
+  currentHealth: 5
+  delayDamageTimerDefault: 0.6
 --- !u!1 &1658555877
 GameObject:
   m_ObjectHideFlags: 0
@@ -55596,7 +55723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9ac3c8e7d84b14ea673a83e675ba87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildings: []
+  isCastleBuilt: 0
 --- !u!1 &2021643324
 GameObject:
   m_ObjectHideFlags: 0
@@ -55822,6 +55949,7 @@ GameObject:
   - component: {fileID: 2030747271}
   - component: {fileID: 2030747273}
   - component: {fileID: 2030747272}
+  - component: {fileID: 2030747274}
   m_Layer: 0
   m_Name: BuildingModelHandle
   m_TagString: Untagged
@@ -55884,6 +56012,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2030747274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030747270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fba4e34acb0b4a43a1c3a771003b260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
+  maxHealth: 5
+  currentHealth: 5
+  delayDamageTimerDefault: 0.6
 --- !u!1 &2030808732
 GameObject:
   m_ObjectHideFlags: 0
@@ -56689,6 +56833,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackSpeedPerLevel: 
   buildingType: 0
+  isBuilt: 0
   taskLoadingCircle: {fileID: 0}
 --- !u!65 &2056865502
 BoxCollider:
@@ -56904,7 +57049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.408936, y: -2.8028564}
+  m_AnchoredPosition: {x: -8.408936, y: -2.8029785}
   m_SizeDelta: {x: -117.73, y: -106.518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2064290358
@@ -59549,11 +59694,11 @@ SceneRoots:
   - {fileID: 36706866}
   - {fileID: 2079345603}
   - {fileID: 488239959}
-  - {fileID: 2056865500}
   - {fileID: 1262624023}
   - {fileID: 531414493}
   - {fileID: 326961806}
   - {fileID: 220930096}
   - {fileID: 955367407}
   - {fileID: 898951692}
+  - {fileID: 2056865500}
   - {fileID: 1660507985}

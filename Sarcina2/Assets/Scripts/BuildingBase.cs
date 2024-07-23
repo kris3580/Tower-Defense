@@ -93,6 +93,8 @@ public abstract class BuildingBase : MonoBehaviour
     private bool isPlayerInRange = false;
     private GameObject buildingModelHandle;
     private GameObject buildingShowcase;
+    public bool isBuilt = false;
+    private BuildingManager buildingManager;
 
     private void BuildingModelHandler()
     {
@@ -103,6 +105,7 @@ public abstract class BuildingBase : MonoBehaviour
 
             buildingModelHandle.SetActive(true);
             buildingShowcase.SetActive(false);
+            isBuilt = true;
 
             if (!isBuildingAtMaxLevel())
             {
@@ -207,6 +210,8 @@ public abstract class BuildingBase : MonoBehaviour
             buildingInfoPopUp.transform.Find("UpgradeDescription").gameObject.SetActive(false);
             buildingInfoPopUp.transform.Find("BuildingNameAndLevel").GetComponent<RectTransform>().localPosition = new Vector3(122, -6.66f, 0);
         }
+
+        buildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
 
 
     }

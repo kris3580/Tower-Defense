@@ -18,7 +18,7 @@ public class EnemyFollow : MonoBehaviour
     void Update()
     {
 
-        if (player == null) player = GameObject.Find("Player");
+        if (player == null) player = GameObject.Find("BuildingModel");
         FollowPlayer();
     }
 

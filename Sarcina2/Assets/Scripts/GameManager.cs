@@ -24,10 +24,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-
-    //SpawnWave();
-
-
     public void SpawnWave()
     {
         Debug.Log(1212);
