@@ -34,9 +34,15 @@ public abstract class BuildingBase : MonoBehaviour
         buildingInfoPopUp.GetComponent<RectTransform>().position = transform.position + buildingInfoPositionOffset;
         LoadTaskLoadingCircleComponent();
         BuildingModelHandler();
+
+        if (isBuildingAtMaxLevel() && !isCircleCanceled)
+        {
+            taskLoadingCircle.ShowTaskLoadingCircle(false);
+            taskLoadingCircle.isTimerActive = false;
+            isPlayerInRange = false;
+            isCircleCanceled = true;
+        }
     }
-
-
 
 
     private void Start()
@@ -51,21 +57,29 @@ public abstract class BuildingBase : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            dottedSquareAreaIcon.enabled = true;
             ShowBuildingInfoPopUp(true);
-            taskLoadingCircle.ShowTaskLoadingCircle(true);
-            taskLoadingCircle.isTimerActive = true;
-            isPlayerInRange = true;
+
+            if (!isBuildingAtMaxLevel())
+            {
+                if (upgradePrices[currentLevel] <= Store.currentYellowCoins)
+                {
+                    taskLoadingCircle.ShowTaskLoadingCircle(true);
+                    taskLoadingCircle.isTimerActive = true;
+                    isPlayerInRange = true;
+                }
+            }
+
         }
 
-
-
-}
+    }
 
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
         {
+            dottedSquareAreaIcon.enabled = false;
             ShowBuildingInfoPopUp(false);
             taskLoadingCircle.ShowTaskLoadingCircle(false);
             taskLoadingCircle.isTimerActive = false;
@@ -82,28 +96,36 @@ public abstract class BuildingBase : MonoBehaviour
 
     private void BuildingModelHandler()
     {
+
+
         if (isPlayerInRange && taskLoadingCircle.isTimeOut) 
         {
+
             buildingModelHandle.SetActive(true);
             buildingShowcase.SetActive(false);
+
+            if (!isBuildingAtMaxLevel())
+            {
+                if (upgradePrices[currentLevel] <= Store.currentYellowCoins)
+                {
+                    Store.currentYellowCoins -= upgradePrices[currentLevel];
+                    currentLevel++;
+                    SetBuildingInfo();
+                    isPlayerInRange = false;
+                }
+                
+
+            }
         }
     }
-
-
-
-
-
-
-
-
-
-
 
 
     // TASK LOADING CIRCLE STUFF
     public TaskLoadingCircle taskLoadingCircle;
     bool isTaskCircleLoadingComponentLoaded = false;
     private GameManager gameManager;
+
+    bool isCircleCanceled = false;
 
     public void LoadTaskLoadingCircleComponent()
     {
@@ -114,6 +136,8 @@ public abstract class BuildingBase : MonoBehaviour
         }
 
     }
+
+
 
 
     // BUILDING POP UP INFO STUFF
@@ -128,17 +152,24 @@ public abstract class BuildingBase : MonoBehaviour
     private TextMeshProUGUI text_buildingLevel;
     private TextMeshProUGUI text_upgradeInfo;
     private Image upgradeIcon;
-
+    private Image coinIcon;
+    private SpriteRenderer dottedSquareAreaIcon;
 
     private void BuildingInfoPopUpSetup()
     {
         canvas = GameObject.Find("WorldSpaceCanvas").GetComponent<Canvas>();
         buildingInfoPrefab = Resources.Load<GameObject>("BuildingInfoPopUp");
         buildingInfoPopUp = Instantiate(buildingInfoPrefab, canvas.transform);
+
+        coinIcon = buildingInfoPopUp.transform.Find("BuildingCost").transform.Find("Coin").GetComponent<Image>();
+        dottedSquareAreaIcon = transform.Find("DottedSquareArea").GetComponent<SpriteRenderer>();
+        dottedSquareAreaIcon.enabled = false;
+
         buildingInfoPopUp.SetActive(false);
         buildingModelHandle = transform.Find("BuildingModelHandle").gameObject;
         buildingModelHandle.SetActive(false);
         buildingShowcase = transform.Find("BuildingTypeInfo").gameObject;
+        
 
         text_buildingCost = buildingInfoPopUp.transform.Find("BuildingCost").transform.Find("CoinText").GetComponent<TextMeshProUGUI>();
         text_buildingName = buildingInfoPopUp.transform.Find("BuildingNameAndLevel").transform.Find("BuildingName").GetComponent<TextMeshProUGUI>();
@@ -156,6 +187,8 @@ public abstract class BuildingBase : MonoBehaviour
 
         upgradeIcon = buildingInfoPopUp.transform.Find("UpgradeDescription").transform.Find("Icon").GetComponent<Image>();
 
+
+
         switch (buildingType)
         {
             case BuildingType.Barracks:
@@ -169,12 +202,13 @@ public abstract class BuildingBase : MonoBehaviour
                 break;
         }
 
-        if (!isBuildingNonDescriptive())
+        if (!isBuildingNonDescriptive() && !isBuildingAtMaxLevel())
         {
             buildingInfoPopUp.transform.Find("UpgradeDescription").gameObject.SetActive(false);
             buildingInfoPopUp.transform.Find("BuildingNameAndLevel").GetComponent<RectTransform>().localPosition = new Vector3(122, -6.66f, 0);
         }
-    
+
+
     }
 
 
@@ -184,18 +218,52 @@ public abstract class BuildingBase : MonoBehaviour
         buildingInfoPopUp.SetActive(state);
     }
 
+
+    
+    private bool isBuildingAtMaxLevel()
+    {
+        if (currentLevel >= upgradePrices.Length) return true;
+        else return false;
+    }
+
+
     public void SetBuildingInfo()
     {
-        text_buildingCost.text = upgradePrices[currentLevel].ToString();
+
+        if (currentLevel == 0)
+        {
+            text_buildingLevel.enabled = false;
+        }
+        else
+        {
+            text_buildingLevel.enabled = true;
+        }
+
         text_buildingName.text = buildingType.ToString().ToUpper();
         text_buildingLevel.text = $"LVL {currentLevel}";
 
-        if (isBuildingNonDescriptive())
+        if (!isBuildingAtMaxLevel())
         {
-            text_upgradeInfo.text = $"+ {profitPerLevel[currentLevel]}";
+            text_buildingCost.text = upgradePrices[currentLevel].ToString();
+
+            if (isBuildingNonDescriptive())
+            {
+                text_upgradeInfo.text = $"+ {profitPerLevel[currentLevel]}";
+            }
         }
+        else
+        {
+            buildingInfoPopUp.transform.Find("UpgradeDescription").gameObject.SetActive(true);
+            buildingInfoPopUp.transform.Find("BuildingNameAndLevel").GetComponent<RectTransform>().localPosition = new Vector3(-10.24f, -19.39f, 0);
+            text_buildingCost.text = "";
+            text_upgradeInfo.text = "MAX";
+            upgradeIcon.enabled = false;
+            coinIcon.enabled = false;
+
+        }
+
         
-        
+
     }
 
 
@@ -208,10 +276,8 @@ public abstract class BuildingBase : MonoBehaviour
         }
     }
 
+
 }
-
-
-
 
 
 public enum BuildingType

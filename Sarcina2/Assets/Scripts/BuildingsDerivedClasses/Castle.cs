@@ -21,17 +21,10 @@ public class Castle : BuildingBase
 
 
 
-
-
-
-
-
     private void Awake()
     {
         DefaultStatsSetup();
     }
-
-
 
 
 }

@@ -265,7 +265,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 206.53
+  m_Spacing: 335.62
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 4893634630812161504}
   - component: {fileID: 2229535016905477837}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -561,7 +561,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 76.4299, y: 38.0957}
+  m_SizeDelta: {x: 101.4864, y: 38.0957}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7049140402065026172
 CanvasRenderer:

@@ -52,6 +52,7 @@ public class TaskLoadingCircle : MonoBehaviour
         {
             timePassed = 0f;
             isTimeOut = true;
+            ShowTaskLoadingCircle(false);
         }
         else isTimeOut = false;
 
@@ -63,6 +64,7 @@ public class TaskLoadingCircle : MonoBehaviour
         }
         else
         {
+            isTimerActive = false ;
             timePassed = 0f;
         }
     }

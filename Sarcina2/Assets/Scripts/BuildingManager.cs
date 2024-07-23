@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] List<GameObject> buildings = new List<GameObject>();
+
+    private void Awake()
     {
-        
+        GetBuildings();
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+
+
+
+
+    private void GetBuildings()
     {
-        
+        GameObject[] buidlingsArray = GameObject.FindGameObjectsWithTag("BuildingHandle");
+
+        foreach (GameObject building in buidlingsArray)
+        {
+            buildings.Add(building);
+
+        }
     }
+
+
+
+
+
+
+
+
 }
