@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -30,13 +31,26 @@ public class ArrowShooting : MonoBehaviour
         arrowPrefab = Resources.Load<GameObject>("Arrow");
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         arrowTimer = 1f;
+        player = GameObject.Find("Player");
     }
 
 
 
     private void Update()
     {
-        ClosestEnemyDetection();
+        
+
+        if (gameObject.name.Contains("Ranged"))
+        {
+            ResetLists();
+            ClosestEnemyDetectionEnemyRanged();
+            IsInShootingRangeCheck();
+        }
+        else
+        {
+            ClosestEnemyDetection();
+        }
+
         DrawRayToClosestObject();
         ShootArrowHandler();
 
@@ -45,10 +59,25 @@ public class ArrowShooting : MonoBehaviour
 
     }
 
+
+    void IsInShootingRangeCheck()
+    {
+        if (enemyDistance <= radius - 1)
+        {
+            GetComponent<EnemyRanged>().isInShootingRange = true;
+        }
+        else
+        {
+            GetComponent<EnemyRanged>().isInShootingRange = false;
+        }
+    }
+
+
+
     [HideInInspector] public float baseArrowTimerSpeed = 1f;
     public float currentArrowTimer;
     public float arrowTimer;
-
+    
     void ShootArrowHandler()
     {
         currentArrowTimer -= Time.deltaTime;
@@ -58,6 +87,7 @@ public class ArrowShooting : MonoBehaviour
             currentArrowTimer = arrowTimer;
             SpawnArrow();
         }
+
     }
 
 
@@ -68,6 +98,8 @@ public class ArrowShooting : MonoBehaviour
     [SerializeField] public float arrowSpeed;
     void SpawnArrow()
     {
+        
+
         if (closestEnemy == null) return;
 
 
@@ -76,6 +108,16 @@ public class ArrowShooting : MonoBehaviour
         newArrowInstance.GetComponent<Rigidbody>().AddForce((closestEnemy.transform.position - transform.position) * 100);
         newArrowInstance.GetComponent<Arrow>().speed = arrowSpeed;
         newArrowInstance.GetComponent<Arrow>().damage = damage;
+
+        if (gameObject.tag == "EnemyPosition") 
+        { 
+            newArrowInstance.GetComponent<Arrow>().isArrowShotByEnemy = true;
+        }
+        else
+        {
+            newArrowInstance.GetComponent<Arrow>().isArrowShotByEnemy = false;
+        }
+
     }
 
 
@@ -106,6 +148,9 @@ public class ArrowShooting : MonoBehaviour
     {
         neareastDistanceChanged = neareastDistance;
 
+        
+
+
         enemies = GameObject.FindGameObjectsWithTag("EnemyPosition");
 
         for (int i = 0; i < enemies.Length; i++)
@@ -120,6 +165,51 @@ public class ArrowShooting : MonoBehaviour
 
         }
 
+    }
+
+    private GameObject[] targetsArray;
+    [SerializeField] List<GameObject> targets;
+    private GameObject player;
+    private void ClosestEnemyDetectionEnemyRanged()
+    {
+        neareastDistanceChanged = neareastDistance;
+
+
+        targetsArray = GameObject.FindGameObjectsWithTag("BuildingModelHandle");
+        targets.AddRange(targetsArray);
+        targets.Add(player);
+
+
+        for (int i = 0; i < targets.Count; i++)
+        {
+            distance = Vector3.Distance(transform.position, targets[i].transform.position);
+
+            if (distance < neareastDistanceChanged && targets[i].activeSelf)
+            {
+                if (targets[i].name == "Player" && distance <= 3)
+                {
+                    closestEnemy = targets[i];
+                    break;
+                }
+                else if (targets[i].name != "Player")
+                {
+                    closestEnemy = targets[i];
+                    neareastDistanceChanged = distance;
+                }
+
+
+
+            }
+
+        }
+
+    }
+
+
+    private void ResetLists()
+    {
+        targets.Clear();
+        targetsArray = new GameObject[0];
     }
 
 

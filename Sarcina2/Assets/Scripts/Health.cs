@@ -66,10 +66,30 @@ public class Health : MonoBehaviour
         }
 
 
-        if (gameObject.name.Contains("Enemy") && other.tag == "Arrow")
+        //if (gameObject.name.Contains("Enemy") && other.tag == "Arrow" && other.gameObject.GetComponent<Arrow>().isArrowShotByEnemy)
+        //{
+        //    ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
+        //}
+        bool isArrowShotByEnemy = false;
+        if (other.tag == "Arrow") isArrowShotByEnemy = other.gameObject.GetComponent<Arrow>().isArrowShotByEnemy;
+
+        if (isArrowShotByEnemy && other.tag == "Arrow" && gameObject.name == "Player")
         {
+            Debug.Log("player shot by rangedEnemy");
             ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
         }
+        if (isArrowShotByEnemy && other.tag == "Arrow" && gameObject.name == "BuildingModelHandle")
+        {
+            Debug.Log("building shot by rangedEnemy");
+            ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
+        }
+        if (!isArrowShotByEnemy && other.tag == "Arrow" && gameObject.name.Contains("Enemy"))
+        {
+            Debug.Log("enemy shot by player");
+            ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
+        }
+
+
 
     }
 
@@ -96,7 +116,7 @@ public class Health : MonoBehaviour
 
     private void ApplyDamage(int damage = 1)
     {
-        Debug.Log(damage);
+        
         currentHealth -= damage;
         UpdateHealthBar(maxHealth, currentHealth);
 

@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
 
     public void SpawnWave()
     {
-        Debug.Log(1212);
         try
         {
             waves[spawnedWaves].SetActive(true);
