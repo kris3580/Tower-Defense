@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Castle : BuildingBase
 {
-    private ArrowShooting arrowShooting;
+
     public override void DefaultStatsSetup()
     {
         buildingType = BuildingType.Castle;
@@ -19,11 +19,21 @@ public class Castle : BuildingBase
     }
 
 
+    public override void CurrentStatsSetup()
+    {
+        healthComponent.maxHealth = hpPerLevel[currentLevel];
+        healthComponent.currentHealth = hpPerLevel[currentLevel];
+        arrowShooting.damage = damagePerLevel[currentLevel];
+        arrowShooting.arrowTimer = arrowShooting.baseArrowTimerSpeed * 100 / attackSpeedPerLevel[currentLevel];
+    }
 
 
     private void Awake()
     {
         DefaultStatsSetup();
     }
+
+
+
 
 }

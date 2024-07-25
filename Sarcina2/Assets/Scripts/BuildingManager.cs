@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class BuildingManager : MonoBehaviour
 {
-    List<GameObject> buildings = new List<GameObject>();
-    BuildingBase castle;
+    private List<GameObject> buildings = new List<GameObject>();
+    public BuildingBase castle;
     public bool isCastleBuilt = false;
     private bool isCastleBuiltAlready = false;
     private GameManager gameManager;
@@ -15,6 +15,11 @@ public class BuildingManager : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         GetBuildings();
+    }
+
+    private void Start()
+    {
+        
     }
 
     private void Update()

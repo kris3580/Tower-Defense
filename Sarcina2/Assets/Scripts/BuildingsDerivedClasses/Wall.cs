@@ -14,6 +14,12 @@ public class Wall : BuildingBase
         
     }
 
+    public override void CurrentStatsSetup()
+    {
+        healthComponent.maxHealth = hpPerLevel[currentLevel];
+        healthComponent.currentHealth = hpPerLevel[currentLevel];
+    }
+
     private void Awake()
     {
         DefaultStatsSetup();

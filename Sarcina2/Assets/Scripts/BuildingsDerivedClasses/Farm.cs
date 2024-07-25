@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class House : BuildingBase
+public class Farm : BuildingBase
 {
     public override void DefaultStatsSetup()
     {
-        buildingType = BuildingType.House;
+        buildingType = BuildingType.Farm;
         currentLevel = 0;
 
-        hpPerLevel = new int[] { 50, 60 };
-        upgradePrices = new int[] { 2, 2 };
+        hpPerLevel = new int[] { 50 };
+        upgradePrices = new int[] { 1 };
 
-        profitPerLevel = new int[] { 1, 2 };
+        profitPerLevel = new int[] { 1 };
     }
 
     public override void CurrentStatsSetup()
@@ -25,6 +25,4 @@ public class House : BuildingBase
     {
         DefaultStatsSetup();
     }
-
-
 }

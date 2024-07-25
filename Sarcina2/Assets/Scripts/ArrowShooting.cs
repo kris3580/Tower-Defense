@@ -12,6 +12,7 @@ public class ArrowShooting : MonoBehaviour
     [SerializeField] private float distance;
     private float neareastDistance = 10000;
     private float neareastDistanceChanged;
+    public int damage;
 
     // Range check
     [SerializeField] float radius;
@@ -28,6 +29,7 @@ public class ArrowShooting : MonoBehaviour
     {
         arrowPrefab = Resources.Load<GameObject>("Arrow");
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        arrowTimer = 1f;
     }
 
 
@@ -43,8 +45,9 @@ public class ArrowShooting : MonoBehaviour
 
     }
 
-    [SerializeField] float currentArrowTimer;
-    [SerializeField] float defaultArrowTimer;
+    [HideInInspector] public float baseArrowTimerSpeed = 1f;
+    public float currentArrowTimer;
+    public float arrowTimer;
 
     void ShootArrowHandler()
     {
@@ -52,7 +55,7 @@ public class ArrowShooting : MonoBehaviour
 
         if (enemyDistance <= radius && currentArrowTimer <= 0)
         {
-            currentArrowTimer = defaultArrowTimer;
+            currentArrowTimer = arrowTimer;
             SpawnArrow();
         }
     }
@@ -62,7 +65,7 @@ public class ArrowShooting : MonoBehaviour
 
 
     private GameObject arrowPrefab;
-    [SerializeField] float arrowSpeed;
+    [SerializeField] public float arrowSpeed;
     void SpawnArrow()
     {
         if (closestEnemy == null) return;
@@ -72,13 +75,8 @@ public class ArrowShooting : MonoBehaviour
         newArrowInstance.GetComponent<Arrow>().target = closestEnemy.transform.position;
         newArrowInstance.GetComponent<Rigidbody>().AddForce((closestEnemy.transform.position - transform.position) * 100);
         newArrowInstance.GetComponent<Arrow>().speed = arrowSpeed;
+        newArrowInstance.GetComponent<Arrow>().damage = damage;
     }
-
-
-
-
-
-
 
 
 
@@ -151,9 +149,5 @@ public class ArrowShooting : MonoBehaviour
             previousPoint = nextPoint;
         }
     }
-
-
-
-
 
 }

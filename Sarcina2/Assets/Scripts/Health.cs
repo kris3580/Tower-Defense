@@ -68,7 +68,7 @@ public class Health : MonoBehaviour
 
         if (gameObject.name.Contains("Enemy") && other.tag == "Arrow")
         {
-            ApplyDamage();
+            ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
         }
 
     }
@@ -94,10 +94,10 @@ public class Health : MonoBehaviour
         }
     }
 
-    private void ApplyDamage()
+    private void ApplyDamage(int damage = 1)
     {
-        
-        currentHealth--;
+        Debug.Log(damage);
+        currentHealth -= damage;
         UpdateHealthBar(maxHealth, currentHealth);
 
         if (currentHealth <= 0)

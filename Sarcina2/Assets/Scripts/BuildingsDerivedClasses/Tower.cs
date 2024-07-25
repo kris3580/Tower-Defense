@@ -16,6 +16,14 @@ public class Tower : BuildingBase
         attackSpeedPerLevel = new int[] { 100, 125, 150 };
     }
 
+    public override void CurrentStatsSetup()
+    {
+        healthComponent.maxHealth = hpPerLevel[currentLevel];
+        healthComponent.currentHealth = hpPerLevel[currentLevel];
+        arrowShooting.damage = damagePerLevel[currentLevel];
+        arrowShooting.arrowTimer = arrowShooting.baseArrowTimerSpeed * 100 / attackSpeedPerLevel[currentLevel];
+    }
+
     private void Awake()
     {
         DefaultStatsSetup();

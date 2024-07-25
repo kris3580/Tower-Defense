@@ -5,7 +5,7 @@ public class Arrow : MonoBehaviour
 {
     public Vector3 target;  
     public float speed;
-
+    public int damage;
 
 
     private void Start()

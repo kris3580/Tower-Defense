@@ -47,7 +47,7 @@ public class Store : MonoBehaviour
 
 
 
-    public static int currentYellowCoins = 8;
+    public static int currentYellowCoins = 999;
     public static int currentRedCoins = 0;
     public static int currentPurpleCoins = 0;
 
@@ -76,7 +76,7 @@ public class Store : MonoBehaviour
 
     public static void ResetCoins()
     {
-        currentYellowCoins = 8;
+        currentYellowCoins = 999;
     }
 
 

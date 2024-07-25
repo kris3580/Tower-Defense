@@ -72,7 +72,8 @@ public class TaskLoadingCircle : MonoBehaviour
 
     public void ShowTaskLoadingCircle(bool state)
     {
-       taskLoadingCircleObject.SetActive(state);
+        taskLoadingCircleObject.GetComponent<RectTransform>().transform.SetAsLastSibling();
+        taskLoadingCircleObject.SetActive(state);
     }
 
 
