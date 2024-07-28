@@ -88,6 +88,12 @@ public class Health : MonoBehaviour
             Debug.Log("enemy shot by player");
             ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
         }
+        if (isArrowShotByEnemy && other.tag == "Arrow" && gameObject.name.Contains("Ally"))
+        {
+            Debug.Log("ally shot by enemy");
+            ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
+        }
+
 
 
 
@@ -105,10 +111,12 @@ public class Health : MonoBehaviour
 
         if (other.tag == "Enemy")
         {
+            
+
             if ( delayDamageTimerCurrent <= 0)
             {
                 delayDamageTimerCurrent = delayDamageTimerDefault;
-                ApplyDamage();
+                ApplyDamage(other.gameObject.transform.parent.GetComponent<GameAI>().damage);
             }
             
         }
@@ -134,7 +142,6 @@ public class Health : MonoBehaviour
             {
                 Destroy(gameObject);
                 Destroy(healthBar);
-                Debug.Log("boss");
                 DropCoin(CoinType.Purple);
             }
             else if (gameObject.name.Contains("Enemy")) 
@@ -148,7 +155,11 @@ public class Health : MonoBehaviour
                 healthBar.SetActive(false);
                 gameObject.SetActive(false);
             }
-            
+            else if (gameObject.name.Contains("Ally"))
+            {
+                Destroy(gameObject);
+                Destroy(healthBar);
+            }
         }
     }
 

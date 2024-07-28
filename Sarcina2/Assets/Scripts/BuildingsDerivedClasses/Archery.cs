@@ -25,5 +25,7 @@ public class Archery : BuildingBase
     private void Awake()
     {
         DefaultStatsSetup();
+
+
     }
 }

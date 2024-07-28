@@ -4,5 +4,16 @@ using UnityEngine;
 
 public class AllyRanged : GameAI
 {
+    public Vector3 flagPolePoint;
+
+
+
+
+
+
+
+
+
+
 
 }

@@ -10,6 +10,8 @@ TagManager:
   - BuildingHandle
   - BuildingModel
   - BuildingModelHandle
+  - AllyPosition
+  - Ally
   layers:
   - Default
   - TransparentFX

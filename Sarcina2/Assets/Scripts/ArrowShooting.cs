@@ -40,11 +40,18 @@ public class ArrowShooting : MonoBehaviour
     {
         
 
-        if (gameObject.name.Contains("Ranged"))
+        if (gameObject.name.Contains("Enemy"))
         {
             ResetLists();
             ClosestEnemyDetectionEnemyRanged();
             IsInShootingRangeCheck();
+        }
+        else if (gameObject.name.Contains("Ally"))
+        {
+            ResetLists();
+            ClosestEnemyDetectionAllyRanged();
+            if (closestEnemy != null) transform.LookAt(closestEnemy.transform.position);
+
         }
         else
         {
@@ -177,6 +184,9 @@ public class ArrowShooting : MonoBehaviour
 
         targetsArray = GameObject.FindGameObjectsWithTag("BuildingModelHandle");
         targets.AddRange(targetsArray);
+        targetsArray = new GameObject[0];
+        targetsArray = GameObject.FindGameObjectsWithTag("Ally");
+        targets.AddRange(targetsArray);
         targets.Add(player);
 
 
@@ -205,7 +215,28 @@ public class ArrowShooting : MonoBehaviour
 
     }
 
+    private void ClosestEnemyDetectionAllyRanged()
+    {
+        neareastDistanceChanged = neareastDistance;
 
+
+        targetsArray = GameObject.FindGameObjectsWithTag("Enemy");
+        targets.AddRange(targetsArray);
+
+
+
+        for (int i = 0; i < targets.Count; i++)
+        {
+            distance = Vector3.Distance(transform.position, targets[i].transform.position);
+
+            if (distance < neareastDistanceChanged && targets[i].activeSelf)
+            {
+                closestEnemy = targets[i];
+            }
+
+        }
+
+    }
     private void ResetLists()
     {
         targets.Clear();

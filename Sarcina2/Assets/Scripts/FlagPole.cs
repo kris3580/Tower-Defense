@@ -22,7 +22,6 @@ public class FlagPole : MonoBehaviour
     {
         if (isPlayerInRange && taskLoadingCircle.isTimeOut)
         {
-            Debug.Log(111);
             isPlayerInRange = false;
             isFlagPoleTaken = true;
             joystickStateWhenFlagPoleIsTaken = joystick.activeSelf;
@@ -74,7 +73,6 @@ public class FlagPole : MonoBehaviour
             taskLoadingCircle.transform.localPosition = transform.position + taskLoadingCirclePositionOffset;
             taskLoadingCircle.ShowTaskLoadingCircle(true);
 
-            Debug.Log("flag");
         }
     }
 
@@ -86,7 +84,6 @@ public class FlagPole : MonoBehaviour
             isFlagPoleTargeted = false;
             taskLoadingCircle.ShowTaskLoadingCircle(false);
             taskLoadingCircle.isTimerActive = false;
-            Debug.Log("flag");
             isPlayerInRange = false;
         }
     }
