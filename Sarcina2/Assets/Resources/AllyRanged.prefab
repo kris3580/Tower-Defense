@@ -39,7 +39,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594291223056174197}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5816c2c5dd71a25458939f9597faef0d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -99,8 +99,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769080293810714306}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 9
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -114,7 +114,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -195,7 +195,6 @@ MonoBehaviour:
   player: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  flagPolePoint: {x: 0, y: 0, z: 0}
 --- !u!1 &7005524850866841838
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +286,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7005524850866841838}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5816c2c5dd71a25458939f9597faef0d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

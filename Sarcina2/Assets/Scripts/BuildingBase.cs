@@ -31,7 +31,7 @@ public abstract class BuildingBase : MonoBehaviour
 
     public virtual void DefaultStatsSetup() { }
     public virtual void CurrentStatsSetup() { }
-
+    public virtual void RangedAlliesSetup() { }
 
 
     // UNITY RELATED METHODS
@@ -48,6 +48,7 @@ public abstract class BuildingBase : MonoBehaviour
             taskLoadingCircle.isTimerActive = false;
             isPlayerInRange = false;
             isCircleCanceled = true;
+
         }
     }
 
@@ -117,6 +118,8 @@ public abstract class BuildingBase : MonoBehaviour
                     currentLevel++;
                     SetBuildingInfo();
                     isPlayerInRange = false;
+
+                    RangedAlliesSetup();
                 }
         }
     }

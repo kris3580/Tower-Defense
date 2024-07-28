@@ -44,6 +44,13 @@ public class FlagPole : MonoBehaviour
 
     }
 
+    private BuildingBase building;
+
+    private void Start()
+    {
+        building = gameObject.transform.parent.transform.parent.GetComponent<BuildingBase>();
+    }
+
 
     private IEnumerator CheckForPlayerStopping()
     {
@@ -55,6 +62,7 @@ public class FlagPole : MonoBehaviour
         {
             isFlagPoleTaken = false;
             transform.position = player.transform.position + flagPoleOffset + new Vector3(0, -0.5f, 0);
+            building.RangedAlliesSetup();
             yield break;
         }
 
