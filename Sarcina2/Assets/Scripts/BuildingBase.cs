@@ -61,7 +61,7 @@ public abstract class BuildingBase : MonoBehaviour
     [SerializeField] Vector3 taskLoadingCirclePositionOffset;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && !FlagPole.isFlagPoleTargeted)
         {
             if (!isBuildingAtMaxLevel()) { dottedSquareAreaIcon.enabled = true; }
             ShowBuildingInfoPopUp(true);
@@ -81,7 +81,7 @@ public abstract class BuildingBase : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !FlagPole.isFlagPoleTargeted)
         {
             dottedSquareAreaIcon.enabled = false;
             ShowBuildingInfoPopUp(false);
