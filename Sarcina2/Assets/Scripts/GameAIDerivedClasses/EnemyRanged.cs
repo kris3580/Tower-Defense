@@ -23,7 +23,16 @@ public class EnemyRanged : GameAI
                 hp = 200;
                 break;
         }
+        healthComponent.currentHealth = hp;
+        healthComponent.maxHealth = hp;
+        arrowShooting.damage = damage;
     }
+
+    private void Start()
+    {
+        DefaultStatsSetup();
+    }
+
 
     private void Update()
     {

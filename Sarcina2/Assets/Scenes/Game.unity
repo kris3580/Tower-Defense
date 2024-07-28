@@ -3498,6 +3498,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -3860,6 +3862,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -4859,6 +4863,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -5967,6 +5973,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -10531,6 +10539,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -12022,7 +12032,9 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
-  enemyRangedType: 0
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
+  enemyRangedType: 1
   isInShootingRange: 0
   targets: []
   distance: 0
@@ -13883,6 +13895,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyRangedType: 0
   isInShootingRange: 0
   targets: []
@@ -15446,6 +15460,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -19935,6 +19951,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -26396,6 +26414,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -28504,6 +28524,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -30639,6 +30661,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -30952,6 +30976,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyRangedType: 0
   isInShootingRange: 0
   targets: []
@@ -32058,6 +32084,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -34698,6 +34726,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -37069,6 +37099,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -40445,6 +40477,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyRangedType: 0
   isInShootingRange: 0
   targets: []
@@ -43518,6 +43552,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -43639,6 +43675,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -46016,6 +46054,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyRangedType: 0
   isInShootingRange: 0
   targets: []
@@ -47589,6 +47629,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyRangedType: 0
   isInShootingRange: 0
   targets: []
@@ -47666,7 +47708,9 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
-  enemyInfantryType: 0
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
+  enemyInfantryType: 1
   targets: []
   distance: 0
 --- !u!54 &1438308490
@@ -48613,7 +48657,9 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
-  enemyInfantryType: 0
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
+  enemyInfantryType: 2
   targets: []
   distance: 0
 --- !u!54 &1459590346
@@ -51774,6 +51820,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyRangedType: 0
   isInShootingRange: 0
   targets: []
@@ -54059,6 +54107,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -54929,6 +54979,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyRangedType: 0
   isInShootingRange: 0
   targets: []
@@ -56507,6 +56559,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyRangedType: 0
   isInShootingRange: 0
   targets: []
@@ -61889,6 +61943,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyRangedType: 0
   isInShootingRange: 0
   targets: []
@@ -66266,6 +66322,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0
@@ -68140,6 +68198,8 @@ MonoBehaviour:
   hp: 0
   damage: 0
   player: {fileID: 0}
+  healthComponent: {fileID: 0}
+  arrowShooting: {fileID: 0}
   enemyInfantryType: 0
   targets: []
   distance: 0

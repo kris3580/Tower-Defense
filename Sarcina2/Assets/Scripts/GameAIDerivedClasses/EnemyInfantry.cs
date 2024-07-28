@@ -27,9 +27,16 @@ public class EnemyInfantry : GameAI
                 hp = 300;
                 break;
         }
+
+        healthComponent.currentHealth = hp;
+        healthComponent.maxHealth = hp;
     }
 
 
+    private void Start()
+    {
+        DefaultStatsSetup();
+    }
 
     private void Update()
     {
