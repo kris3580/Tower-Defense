@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
     // player
 
     private float delayDamageTimerCurrent;
-    [SerializeField] float delayDamageTimerDefault;
+    float delayDamageTimerDefault = 1f;
 
 
 
@@ -111,7 +111,6 @@ public class Health : MonoBehaviour
 
         if (other.tag == "Enemy")
         {
-            
 
             if ( delayDamageTimerCurrent <= 0)
             {

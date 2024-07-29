@@ -42,14 +42,12 @@ public class ArrowShooting : MonoBehaviour
 
         if (gameObject.name.Contains("Enemy"))
         {
-            ResetLists();
             ClosestEnemyDetectionEnemyRanged();
             IsInShootingRangeCheck();
         }
         else if (gameObject.name.Contains("Ally"))
         {
-            ResetLists();
-            ClosestEnemyDetectionAllyRanged();
+            ClosestEnemyDetection();
             if (closestEnemy != null) transform.LookAt(closestEnemy.transform.position);
 
         }
@@ -139,7 +137,7 @@ public class ArrowShooting : MonoBehaviour
         if (closestEnemy == null) return Color.white;
 
         enemyDistance = Vector3.Distance(transform.position, closestEnemy.transform.position);
-        if (enemyDistance <= radius) return Color.red;
+        if (enemyDistance <= radius) { if (gameObject.name.Contains("Ally")) { Debug.Log("HAIAIIIA"); }  return Color.red; }
         else return Color.yellow;
     }
 
@@ -215,33 +213,7 @@ public class ArrowShooting : MonoBehaviour
 
     }
 
-    private void ClosestEnemyDetectionAllyRanged()
-    {
-        neareastDistanceChanged = neareastDistance;
 
-
-        targetsArray = GameObject.FindGameObjectsWithTag("Enemy");
-        targets.AddRange(targetsArray);
-
-
-
-        for (int i = 0; i < targets.Count; i++)
-        {
-            distance = Vector3.Distance(transform.position, targets[i].transform.position);
-
-            if (distance < neareastDistanceChanged && targets[i].activeSelf)
-            {
-                closestEnemy = targets[i];
-            }
-
-        }
-
-    }
-    private void ResetLists()
-    {
-        targets.Clear();
-        targetsArray = new GameObject[0];
-    }
 
 
 
