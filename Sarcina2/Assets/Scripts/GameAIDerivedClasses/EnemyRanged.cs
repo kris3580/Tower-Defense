@@ -69,6 +69,9 @@ public class EnemyRanged : GameAI
 
         targetsArray = GameObject.FindGameObjectsWithTag("BuildingModelHandle");
         targets.AddRange(targetsArray);
+        targetsArray = new GameObject[0];
+        targetsArray = GameObject.FindGameObjectsWithTag("Ally");
+        targets.AddRange(targetsArray);
         targets.Add(player);
 
 

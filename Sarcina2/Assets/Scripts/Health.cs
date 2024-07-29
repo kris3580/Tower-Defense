@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
 
     // player
 
-    private float delayDamageTimerCurrent;
+    public float delayDamageTimerCurrent;
     float delayDamageTimerDefault = 1f;
 
 
@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
     {
         healthBar.GetComponent<RectTransform>().position = transform.position + healthBarPositionOffset;
 
-        if (gameObject.name == "Player" || gameObject.name == "BuildingModelHandle")
+        if (gameObject.name == "Player" || gameObject.name == "BuildingModelHandle" || gameObject.name.Contains("Ally"))
         {
             delayDamageTimerCurrent -= Time.deltaTime;
         }
@@ -107,13 +107,12 @@ public class Health : MonoBehaviour
             return;
         }
 
-
-
         if (other.tag == "Enemy")
         {
 
             if ( delayDamageTimerCurrent <= 0)
             {
+                Debug.LogWarning(1);
                 delayDamageTimerCurrent = delayDamageTimerDefault;
                 ApplyDamage(other.gameObject.transform.parent.GetComponent<GameAI>().damage);
             }

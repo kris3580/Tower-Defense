@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 2004599}
   - component: {fileID: 2004598}
   - component: {fileID: 2004597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 2318985}
   - component: {fileID: 2318984}
   - component: {fileID: 2318983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 9927355}
   - component: {fileID: 9927354}
   - component: {fileID: 9927353}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 11209793}
   - component: {fileID: 11209792}
   - component: {fileID: 11209791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11869855}
   - component: {fileID: 11869856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (112)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 14040179}
   - component: {fileID: 14040180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,6 +983,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!54 &14422704
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1036,7 +1037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 15167786}
   - component: {fileID: 15167787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (83)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1089,7 @@ GameObject:
   - component: {fileID: 21002130}
   - component: {fileID: 21002129}
   - component: {fileID: 21002128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1196,7 @@ GameObject:
   - component: {fileID: 23475744}
   - component: {fileID: 23475743}
   - component: {fileID: 23475742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1302,7 +1303,7 @@ GameObject:
   - component: {fileID: 31868142}
   - component: {fileID: 31868141}
   - component: {fileID: 31868140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1409,7 +1410,7 @@ GameObject:
   - component: {fileID: 32357918}
   - component: {fileID: 32357917}
   - component: {fileID: 32357916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1516,7 +1517,7 @@ GameObject:
   - component: {fileID: 33693861}
   - component: {fileID: 33693860}
   - component: {fileID: 33693859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1623,7 +1624,7 @@ GameObject:
   - component: {fileID: 35317754}
   - component: {fileID: 35317753}
   - component: {fileID: 35317752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1730,7 +1731,7 @@ GameObject:
   - component: {fileID: 36378207}
   - component: {fileID: 36378206}
   - component: {fileID: 36378205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1941,7 +1942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37291798}
   - component: {fileID: 37291799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (77)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1993,7 +1994,7 @@ GameObject:
   - component: {fileID: 38974026}
   - component: {fileID: 38974025}
   - component: {fileID: 38974024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2088,6 +2089,93 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38974022}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &44888527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1769080293810714306, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_Name
+      value: AllyRanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769080293810714306, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_TagString
+      value: Ally
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138159526757189607, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138159526757189607, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5895710882806736062, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.8577566
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.379
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.998077
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260913947725257378, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525281186614273332, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 881533198896949755, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+    - {fileID: 5138159526757189607, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 1594291223056174197, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7005524850866841838, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 833236201}
+  m_SourcePrefab: {fileID: 100100000, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
 --- !u!1 &57033340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,7 +2188,7 @@ GameObject:
   - component: {fileID: 57033344}
   - component: {fileID: 57033343}
   - component: {fileID: 57033342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2207,7 +2295,7 @@ GameObject:
   - component: {fileID: 57840108}
   - component: {fileID: 57840107}
   - component: {fileID: 57840106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2314,7 +2402,7 @@ GameObject:
   - component: {fileID: 58350255}
   - component: {fileID: 58350254}
   - component: {fileID: 58350253}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2421,7 +2509,7 @@ GameObject:
   - component: {fileID: 58858678}
   - component: {fileID: 58858677}
   - component: {fileID: 58858676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2528,7 +2616,7 @@ GameObject:
   - component: {fileID: 60929376}
   - component: {fileID: 60929375}
   - component: {fileID: 60929374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2635,7 +2723,7 @@ GameObject:
   - component: {fileID: 64632251}
   - component: {fileID: 64632250}
   - component: {fileID: 64632249}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2742,7 +2830,7 @@ GameObject:
   - component: {fileID: 70229688}
   - component: {fileID: 70229687}
   - component: {fileID: 70229686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2849,7 +2937,7 @@ GameObject:
   - component: {fileID: 73221507}
   - component: {fileID: 73221506}
   - component: {fileID: 73221505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2954,7 +3042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 74515348}
   - component: {fileID: 74515349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (173)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3006,7 +3094,7 @@ GameObject:
   - component: {fileID: 77858299}
   - component: {fileID: 77858298}
   - component: {fileID: 77858297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3111,7 +3199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 78260796}
   - component: {fileID: 78260797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (172)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3163,7 +3251,7 @@ GameObject:
   - component: {fileID: 83944345}
   - component: {fileID: 83944344}
   - component: {fileID: 83944343}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -3268,7 +3356,7 @@ GameObject:
   - component: {fileID: 84601886}
   - component: {fileID: 84601885}
   - component: {fileID: 84601884}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3373,7 +3461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 90375538}
   - component: {fileID: 90375539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3426,7 +3514,7 @@ GameObject:
   - component: {fileID: 99984765}
   - component: {fileID: 99984764}
   - component: {fileID: 99984763}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (4)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -3513,6 +3601,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 2
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &99984766
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3547,7 +3636,7 @@ GameObject:
   - component: {fileID: 100190199}
   - component: {fileID: 100190198}
   - component: {fileID: 100190197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3736,7 +3825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 103712454}
   - component: {fileID: 103712455}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (171)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3789,7 +3878,7 @@ GameObject:
   - component: {fileID: 105107012}
   - component: {fileID: 105107011}
   - component: {fileID: 105107010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (6)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -3876,6 +3965,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 2
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &105107013
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3908,7 +3998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107892767}
   - component: {fileID: 107892768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (108)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3960,7 +4050,7 @@ GameObject:
   - component: {fileID: 110118313}
   - component: {fileID: 110118312}
   - component: {fileID: 110118311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4067,7 +4157,7 @@ GameObject:
   - component: {fileID: 110539509}
   - component: {fileID: 110539508}
   - component: {fileID: 110539507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4174,7 +4264,7 @@ GameObject:
   - component: {fileID: 113893025}
   - component: {fileID: 113893024}
   - component: {fileID: 113893023}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4279,7 +4369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 115895770}
   - component: {fileID: 115895771}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (158)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4331,7 +4421,7 @@ GameObject:
   - component: {fileID: 115969198}
   - component: {fileID: 115969197}
   - component: {fileID: 115969196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4438,7 +4528,7 @@ GameObject:
   - component: {fileID: 117803708}
   - component: {fileID: 117803707}
   - component: {fileID: 117803706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4545,7 +4635,7 @@ GameObject:
   - component: {fileID: 119006020}
   - component: {fileID: 119006019}
   - component: {fileID: 119006018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4758,7 +4848,7 @@ GameObject:
   - component: {fileID: 124194084}
   - component: {fileID: 124194083}
   - component: {fileID: 124194082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (8)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -4845,6 +4935,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 2
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &124194085
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4879,7 +4970,7 @@ GameObject:
   - component: {fileID: 125900898}
   - component: {fileID: 125900897}
   - component: {fileID: 125900896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -4984,7 +5075,7 @@ GameObject:
   - component: {fileID: 127255528}
   - component: {fileID: 127255527}
   - component: {fileID: 127255526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5091,7 +5182,7 @@ GameObject:
   - component: {fileID: 127537619}
   - component: {fileID: 127537618}
   - component: {fileID: 127537617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5198,7 +5289,7 @@ GameObject:
   - component: {fileID: 131398284}
   - component: {fileID: 131398283}
   - component: {fileID: 131398282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5305,7 +5396,7 @@ GameObject:
   - component: {fileID: 132105579}
   - component: {fileID: 132105578}
   - component: {fileID: 132105577}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5412,7 +5503,7 @@ GameObject:
   - component: {fileID: 132466801}
   - component: {fileID: 132466800}
   - component: {fileID: 132466799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5519,7 +5610,7 @@ GameObject:
   - component: {fileID: 137175926}
   - component: {fileID: 137175925}
   - component: {fileID: 137175924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5659,7 +5750,7 @@ GameObject:
   - component: {fileID: 139189418}
   - component: {fileID: 139189417}
   - component: {fileID: 139189416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5764,7 +5855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 142400750}
   - component: {fileID: 142400751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (84)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5814,7 +5905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147776388}
   - component: {fileID: 147776389}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (120)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5867,7 +5958,7 @@ GameObject:
   - component: {fileID: 148439456}
   - component: {fileID: 148439455}
   - component: {fileID: 148439454}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (4)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -5954,6 +6045,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 2
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &148439457
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5988,7 +6080,7 @@ GameObject:
   - component: {fileID: 151576902}
   - component: {fileID: 151576901}
   - component: {fileID: 151576900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6093,7 +6185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 153394448}
   - component: {fileID: 153394449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (74)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6145,7 +6237,7 @@ GameObject:
   - component: {fileID: 157941579}
   - component: {fileID: 157941578}
   - component: {fileID: 157941577}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6252,7 +6344,7 @@ GameObject:
   - component: {fileID: 158496401}
   - component: {fileID: 158496400}
   - component: {fileID: 158496399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6359,7 +6451,7 @@ GameObject:
   - component: {fileID: 161667929}
   - component: {fileID: 161667928}
   - component: {fileID: 161667927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6464,7 +6556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 162254435}
   - component: {fileID: 162254436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (176)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6516,7 +6608,7 @@ GameObject:
   - component: {fileID: 164972380}
   - component: {fileID: 164972379}
   - component: {fileID: 164972378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6621,7 +6713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 166271835}
   - component: {fileID: 166271836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6673,7 +6765,7 @@ GameObject:
   - component: {fileID: 172331992}
   - component: {fileID: 172331991}
   - component: {fileID: 172331990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6778,7 +6870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 179386716}
   - component: {fileID: 179386717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6830,7 +6922,7 @@ GameObject:
   - component: {fileID: 179866332}
   - component: {fileID: 179866331}
   - component: {fileID: 179866330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6937,7 +7029,7 @@ GameObject:
   - component: {fileID: 181285228}
   - component: {fileID: 181285227}
   - component: {fileID: 181285226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7044,7 +7136,7 @@ GameObject:
   - component: {fileID: 182184197}
   - component: {fileID: 182184196}
   - component: {fileID: 182184195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7151,7 +7243,7 @@ GameObject:
   - component: {fileID: 186397518}
   - component: {fileID: 186397517}
   - component: {fileID: 186397516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7429,7 +7521,7 @@ GameObject:
   - component: {fileID: 193645661}
   - component: {fileID: 193645660}
   - component: {fileID: 193645659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7536,7 +7628,7 @@ GameObject:
   - component: {fileID: 201844188}
   - component: {fileID: 201844187}
   - component: {fileID: 201844186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7643,7 +7735,7 @@ GameObject:
   - component: {fileID: 202237227}
   - component: {fileID: 202237226}
   - component: {fileID: 202237225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7750,7 +7842,7 @@ GameObject:
   - component: {fileID: 207525667}
   - component: {fileID: 207525666}
   - component: {fileID: 207525665}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7857,7 +7949,7 @@ GameObject:
   - component: {fileID: 208171939}
   - component: {fileID: 208171938}
   - component: {fileID: 208171937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7964,7 +8056,7 @@ GameObject:
   - component: {fileID: 209400109}
   - component: {fileID: 209400108}
   - component: {fileID: 209400107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8084,7 +8176,7 @@ Transform:
   m_GameObject: {fileID: 214863931}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.78999996, y: 0, z: -0.23}
+  m_LocalPosition: {x: 0.78999996, y: 0, z: 0.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8184,7 +8276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216895886}
   - component: {fileID: 216895887}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (151)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8271,7 +8363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 218821148}
   - component: {fileID: 218821149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (130)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8408,7 +8500,7 @@ GameObject:
   - component: {fileID: 224120822}
   - component: {fileID: 224120821}
   - component: {fileID: 224120820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8513,7 +8605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 226227938}
   - component: {fileID: 226227939}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8565,7 +8657,7 @@ GameObject:
   - component: {fileID: 227526001}
   - component: {fileID: 227526000}
   - component: {fileID: 227525999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8670,7 +8762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 230012926}
   - component: {fileID: 230012927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (94)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8722,7 +8814,7 @@ GameObject:
   - component: {fileID: 230117537}
   - component: {fileID: 230117536}
   - component: {fileID: 230117535}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8829,7 +8921,7 @@ GameObject:
   - component: {fileID: 230532382}
   - component: {fileID: 230532381}
   - component: {fileID: 230532380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9011,7 +9103,7 @@ GameObject:
   - component: {fileID: 236136374}
   - component: {fileID: 236136373}
   - component: {fileID: 236136372}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9118,7 +9210,7 @@ GameObject:
   - component: {fileID: 239686635}
   - component: {fileID: 239686634}
   - component: {fileID: 239686633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9261,7 +9353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246273511}
   - component: {fileID: 246273512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9313,7 +9405,7 @@ GameObject:
   - component: {fileID: 248967724}
   - component: {fileID: 248967723}
   - component: {fileID: 248967722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9420,7 +9512,7 @@ GameObject:
   - component: {fileID: 249455219}
   - component: {fileID: 249455218}
   - component: {fileID: 249455217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9527,7 +9619,7 @@ GameObject:
   - component: {fileID: 253074544}
   - component: {fileID: 253074543}
   - component: {fileID: 253074542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9634,7 +9726,7 @@ GameObject:
   - component: {fileID: 260883224}
   - component: {fileID: 260883223}
   - component: {fileID: 260883222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -9737,7 +9829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 267761471}
   - component: {fileID: 267761472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9789,7 +9881,7 @@ GameObject:
   - component: {fileID: 276289577}
   - component: {fileID: 276289576}
   - component: {fileID: 276289575}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -9894,7 +9986,7 @@ GameObject:
   - component: {fileID: 277505011}
   - component: {fileID: 277505010}
   - component: {fileID: 277505009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9999,7 +10091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 279569309}
   - component: {fileID: 279569310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (92)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10365,7 +10457,7 @@ GameObject:
   - component: {fileID: 291351291}
   - component: {fileID: 291351290}
   - component: {fileID: 291351294}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (4)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -10430,6 +10522,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &291351293
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10484,7 +10577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291637264}
   - component: {fileID: 291637265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10588,7 +10681,7 @@ GameObject:
   - component: {fileID: 297347321}
   - component: {fileID: 297347320}
   - component: {fileID: 297347319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10695,7 +10788,7 @@ GameObject:
   - component: {fileID: 300588152}
   - component: {fileID: 300588151}
   - component: {fileID: 300588150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10815,7 +10908,7 @@ Transform:
   m_GameObject: {fileID: 305341394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.78999996, y: 0, z: -2.81}
+  m_LocalPosition: {x: 0.78999996, y: 0, z: -3.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10831,7 +10924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 309005836}
   - component: {fileID: 309005837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10883,7 +10976,7 @@ GameObject:
   - component: {fileID: 309075202}
   - component: {fileID: 309075201}
   - component: {fileID: 309075200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11074,7 +11167,7 @@ GameObject:
   - component: {fileID: 316585407}
   - component: {fileID: 316585406}
   - component: {fileID: 316585405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11181,7 +11274,7 @@ GameObject:
   - component: {fileID: 318518109}
   - component: {fileID: 318518108}
   - component: {fileID: 318518107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11505,7 +11598,7 @@ GameObject:
   - component: {fileID: 328954391}
   - component: {fileID: 328954390}
   - component: {fileID: 328954389}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11748,7 +11841,7 @@ GameObject:
   - component: {fileID: 343197826}
   - component: {fileID: 343197825}
   - component: {fileID: 343197824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11857,13 +11950,13 @@ GameObject:
   - component: {fileID: 346938143}
   - component: {fileID: 346938147}
   - component: {fileID: 346938148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRanged (10)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &346938140
 Transform:
   m_ObjectHideFlags: 0
@@ -11922,6 +12015,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &346938145
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11999,7 +12093,7 @@ GameObject:
   - component: {fileID: 347241367}
   - component: {fileID: 347241366}
   - component: {fileID: 347241365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12104,7 +12198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347412551}
   - component: {fileID: 347412552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (101)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12325,7 +12419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 348973111}
   - component: {fileID: 348973112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12377,7 +12471,7 @@ GameObject:
   - component: {fileID: 349149290}
   - component: {fileID: 349149289}
   - component: {fileID: 349149288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12589,7 +12683,7 @@ GameObject:
   - component: {fileID: 350434998}
   - component: {fileID: 350434997}
   - component: {fileID: 350434996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12709,7 +12803,7 @@ Transform:
   m_GameObject: {fileID: 350614342}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0400004, y: 0, z: -0.23000067}
+  m_LocalPosition: {x: -2.0400004, y: 0, z: 0.2099989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12758,7 +12852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359443466}
   - component: {fileID: 359443467}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (76)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13065,7 +13159,7 @@ GameObject:
   - component: {fileID: 366413940}
   - component: {fileID: 366413939}
   - component: {fileID: 366413938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13172,7 +13266,7 @@ GameObject:
   - component: {fileID: 368585149}
   - component: {fileID: 368585148}
   - component: {fileID: 368585147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13277,7 +13371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373490384}
   - component: {fileID: 373490385}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (175)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13413,7 +13507,7 @@ GameObject:
   - component: {fileID: 382371183}
   - component: {fileID: 382371182}
   - component: {fileID: 382371181}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13641,7 +13735,7 @@ GameObject:
   - component: {fileID: 386210637}
   - component: {fileID: 386210636}
   - component: {fileID: 386210635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13750,13 +13844,13 @@ GameObject:
   - component: {fileID: 386818263}
   - component: {fileID: 386818267}
   - component: {fileID: 386818268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRanged (12)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &386818260
 Transform:
   m_ObjectHideFlags: 0
@@ -13815,6 +13909,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &386818265
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13890,7 +13985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 387708536}
   - component: {fileID: 387708537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13942,7 +14037,7 @@ GameObject:
   - component: {fileID: 388564619}
   - component: {fileID: 388564618}
   - component: {fileID: 388564617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14049,7 +14144,7 @@ GameObject:
   - component: {fileID: 391085300}
   - component: {fileID: 391085299}
   - component: {fileID: 391085298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14259,7 +14354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 399176657}
   - component: {fileID: 399176658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14311,7 +14406,7 @@ GameObject:
   - component: {fileID: 400336197}
   - component: {fileID: 400336196}
   - component: {fileID: 400336195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14456,6 +14551,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!54 &403063390
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14511,7 +14607,7 @@ GameObject:
   - component: {fileID: 403432816}
   - component: {fileID: 403432815}
   - component: {fileID: 403432814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14616,7 +14712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 405760747}
   - component: {fileID: 405760748}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14668,7 +14764,7 @@ GameObject:
   - component: {fileID: 409775452}
   - component: {fileID: 409775451}
   - component: {fileID: 409775450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14773,7 +14869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 410847771}
   - component: {fileID: 410847772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14823,7 +14919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 410953586}
   - component: {fileID: 410953587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14873,7 +14969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417976853}
   - component: {fileID: 417976854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (141)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14925,7 +15021,7 @@ GameObject:
   - component: {fileID: 419696345}
   - component: {fileID: 419696344}
   - component: {fileID: 419696343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15032,7 +15128,7 @@ GameObject:
   - component: {fileID: 420491946}
   - component: {fileID: 420491945}
   - component: {fileID: 420491944}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15137,7 +15233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 423994828}
   - component: {fileID: 423994829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (149)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15187,7 +15283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431031369}
   - component: {fileID: 431031370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15239,7 +15335,7 @@ GameObject:
   - component: {fileID: 431402363}
   - component: {fileID: 431402362}
   - component: {fileID: 431402361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15347,7 +15443,7 @@ GameObject:
   - component: {fileID: 437200748}
   - component: {fileID: 437200747}
   - component: {fileID: 437200746}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (10)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -15434,6 +15530,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &437200749
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15520,7 +15617,7 @@ GameObject:
   - component: {fileID: 440734954}
   - component: {fileID: 440734953}
   - component: {fileID: 440734952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15625,7 +15722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 440871189}
   - component: {fileID: 440871190}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (109)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15677,7 +15774,7 @@ GameObject:
   - component: {fileID: 441569420}
   - component: {fileID: 441569419}
   - component: {fileID: 441569418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15815,7 +15912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443961442}
   - component: {fileID: 443961443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (161)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15867,7 +15964,7 @@ GameObject:
   - component: {fileID: 445565645}
   - component: {fileID: 445565644}
   - component: {fileID: 445565643}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16058,7 +16155,7 @@ GameObject:
   - component: {fileID: 451984608}
   - component: {fileID: 451984607}
   - component: {fileID: 451984606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16165,7 +16262,7 @@ GameObject:
   - component: {fileID: 452495996}
   - component: {fileID: 452495995}
   - component: {fileID: 452495994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16270,7 +16367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 455013608}
   - component: {fileID: 455013609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (137)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16322,7 +16419,7 @@ GameObject:
   - component: {fileID: 455656326}
   - component: {fileID: 455656325}
   - component: {fileID: 455656324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -16427,7 +16524,7 @@ GameObject:
   - component: {fileID: 456302966}
   - component: {fileID: 456302965}
   - component: {fileID: 456302964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16534,7 +16631,7 @@ GameObject:
   - component: {fileID: 460488000}
   - component: {fileID: 460487999}
   - component: {fileID: 460487998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16639,7 +16736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 463910852}
   - component: {fileID: 463910853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (142)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16775,7 +16872,7 @@ GameObject:
   - component: {fileID: 469086929}
   - component: {fileID: 469086928}
   - component: {fileID: 469086927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17148,7 +17245,7 @@ GameObject:
   - component: {fileID: 471815096}
   - component: {fileID: 471815095}
   - component: {fileID: 471815094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17253,7 +17350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 472413909}
   - component: {fileID: 472413910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (168)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17305,7 +17402,7 @@ GameObject:
   - component: {fileID: 474258237}
   - component: {fileID: 474258236}
   - component: {fileID: 474258235}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17412,7 +17509,7 @@ GameObject:
   - component: {fileID: 476004922}
   - component: {fileID: 476004921}
   - component: {fileID: 476004920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17519,7 +17616,7 @@ GameObject:
   - component: {fileID: 482235938}
   - component: {fileID: 482235937}
   - component: {fileID: 482235936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17624,7 +17721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 487713341}
   - component: {fileID: 487713342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17728,7 +17825,7 @@ GameObject:
   - component: {fileID: 492556006}
   - component: {fileID: 492556005}
   - component: {fileID: 492556004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17835,7 +17932,7 @@ GameObject:
   - component: {fileID: 492587360}
   - component: {fileID: 492587359}
   - component: {fileID: 492587358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -17940,7 +18037,7 @@ GameObject:
   - component: {fileID: 497319051}
   - component: {fileID: 497319050}
   - component: {fileID: 497319049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18085,6 +18182,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!54 &501670529
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18245,7 +18343,7 @@ GameObject:
   - component: {fileID: 510685073}
   - component: {fileID: 510685072}
   - component: {fileID: 510685071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18352,7 +18450,7 @@ GameObject:
   - component: {fileID: 510754423}
   - component: {fileID: 510754422}
   - component: {fileID: 510754421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18457,7 +18555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511857215}
   - component: {fileID: 511857216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (152)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18509,7 +18607,7 @@ GameObject:
   - component: {fileID: 517914591}
   - component: {fileID: 517914590}
   - component: {fileID: 517914589}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -18612,7 +18710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 520212943}
   - component: {fileID: 520212944}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (82)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18831,7 +18929,7 @@ GameObject:
   - component: {fileID: 533076829}
   - component: {fileID: 533076828}
   - component: {fileID: 533076827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18936,7 +19034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534397569}
   - component: {fileID: 534397570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (156)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18988,7 +19086,7 @@ GameObject:
   - component: {fileID: 536826294}
   - component: {fileID: 536826293}
   - component: {fileID: 536826292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19095,7 +19193,7 @@ GameObject:
   - component: {fileID: 540924102}
   - component: {fileID: 540924101}
   - component: {fileID: 540924100}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19202,7 +19300,7 @@ GameObject:
   - component: {fileID: 541342521}
   - component: {fileID: 541342520}
   - component: {fileID: 541342519}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -19307,7 +19405,7 @@ GameObject:
   - component: {fileID: 542629766}
   - component: {fileID: 542629765}
   - component: {fileID: 542629764}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19414,7 +19512,7 @@ GameObject:
   - component: {fileID: 545842413}
   - component: {fileID: 545842412}
   - component: {fileID: 545842411}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19521,7 +19619,7 @@ GameObject:
   - component: {fileID: 548357576}
   - component: {fileID: 548357575}
   - component: {fileID: 548357574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19626,7 +19724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 551110596}
   - component: {fileID: 551110597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19676,7 +19774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 555732005}
   - component: {fileID: 555732006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (116)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19728,7 +19826,7 @@ GameObject:
   - component: {fileID: 556128095}
   - component: {fileID: 556128094}
   - component: {fileID: 556128093}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19836,7 +19934,7 @@ GameObject:
   - component: {fileID: 558180706}
   - component: {fileID: 558180705}
   - component: {fileID: 558180704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (5)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -19923,6 +20021,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 2
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &558180707
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -19957,7 +20056,7 @@ GameObject:
   - component: {fileID: 568527624}
   - component: {fileID: 568527623}
   - component: {fileID: 568527622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20064,7 +20163,7 @@ GameObject:
   - component: {fileID: 571926054}
   - component: {fileID: 571926053}
   - component: {fileID: 571926052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20169,7 +20268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572422592}
   - component: {fileID: 572422593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20221,7 +20320,7 @@ GameObject:
   - component: {fileID: 572528054}
   - component: {fileID: 572528053}
   - component: {fileID: 572528052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20328,7 +20427,7 @@ GameObject:
   - component: {fileID: 574845736}
   - component: {fileID: 574845735}
   - component: {fileID: 574845734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20719,7 +20818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582176327}
   - component: {fileID: 582176328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (132)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20771,7 +20870,7 @@ GameObject:
   - component: {fileID: 590385600}
   - component: {fileID: 590385599}
   - component: {fileID: 590385598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20878,7 +20977,7 @@ GameObject:
   - component: {fileID: 599006342}
   - component: {fileID: 599006341}
   - component: {fileID: 599006340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20985,7 +21084,7 @@ GameObject:
   - component: {fileID: 600278917}
   - component: {fileID: 600278916}
   - component: {fileID: 600278915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21092,7 +21191,7 @@ GameObject:
   - component: {fileID: 610939282}
   - component: {fileID: 610939281}
   - component: {fileID: 610939280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21199,7 +21298,7 @@ GameObject:
   - component: {fileID: 611709317}
   - component: {fileID: 611709316}
   - component: {fileID: 611709315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21304,7 +21403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 615711550}
   - component: {fileID: 615711551}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (103)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21356,7 +21455,7 @@ GameObject:
   - component: {fileID: 615862168}
   - component: {fileID: 615862167}
   - component: {fileID: 615862166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21463,7 +21562,7 @@ GameObject:
   - component: {fileID: 617911618}
   - component: {fileID: 617911617}
   - component: {fileID: 617911616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21738,7 +21837,7 @@ GameObject:
   - component: {fileID: 621916854}
   - component: {fileID: 621916853}
   - component: {fileID: 621916852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21845,7 +21944,7 @@ GameObject:
   - component: {fileID: 623820598}
   - component: {fileID: 623820597}
   - component: {fileID: 623820596}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21950,7 +22049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 624445037}
   - component: {fileID: 624445038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22002,7 +22101,7 @@ GameObject:
   - component: {fileID: 624746474}
   - component: {fileID: 624746473}
   - component: {fileID: 624746472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22109,7 +22208,7 @@ GameObject:
   - component: {fileID: 625137234}
   - component: {fileID: 625137233}
   - component: {fileID: 625137232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22216,7 +22315,7 @@ GameObject:
   - component: {fileID: 627290244}
   - component: {fileID: 627290243}
   - component: {fileID: 627290242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22321,7 +22420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633956169}
   - component: {fileID: 633956170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22371,7 +22470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636605038}
   - component: {fileID: 636605039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (91)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22423,7 +22522,7 @@ GameObject:
   - component: {fileID: 643132457}
   - component: {fileID: 643132456}
   - component: {fileID: 643132455}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22530,7 +22629,7 @@ GameObject:
   - component: {fileID: 643678689}
   - component: {fileID: 643678688}
   - component: {fileID: 643678687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22635,7 +22734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 646063579}
   - component: {fileID: 646063580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (134)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22687,7 +22786,7 @@ GameObject:
   - component: {fileID: 652659970}
   - component: {fileID: 652659969}
   - component: {fileID: 652659968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22794,7 +22893,7 @@ GameObject:
   - component: {fileID: 658882904}
   - component: {fileID: 658882903}
   - component: {fileID: 658882902}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22899,7 +22998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 663603261}
   - component: {fileID: 663603262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (113)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22951,7 +23050,7 @@ GameObject:
   - component: {fileID: 666103051}
   - component: {fileID: 666103050}
   - component: {fileID: 666103049}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -23056,7 +23155,7 @@ GameObject:
   - component: {fileID: 667612293}
   - component: {fileID: 667612292}
   - component: {fileID: 667612291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23163,7 +23262,7 @@ GameObject:
   - component: {fileID: 671040970}
   - component: {fileID: 671040969}
   - component: {fileID: 671040968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23270,7 +23369,7 @@ GameObject:
   - component: {fileID: 675089899}
   - component: {fileID: 675089898}
   - component: {fileID: 675089897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23377,7 +23476,7 @@ GameObject:
   - component: {fileID: 675423070}
   - component: {fileID: 675423069}
   - component: {fileID: 675423068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23482,7 +23581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 676328873}
   - component: {fileID: 676328874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (144)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23689,6 +23788,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!54 &686253887
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23742,7 +23842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 692046171}
   - component: {fileID: 692046172}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24062,7 +24162,7 @@ GameObject:
   - component: {fileID: 703028560}
   - component: {fileID: 703028559}
   - component: {fileID: 703028558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24263,7 +24363,7 @@ GameObject:
   - component: {fileID: 718276605}
   - component: {fileID: 718276604}
   - component: {fileID: 718276603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24370,7 +24470,7 @@ GameObject:
   - component: {fileID: 723193651}
   - component: {fileID: 723193650}
   - component: {fileID: 723193649}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24475,7 +24575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 724850765}
   - component: {fileID: 724850766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (125)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24527,7 +24627,7 @@ GameObject:
   - component: {fileID: 725391067}
   - component: {fileID: 725391066}
   - component: {fileID: 725391065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24634,7 +24734,7 @@ GameObject:
   - component: {fileID: 730157772}
   - component: {fileID: 730157771}
   - component: {fileID: 730157770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24774,7 +24874,7 @@ GameObject:
   - component: {fileID: 734409046}
   - component: {fileID: 734409045}
   - component: {fileID: 734409044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24881,7 +24981,7 @@ GameObject:
   - component: {fileID: 735258228}
   - component: {fileID: 735258227}
   - component: {fileID: 735258226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24986,7 +25086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 741119296}
   - component: {fileID: 741119297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (90)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25038,7 +25138,7 @@ GameObject:
   - component: {fileID: 742130401}
   - component: {fileID: 742130400}
   - component: {fileID: 742130399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25143,7 +25243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 742593563}
   - component: {fileID: 742593564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (124)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25195,7 +25295,7 @@ GameObject:
   - component: {fileID: 744231475}
   - component: {fileID: 744231474}
   - component: {fileID: 744231473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25302,7 +25402,7 @@ GameObject:
   - component: {fileID: 751522009}
   - component: {fileID: 751522008}
   - component: {fileID: 751522007}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -25491,7 +25591,7 @@ GameObject:
   - component: {fileID: 761094602}
   - component: {fileID: 761094601}
   - component: {fileID: 761094600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25598,7 +25698,7 @@ GameObject:
   - component: {fileID: 764075314}
   - component: {fileID: 764075313}
   - component: {fileID: 764075312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25789,7 +25889,7 @@ GameObject:
   - component: {fileID: 772195217}
   - component: {fileID: 772195216}
   - component: {fileID: 772195215}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -25894,7 +25994,7 @@ GameObject:
   - component: {fileID: 772776109}
   - component: {fileID: 772776108}
   - component: {fileID: 772776107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25999,7 +26099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 773066184}
   - component: {fileID: 773066185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26051,7 +26151,7 @@ GameObject:
   - component: {fileID: 775088047}
   - component: {fileID: 775088046}
   - component: {fileID: 775088045}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26158,7 +26258,7 @@ GameObject:
   - component: {fileID: 775515411}
   - component: {fileID: 775515410}
   - component: {fileID: 775515409}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26266,7 +26366,7 @@ GameObject:
   - component: {fileID: 775927646}
   - component: {fileID: 775927645}
   - component: {fileID: 775927644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (7)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -26353,6 +26453,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 2
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &775927647
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -26385,7 +26486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 777687651}
   - component: {fileID: 777687652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (140)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26437,7 +26538,7 @@ GameObject:
   - component: {fileID: 779348103}
   - component: {fileID: 779348102}
   - component: {fileID: 779348101}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26544,7 +26645,7 @@ GameObject:
   - component: {fileID: 787223833}
   - component: {fileID: 787223832}
   - component: {fileID: 787223831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26651,7 +26752,7 @@ GameObject:
   - component: {fileID: 790294912}
   - component: {fileID: 790294911}
   - component: {fileID: 790294910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27032,7 +27133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 799682831}
   - component: {fileID: 799682832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (147)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27181,7 +27282,7 @@ Transform:
   m_GameObject: {fileID: 800677277}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6179999, y: 0, z: 1.24}
+  m_LocalPosition: {x: -0.6179999, y: 0, z: 2.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27199,7 +27300,7 @@ GameObject:
   - component: {fileID: 803623221}
   - component: {fileID: 803623220}
   - component: {fileID: 803623219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27306,7 +27407,7 @@ GameObject:
   - component: {fileID: 813382839}
   - component: {fileID: 813382838}
   - component: {fileID: 813382837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27584,7 +27685,7 @@ GameObject:
   - component: {fileID: 829841979}
   - component: {fileID: 829841978}
   - component: {fileID: 829841977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27679,6 +27780,32 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829841975}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &833236199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7005524850866841838, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
+  m_PrefabInstance: {fileID: 44888527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &833236201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833236199}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.44, y: 1, z: 2.49}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &836112983
 GameObject:
   m_ObjectHideFlags: 0
@@ -27691,7 +27818,7 @@ GameObject:
   - component: {fileID: 836112987}
   - component: {fileID: 836112986}
   - component: {fileID: 836112985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27798,7 +27925,7 @@ GameObject:
   - component: {fileID: 837919065}
   - component: {fileID: 837919064}
   - component: {fileID: 837919063}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27905,7 +28032,7 @@ GameObject:
   - component: {fileID: 843110575}
   - component: {fileID: 843110574}
   - component: {fileID: 843110573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28012,7 +28139,7 @@ GameObject:
   - component: {fileID: 846175811}
   - component: {fileID: 846175810}
   - component: {fileID: 846175809}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28119,7 +28246,7 @@ GameObject:
   - component: {fileID: 846843095}
   - component: {fileID: 846843094}
   - component: {fileID: 846843093}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28298,7 +28425,7 @@ GameObject:
   - component: {fileID: 850205249}
   - component: {fileID: 850205248}
   - component: {fileID: 850205247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28406,7 +28533,7 @@ GameObject:
   - component: {fileID: 852704651}
   - component: {fileID: 852704650}
   - component: {fileID: 852704649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (5)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -28493,6 +28620,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 2
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &852704652
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -28661,7 +28789,7 @@ GameObject:
   - component: {fileID: 856028230}
   - component: {fileID: 856028229}
   - component: {fileID: 856028228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28766,7 +28894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 858012681}
   - component: {fileID: 858012682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28902,7 +29030,7 @@ GameObject:
   - component: {fileID: 867504871}
   - component: {fileID: 867504870}
   - component: {fileID: 867504869}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29009,7 +29137,7 @@ GameObject:
   - component: {fileID: 867624620}
   - component: {fileID: 867624619}
   - component: {fileID: 867624618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29114,7 +29242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 869780997}
   - component: {fileID: 869780998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29179,7 +29307,7 @@ Transform:
   m_GameObject: {fileID: 875110714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.78999996, y: 0, z: -1.4800009}
+  m_LocalPosition: {x: 0.78999996, y: 0, z: -1.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29197,7 +29325,7 @@ GameObject:
   - component: {fileID: 877783131}
   - component: {fileID: 877783130}
   - component: {fileID: 877783129}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29304,7 +29432,7 @@ GameObject:
   - component: {fileID: 887781274}
   - component: {fileID: 887781273}
   - component: {fileID: 887781272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29450,7 +29578,7 @@ GameObject:
   - component: {fileID: 892331293}
   - component: {fileID: 892331292}
   - component: {fileID: 892331291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29555,7 +29683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 898940365}
   - component: {fileID: 898940366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29704,7 +29832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 901264709}
   - component: {fileID: 901264710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (72)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29756,7 +29884,7 @@ GameObject:
   - component: {fileID: 902074652}
   - component: {fileID: 902074651}
   - component: {fileID: 902074650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29863,7 +29991,7 @@ GameObject:
   - component: {fileID: 904232977}
   - component: {fileID: 904232976}
   - component: {fileID: 904232975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29970,7 +30098,7 @@ GameObject:
   - component: {fileID: 907497238}
   - component: {fileID: 907497237}
   - component: {fileID: 907497236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30077,7 +30205,7 @@ GameObject:
   - component: {fileID: 908018205}
   - component: {fileID: 908018204}
   - component: {fileID: 908018203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30182,7 +30310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 908555503}
   - component: {fileID: 908555504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (85)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30234,7 +30362,7 @@ GameObject:
   - component: {fileID: 912221801}
   - component: {fileID: 912221800}
   - component: {fileID: 912221799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30588,7 +30716,7 @@ GameObject:
   - component: {fileID: 916983576}
   - component: {fileID: 916983575}
   - component: {fileID: 916983574}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (7)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -30675,6 +30803,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 2
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &916983577
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30882,13 +31011,13 @@ GameObject:
   - component: {fileID: 918832189}
   - component: {fileID: 918832188}
   - component: {fileID: 918832187}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRanged (14)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &918832186
 Transform:
   m_ObjectHideFlags: 0
@@ -30990,6 +31119,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &918832191
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -31024,7 +31154,7 @@ GameObject:
   - component: {fileID: 921801134}
   - component: {fileID: 921801133}
   - component: {fileID: 921801132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31129,7 +31259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 927045088}
   - component: {fileID: 927045089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (100)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31263,7 +31393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 934302693}
   - component: {fileID: 934302694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (133)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31313,7 +31443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 935364620}
   - component: {fileID: 935364621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31570,7 +31700,7 @@ GameObject:
   - component: {fileID: 945175422}
   - component: {fileID: 945175421}
   - component: {fileID: 945175420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31755,6 +31885,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.96, y: 2.36, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!208 &947948104
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -31783,7 +31914,7 @@ GameObject:
   - component: {fileID: 951600045}
   - component: {fileID: 951600044}
   - component: {fileID: 951600043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32008,7 +32139,7 @@ GameObject:
   - component: {fileID: 957629824}
   - component: {fileID: 957629823}
   - component: {fileID: 957629822}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (9)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -32095,6 +32226,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &957629825
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -32483,7 +32615,7 @@ GameObject:
   - component: {fileID: 963344384}
   - component: {fileID: 963344383}
   - component: {fileID: 963344382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32590,7 +32722,7 @@ GameObject:
   - component: {fileID: 963709898}
   - component: {fileID: 963709897}
   - component: {fileID: 963709896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32697,7 +32829,7 @@ GameObject:
   - component: {fileID: 963828295}
   - component: {fileID: 963828294}
   - component: {fileID: 963828293}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -32802,7 +32934,7 @@ GameObject:
   - component: {fileID: 964562433}
   - component: {fileID: 964562432}
   - component: {fileID: 964562431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32909,7 +33041,7 @@ GameObject:
   - component: {fileID: 968356752}
   - component: {fileID: 968356751}
   - component: {fileID: 968356750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33016,7 +33148,7 @@ GameObject:
   - component: {fileID: 969003300}
   - component: {fileID: 969003299}
   - component: {fileID: 969003298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33123,7 +33255,7 @@ GameObject:
   - component: {fileID: 969153718}
   - component: {fileID: 969153717}
   - component: {fileID: 969153716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33230,7 +33362,7 @@ GameObject:
   - component: {fileID: 972090943}
   - component: {fileID: 972090942}
   - component: {fileID: 972090941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33337,7 +33469,7 @@ GameObject:
   - component: {fileID: 976552235}
   - component: {fileID: 976552234}
   - component: {fileID: 976552233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33457,7 +33589,7 @@ Transform:
   m_GameObject: {fileID: 978382068}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.61800003, y: 0, z: -2.81}
+  m_LocalPosition: {x: -0.61800003, y: 0, z: -3.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33473,7 +33605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 982101681}
   - component: {fileID: 982101682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (86)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33525,7 +33657,7 @@ GameObject:
   - component: {fileID: 982651122}
   - component: {fileID: 982651121}
   - component: {fileID: 982651120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33630,7 +33762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 984312271}
   - component: {fileID: 984312272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (119)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33680,7 +33812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 985719009}
   - component: {fileID: 985719010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (177)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33730,7 +33862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 986693816}
   - component: {fileID: 986693817}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33782,7 +33914,7 @@ GameObject:
   - component: {fileID: 988994205}
   - component: {fileID: 988994204}
   - component: {fileID: 988994203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33889,7 +34021,7 @@ GameObject:
   - component: {fileID: 991351868}
   - component: {fileID: 991351867}
   - component: {fileID: 991351866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34095,6 +34227,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.96, y: 2.36, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!208 &996698039
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -34121,7 +34254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 997391851}
   - component: {fileID: 997391852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34255,7 +34388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002180995}
   - component: {fileID: 1002180996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (95)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34305,7 +34438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002624867}
   - component: {fileID: 1002624868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (145)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34357,7 +34490,7 @@ GameObject:
   - component: {fileID: 1003192792}
   - component: {fileID: 1003192791}
   - component: {fileID: 1003192790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34464,7 +34597,7 @@ GameObject:
   - component: {fileID: 1015466490}
   - component: {fileID: 1015466489}
   - component: {fileID: 1015466488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34571,7 +34704,7 @@ GameObject:
   - component: {fileID: 1017178883}
   - component: {fileID: 1017178882}
   - component: {fileID: 1017178881}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34679,7 +34812,7 @@ GameObject:
   - component: {fileID: 1017646116}
   - component: {fileID: 1017646115}
   - component: {fileID: 1017646114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (6)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -34766,6 +34899,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 2
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1017646117
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -34800,7 +34934,7 @@ GameObject:
   - component: {fileID: 1019367604}
   - component: {fileID: 1019367603}
   - component: {fileID: 1019367602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34905,7 +35039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1021797128}
   - component: {fileID: 1021797129}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (107)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34955,7 +35089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022189133}
   - component: {fileID: 1022189134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35038,7 +35172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1026386303}
   - component: {fileID: 1026386304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35090,7 +35224,7 @@ GameObject:
   - component: {fileID: 1029110908}
   - component: {fileID: 1029110907}
   - component: {fileID: 1029110906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35195,7 +35329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1029693644}
   - component: {fileID: 1029693645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35247,7 +35381,7 @@ GameObject:
   - component: {fileID: 1030030234}
   - component: {fileID: 1030030233}
   - component: {fileID: 1030030232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35354,7 +35488,7 @@ GameObject:
   - component: {fileID: 1035800863}
   - component: {fileID: 1035800862}
   - component: {fileID: 1035800861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35492,7 +35626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1038730263}
   - component: {fileID: 1038730264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (148)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35544,7 +35678,7 @@ GameObject:
   - component: {fileID: 1038776240}
   - component: {fileID: 1038776239}
   - component: {fileID: 1038776238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35651,7 +35785,7 @@ GameObject:
   - component: {fileID: 1044769266}
   - component: {fileID: 1044769265}
   - component: {fileID: 1044769264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35758,7 +35892,7 @@ GameObject:
   - component: {fileID: 1045062102}
   - component: {fileID: 1045062101}
   - component: {fileID: 1045062100}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35865,7 +35999,7 @@ GameObject:
   - component: {fileID: 1045392174}
   - component: {fileID: 1045392173}
   - component: {fileID: 1045392172}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36056,7 +36190,7 @@ GameObject:
   - component: {fileID: 1051016657}
   - component: {fileID: 1051016656}
   - component: {fileID: 1051016655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36161,7 +36295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052062994}
   - component: {fileID: 1052062995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (153)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36213,7 +36347,7 @@ GameObject:
   - component: {fileID: 1056588687}
   - component: {fileID: 1056588686}
   - component: {fileID: 1056588685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36320,7 +36454,7 @@ GameObject:
   - component: {fileID: 1058012250}
   - component: {fileID: 1058012249}
   - component: {fileID: 1058012248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36425,7 +36559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1060875109}
   - component: {fileID: 1060875110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (170)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36646,7 +36780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1061154255}
   - component: {fileID: 1061154256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (121)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36698,7 +36832,7 @@ GameObject:
   - component: {fileID: 1062552922}
   - component: {fileID: 1062552921}
   - component: {fileID: 1062552920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36805,7 +36939,7 @@ GameObject:
   - component: {fileID: 1062692051}
   - component: {fileID: 1062692050}
   - component: {fileID: 1062692049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36912,7 +37046,7 @@ GameObject:
   - component: {fileID: 1066848013}
   - component: {fileID: 1066848012}
   - component: {fileID: 1066848011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37020,7 +37154,7 @@ GameObject:
   - component: {fileID: 1072258138}
   - component: {fileID: 1072258137}
   - component: {fileID: 1072258136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (7)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -37107,6 +37241,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1072258139
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -37321,6 +37456,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.96, y: 2.36, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!208 &1080485482
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -37349,7 +37485,7 @@ GameObject:
   - component: {fileID: 1085993477}
   - component: {fileID: 1085993476}
   - component: {fileID: 1085993475}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37645,7 +37781,7 @@ GameObject:
   - component: {fileID: 1093447864}
   - component: {fileID: 1093447863}
   - component: {fileID: 1093447862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37752,7 +37888,7 @@ GameObject:
   - component: {fileID: 1095039429}
   - component: {fileID: 1095039428}
   - component: {fileID: 1095039427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37943,7 +38079,7 @@ GameObject:
   - component: {fileID: 1099098603}
   - component: {fileID: 1099098602}
   - component: {fileID: 1099098601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38050,7 +38186,7 @@ GameObject:
   - component: {fileID: 1100707781}
   - component: {fileID: 1100707780}
   - component: {fileID: 1100707779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38157,7 +38293,7 @@ GameObject:
   - component: {fileID: 1103890111}
   - component: {fileID: 1103890110}
   - component: {fileID: 1103890109}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38367,7 +38503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1106177462}
   - component: {fileID: 1106177463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38417,7 +38553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1113423409}
   - component: {fileID: 1113423410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (105)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38469,7 +38605,7 @@ GameObject:
   - component: {fileID: 1115859990}
   - component: {fileID: 1115859989}
   - component: {fileID: 1115859988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38576,7 +38712,7 @@ GameObject:
   - component: {fileID: 1122797069}
   - component: {fileID: 1122797068}
   - component: {fileID: 1122797067}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38767,7 +38903,7 @@ GameObject:
   - component: {fileID: 1127469822}
   - component: {fileID: 1127469821}
   - component: {fileID: 1127469820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38874,7 +39010,7 @@ GameObject:
   - component: {fileID: 1129108583}
   - component: {fileID: 1129108582}
   - component: {fileID: 1129108581}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -38977,7 +39113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1129636598}
   - component: {fileID: 1129636599}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (80)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39042,7 +39178,7 @@ Transform:
   m_GameObject: {fileID: 1130150914}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.61800003, y: 0, z: -1.4799999}
+  m_LocalPosition: {x: -0.61800003, y: 0, z: -2.2799993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39058,7 +39194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1130575639}
   - component: {fileID: 1130575640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39110,7 +39246,7 @@ GameObject:
   - component: {fileID: 1131631401}
   - component: {fileID: 1131631400}
   - component: {fileID: 1131631399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39215,7 +39351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1132559589}
   - component: {fileID: 1132559590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39435,7 +39571,7 @@ GameObject:
   - component: {fileID: 1141832687}
   - component: {fileID: 1141832686}
   - component: {fileID: 1141832685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39542,7 +39678,7 @@ GameObject:
   - component: {fileID: 1144014343}
   - component: {fileID: 1144014342}
   - component: {fileID: 1144014341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39820,7 +39956,7 @@ GameObject:
   - component: {fileID: 1158039527}
   - component: {fileID: 1158039526}
   - component: {fileID: 1158039525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39927,7 +40063,7 @@ GameObject:
   - component: {fileID: 1158418528}
   - component: {fileID: 1158418527}
   - component: {fileID: 1158418526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40034,7 +40170,7 @@ GameObject:
   - component: {fileID: 1159401851}
   - component: {fileID: 1159401850}
   - component: {fileID: 1159401849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40141,7 +40277,7 @@ GameObject:
   - component: {fileID: 1160571307}
   - component: {fileID: 1160571306}
   - component: {fileID: 1160571305}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40246,7 +40382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1161267162}
   - component: {fileID: 1161267163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40298,7 +40434,7 @@ GameObject:
   - component: {fileID: 1161870694}
   - component: {fileID: 1161870693}
   - component: {fileID: 1161870692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40407,13 +40543,13 @@ GameObject:
   - component: {fileID: 1163818638}
   - component: {fileID: 1163818637}
   - component: {fileID: 1163818636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRanged (18)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1163818635
 Transform:
   m_ObjectHideFlags: 0
@@ -40515,6 +40651,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1163818640
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -40624,7 +40761,7 @@ GameObject:
   - component: {fileID: 1168673137}
   - component: {fileID: 1168673136}
   - component: {fileID: 1168673135}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40731,7 +40868,7 @@ GameObject:
   - component: {fileID: 1171108831}
   - component: {fileID: 1171108830}
   - component: {fileID: 1171108829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40838,7 +40975,7 @@ GameObject:
   - component: {fileID: 1172067431}
   - component: {fileID: 1172067430}
   - component: {fileID: 1172067429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40945,7 +41082,7 @@ GameObject:
   - component: {fileID: 1172792315}
   - component: {fileID: 1172792314}
   - component: {fileID: 1172792313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41052,7 +41189,7 @@ GameObject:
   - component: {fileID: 1195620562}
   - component: {fileID: 1195620561}
   - component: {fileID: 1195620560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41234,7 +41371,7 @@ GameObject:
   - component: {fileID: 1208551359}
   - component: {fileID: 1208551358}
   - component: {fileID: 1208551357}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41462,7 +41599,7 @@ GameObject:
   - component: {fileID: 1214197453}
   - component: {fileID: 1214197452}
   - component: {fileID: 1214197451}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41567,7 +41704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1216569081}
   - component: {fileID: 1216569082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41619,7 +41756,7 @@ GameObject:
   - component: {fileID: 1218200142}
   - component: {fileID: 1218200141}
   - component: {fileID: 1218200140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41726,7 +41863,7 @@ GameObject:
   - component: {fileID: 1223417002}
   - component: {fileID: 1223417001}
   - component: {fileID: 1223417000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41831,7 +41968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1224220895}
   - component: {fileID: 1224220896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (126)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41881,7 +42018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1224409744}
   - component: {fileID: 1224409745}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (79)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42237,7 +42374,7 @@ GameObject:
   - component: {fileID: 1236331168}
   - component: {fileID: 1236331167}
   - component: {fileID: 1236331166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42342,7 +42479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1236424796}
   - component: {fileID: 1236424797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (122)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42394,7 +42531,7 @@ GameObject:
   - component: {fileID: 1237255942}
   - component: {fileID: 1237255941}
   - component: {fileID: 1237255940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42501,7 +42638,7 @@ GameObject:
   - component: {fileID: 1241960987}
   - component: {fileID: 1241960986}
   - component: {fileID: 1241960985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42608,7 +42745,7 @@ GameObject:
   - component: {fileID: 1246837463}
   - component: {fileID: 1246837462}
   - component: {fileID: 1246837461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42715,7 +42852,7 @@ GameObject:
   - component: {fileID: 1249176894}
   - component: {fileID: 1249176893}
   - component: {fileID: 1249176892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42822,7 +42959,7 @@ GameObject:
   - component: {fileID: 1250665804}
   - component: {fileID: 1250665803}
   - component: {fileID: 1250665802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42929,7 +43066,7 @@ GameObject:
   - component: {fileID: 1250694786}
   - component: {fileID: 1250694785}
   - component: {fileID: 1250694784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43036,7 +43173,7 @@ GameObject:
   - component: {fileID: 1252212690}
   - component: {fileID: 1252212689}
   - component: {fileID: 1252212688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -43178,7 +43315,7 @@ GameObject:
   - component: {fileID: 1259657907}
   - component: {fileID: 1259657906}
   - component: {fileID: 1259657905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43367,7 +43504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269918441}
   - component: {fileID: 1269918442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43417,7 +43554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1274257193}
   - component: {fileID: 1274257194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (146)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43470,7 +43607,7 @@ GameObject:
   - component: {fileID: 1292435296}
   - component: {fileID: 1292435295}
   - component: {fileID: 1292435294}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (12)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -43557,6 +43694,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1292435297
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -43592,7 +43730,7 @@ GameObject:
   - component: {fileID: 1293821659}
   - component: {fileID: 1293821658}
   - component: {fileID: 1293821657}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (11)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -43679,6 +43817,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1293821660
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -43711,7 +43850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1296518063}
   - component: {fileID: 1296518064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (110)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43761,7 +43900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1298368255}
   - component: {fileID: 1298368256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (99)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43851,6 +43990,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!54 &1302247484
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43906,7 +44046,7 @@ GameObject:
   - component: {fileID: 1313213640}
   - component: {fileID: 1313213639}
   - component: {fileID: 1313213638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44097,7 +44237,7 @@ GameObject:
   - component: {fileID: 1317730404}
   - component: {fileID: 1317730403}
   - component: {fileID: 1317730402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44204,7 +44344,7 @@ GameObject:
   - component: {fileID: 1320066113}
   - component: {fileID: 1320066112}
   - component: {fileID: 1320066111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44311,7 +44451,7 @@ GameObject:
   - component: {fileID: 1324507188}
   - component: {fileID: 1324507187}
   - component: {fileID: 1324507186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44418,7 +44558,7 @@ GameObject:
   - component: {fileID: 1325177039}
   - component: {fileID: 1325177038}
   - component: {fileID: 1325177037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44525,7 +44665,7 @@ GameObject:
   - component: {fileID: 1327576228}
   - component: {fileID: 1327576227}
   - component: {fileID: 1327576226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44632,7 +44772,7 @@ GameObject:
   - component: {fileID: 1329277631}
   - component: {fileID: 1329277630}
   - component: {fileID: 1329277629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44739,7 +44879,7 @@ GameObject:
   - component: {fileID: 1332524086}
   - component: {fileID: 1332524085}
   - component: {fileID: 1332524084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -44842,7 +44982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335062487}
   - component: {fileID: 1335062488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (87)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44894,7 +45034,7 @@ GameObject:
   - component: {fileID: 1336015067}
   - component: {fileID: 1336015066}
   - component: {fileID: 1336015065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45255,7 +45395,7 @@ GameObject:
   - component: {fileID: 1352658030}
   - component: {fileID: 1352658029}
   - component: {fileID: 1352658028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45360,7 +45500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1354549928}
   - component: {fileID: 1354549929}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (104)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45412,7 +45552,7 @@ GameObject:
   - component: {fileID: 1354952527}
   - component: {fileID: 1354952526}
   - component: {fileID: 1354952525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45517,7 +45657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1357846827}
   - component: {fileID: 1357846828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45600,7 +45740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374402788}
   - component: {fileID: 1374402789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45652,7 +45792,7 @@ GameObject:
   - component: {fileID: 1374514429}
   - component: {fileID: 1374514428}
   - component: {fileID: 1374514427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45757,7 +45897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1378519540}
   - component: {fileID: 1378519541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (93)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45809,7 +45949,7 @@ GameObject:
   - component: {fileID: 1378702767}
   - component: {fileID: 1378702766}
   - component: {fileID: 1378702765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45918,13 +46058,13 @@ GameObject:
   - component: {fileID: 1383877111}
   - component: {fileID: 1383877110}
   - component: {fileID: 1383877109}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRanged (17)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1383877108
 Transform:
   m_ObjectHideFlags: 0
@@ -46026,6 +46166,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1383877113
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -46060,7 +46201,7 @@ GameObject:
   - component: {fileID: 1387799523}
   - component: {fileID: 1387799522}
   - component: {fileID: 1387799521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46288,7 +46429,7 @@ GameObject:
   - component: {fileID: 1398075948}
   - component: {fileID: 1398075947}
   - component: {fileID: 1398075946}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46395,7 +46536,7 @@ GameObject:
   - component: {fileID: 1400075267}
   - component: {fileID: 1400075266}
   - component: {fileID: 1400075265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46502,7 +46643,7 @@ GameObject:
   - component: {fileID: 1400938445}
   - component: {fileID: 1400938444}
   - component: {fileID: 1400938443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46609,7 +46750,7 @@ GameObject:
   - component: {fileID: 1401552261}
   - component: {fileID: 1401552260}
   - component: {fileID: 1401552259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46754,6 +46895,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!54 &1403769867
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -46806,7 +46948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1404913464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46845,7 +46987,7 @@ GameObject:
   - component: {fileID: 1410314625}
   - component: {fileID: 1410314624}
   - component: {fileID: 1410314623}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47086,7 +47228,7 @@ GameObject:
   - component: {fileID: 1425537594}
   - component: {fileID: 1425537593}
   - component: {fileID: 1425537592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47193,7 +47335,7 @@ GameObject:
   - component: {fileID: 1428070732}
   - component: {fileID: 1428070731}
   - component: {fileID: 1428070730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47298,7 +47440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1428647609}
   - component: {fileID: 1428647610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (164)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47348,7 +47490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433733645}
   - component: {fileID: 1433733646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47446,13 +47588,13 @@ GameObject:
   - component: {fileID: 1435175978}
   - component: {fileID: 1435175982}
   - component: {fileID: 1435175983}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRanged (11)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1435175975
 Transform:
   m_ObjectHideFlags: 0
@@ -47511,6 +47653,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1435175980
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -47601,7 +47744,7 @@ Transform:
   m_GameObject: {fileID: 1435520222}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0400004, y: 0, z: 1.24}
+  m_LocalPosition: {x: -2.0400004, y: 0, z: 1.7500002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47620,7 +47763,7 @@ GameObject:
   - component: {fileID: 1438308491}
   - component: {fileID: 1438308490}
   - component: {fileID: 1438308489}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (5)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -47707,6 +47850,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1438308492
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -47739,7 +47883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1444855983}
   - component: {fileID: 1444855984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (150)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47791,7 +47935,7 @@ GameObject:
   - component: {fileID: 1445713969}
   - component: {fileID: 1445713968}
   - component: {fileID: 1445713967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47895,7 +48039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451751809}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47934,7 +48078,7 @@ GameObject:
   - component: {fileID: 1452370030}
   - component: {fileID: 1452370029}
   - component: {fileID: 1452370028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48041,7 +48185,7 @@ GameObject:
   - component: {fileID: 1454193085}
   - component: {fileID: 1454193084}
   - component: {fileID: 1454193083}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48148,7 +48292,7 @@ GameObject:
   - component: {fileID: 1455703181}
   - component: {fileID: 1455703180}
   - component: {fileID: 1455703179}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -48251,7 +48395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1456204435}
   - component: {fileID: 1456204436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48301,7 +48445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1456378357}
   - component: {fileID: 1456378358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48353,7 +48497,7 @@ GameObject:
   - component: {fileID: 1456937952}
   - component: {fileID: 1456937951}
   - component: {fileID: 1456937950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48460,7 +48604,7 @@ GameObject:
   - component: {fileID: 1457424332}
   - component: {fileID: 1457424331}
   - component: {fileID: 1457424330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48568,7 +48712,7 @@ GameObject:
   - component: {fileID: 1459590347}
   - component: {fileID: 1459590346}
   - component: {fileID: 1459590345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (6)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -48655,6 +48799,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1459590348
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -48689,7 +48834,7 @@ GameObject:
   - component: {fileID: 1466125325}
   - component: {fileID: 1466125324}
   - component: {fileID: 1466125323}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -48792,7 +48937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1466440750}
   - component: {fileID: 1466440751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48844,7 +48989,7 @@ GameObject:
   - component: {fileID: 1474211534}
   - component: {fileID: 1474211533}
   - component: {fileID: 1474211532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48951,7 +49096,7 @@ GameObject:
   - component: {fileID: 1474801076}
   - component: {fileID: 1474801075}
   - component: {fileID: 1474801074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49058,7 +49203,7 @@ GameObject:
   - component: {fileID: 1476104241}
   - component: {fileID: 1476104240}
   - component: {fileID: 1476104239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49264,6 +49409,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.96, y: 2.36, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!208 &1477839573
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -49290,7 +49436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479443793}
   - component: {fileID: 1479443794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (73)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49410,7 +49556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481505842}
   - component: {fileID: 1481505843}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (123)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49495,7 +49641,7 @@ GameObject:
   - component: {fileID: 1485133567}
   - component: {fileID: 1485133566}
   - component: {fileID: 1485133565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49600,7 +49746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486419877}
   - component: {fileID: 1486419878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (138)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49650,7 +49796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1487131458}
   - component: {fileID: 1487131459}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49700,7 +49846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1487292280}
   - component: {fileID: 1487292281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (139)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49750,7 +49896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488445919}
   - component: {fileID: 1488445920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (169)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49802,7 +49948,7 @@ GameObject:
   - component: {fileID: 1489592042}
   - component: {fileID: 1489592041}
   - component: {fileID: 1489592040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49909,7 +50055,7 @@ GameObject:
   - component: {fileID: 1496044500}
   - component: {fileID: 1496044499}
   - component: {fileID: 1496044498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50016,7 +50162,7 @@ GameObject:
   - component: {fileID: 1498010224}
   - component: {fileID: 1498010223}
   - component: {fileID: 1498010222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -50121,7 +50267,7 @@ GameObject:
   - component: {fileID: 1499313981}
   - component: {fileID: 1499313980}
   - component: {fileID: 1499313979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50228,7 +50374,7 @@ GameObject:
   - component: {fileID: 1499335618}
   - component: {fileID: 1499335617}
   - component: {fileID: 1499335616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50333,7 +50479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499623103}
   - component: {fileID: 1499623104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50469,7 +50615,7 @@ GameObject:
   - component: {fileID: 1501187351}
   - component: {fileID: 1501187350}
   - component: {fileID: 1501187349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50573,7 +50719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509493198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50627,7 +50773,7 @@ GameObject:
   - component: {fileID: 1513551126}
   - component: {fileID: 1513551125}
   - component: {fileID: 1513551124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50734,7 +50880,7 @@ GameObject:
   - component: {fileID: 1516121511}
   - component: {fileID: 1516121510}
   - component: {fileID: 1516121509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50879,6 +51025,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!54 &1518124150
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -51010,7 +51157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1530411319}
   - component: {fileID: 1530411320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (102)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51062,7 +51209,7 @@ GameObject:
   - component: {fileID: 1530468197}
   - component: {fileID: 1530468196}
   - component: {fileID: 1530468195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51272,7 +51419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1535227764}
   - component: {fileID: 1535227765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (135)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51322,7 +51469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1541186176}
   - component: {fileID: 1541186177}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (167)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51374,7 +51521,7 @@ GameObject:
   - component: {fileID: 1541254208}
   - component: {fileID: 1541254207}
   - component: {fileID: 1541254206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51479,7 +51626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543666613}
   - component: {fileID: 1543666614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (89)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51531,7 +51678,7 @@ GameObject:
   - component: {fileID: 1548087279}
   - component: {fileID: 1548087278}
   - component: {fileID: 1548087277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51638,7 +51785,7 @@ GameObject:
   - component: {fileID: 1554085355}
   - component: {fileID: 1554085354}
   - component: {fileID: 1554085353}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51747,13 +51894,13 @@ GameObject:
   - component: {fileID: 1556323461}
   - component: {fileID: 1556323460}
   - component: {fileID: 1556323459}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRanged (16)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1556323458
 Transform:
   m_ObjectHideFlags: 0
@@ -51855,6 +52002,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1556323463
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -52008,7 +52156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1559307214}
   - component: {fileID: 1559307215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52060,7 +52208,7 @@ GameObject:
   - component: {fileID: 1561195442}
   - component: {fileID: 1561195441}
   - component: {fileID: 1561195440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52165,7 +52313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568153705}
   - component: {fileID: 1568153706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52217,7 +52365,7 @@ GameObject:
   - component: {fileID: 1571902558}
   - component: {fileID: 1571902557}
   - component: {fileID: 1571902556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52322,7 +52470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1577202645}
   - component: {fileID: 1577202646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (81)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52372,7 +52520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1580105407}
   - component: {fileID: 1580105408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (128)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52422,7 +52570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590095843}
   - component: {fileID: 1590095844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52472,7 +52620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1595169833}
   - component: {fileID: 1595169834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52562,6 +52710,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0, y: 4.49, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!54 &1596495790
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52750,7 +52899,7 @@ GameObject:
   - component: {fileID: 1604780066}
   - component: {fileID: 1604780065}
   - component: {fileID: 1604780064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52855,7 +53004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1606132697}
   - component: {fileID: 1606132698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52905,7 +53054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1609729032}
   - component: {fileID: 1609729033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52957,7 +53106,7 @@ GameObject:
   - component: {fileID: 1612400150}
   - component: {fileID: 1612400149}
   - component: {fileID: 1612400148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53196,7 +53345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1621891088}
   - component: {fileID: 1621891089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53248,7 +53397,7 @@ GameObject:
   - component: {fileID: 1627585318}
   - component: {fileID: 1627585317}
   - component: {fileID: 1627585316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53355,7 +53504,7 @@ GameObject:
   - component: {fileID: 1627676980}
   - component: {fileID: 1627676979}
   - component: {fileID: 1627676978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53460,7 +53609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1628045892}
   - component: {fileID: 1628045893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53596,7 +53745,7 @@ GameObject:
   - component: {fileID: 1632318330}
   - component: {fileID: 1632318329}
   - component: {fileID: 1632318328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -53701,7 +53850,7 @@ GameObject:
   - component: {fileID: 1636160398}
   - component: {fileID: 1636160397}
   - component: {fileID: 1636160396}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -53806,7 +53955,7 @@ GameObject:
   - component: {fileID: 1636381279}
   - component: {fileID: 1636381278}
   - component: {fileID: 1636381277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53913,7 +54062,7 @@ GameObject:
   - component: {fileID: 1636529758}
   - component: {fileID: 1636529757}
   - component: {fileID: 1636529756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54021,7 +54170,7 @@ GameObject:
   - component: {fileID: 1639386140}
   - component: {fileID: 1639386139}
   - component: {fileID: 1639386138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (8)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -54108,6 +54257,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 2
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1639386141
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -54140,7 +54290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644614961}
   - component: {fileID: 1644614962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54190,7 +54340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644620838}
   - component: {fileID: 1644620839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (118)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54242,7 +54392,7 @@ GameObject:
   - component: {fileID: 1645138388}
   - component: {fileID: 1645138387}
   - component: {fileID: 1645138386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54349,7 +54499,7 @@ GameObject:
   - component: {fileID: 1646055249}
   - component: {fileID: 1646055248}
   - component: {fileID: 1646055247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54574,7 +54724,7 @@ Transform:
   m_GameObject: {fileID: 1649996484}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.18, y: 0, z: 0.54}
+  m_LocalPosition: {x: 0.74, y: 0, z: 0.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -54604,7 +54754,7 @@ GameObject:
   - component: {fileID: 1651087320}
   - component: {fileID: 1651087319}
   - component: {fileID: 1651087318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54709,7 +54859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1651185727}
   - component: {fileID: 1651185728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (97)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54840,6 +54990,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.96, y: 2.36, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!208 &1652969485
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -54870,13 +55021,13 @@ GameObject:
   - component: {fileID: 1657213780}
   - component: {fileID: 1657213784}
   - component: {fileID: 1657213785}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRanged (13)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1657213777
 Transform:
   m_ObjectHideFlags: 0
@@ -54935,6 +55086,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1657213782
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -55332,7 +55484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1669416317}
   - component: {fileID: 1669416318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (163)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55384,7 +55536,7 @@ GameObject:
   - component: {fileID: 1676579108}
   - component: {fileID: 1676579107}
   - component: {fileID: 1676579106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55491,7 +55643,7 @@ GameObject:
   - component: {fileID: 1677674197}
   - component: {fileID: 1677674196}
   - component: {fileID: 1677674195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55598,7 +55750,7 @@ GameObject:
   - component: {fileID: 1683249793}
   - component: {fileID: 1683249792}
   - component: {fileID: 1683249791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55738,7 +55890,7 @@ GameObject:
   - component: {fileID: 1688235187}
   - component: {fileID: 1688235186}
   - component: {fileID: 1688235185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55845,7 +55997,7 @@ GameObject:
   - component: {fileID: 1705380676}
   - component: {fileID: 1705380675}
   - component: {fileID: 1705380674}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -55950,7 +56102,7 @@ GameObject:
   - component: {fileID: 1705695893}
   - component: {fileID: 1705695892}
   - component: {fileID: 1705695891}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56057,7 +56209,7 @@ GameObject:
   - component: {fileID: 1705884266}
   - component: {fileID: 1705884265}
   - component: {fileID: 1705884264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56280,7 +56432,7 @@ GameObject:
   - component: {fileID: 1707105330}
   - component: {fileID: 1707105329}
   - component: {fileID: 1707105328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -56385,7 +56537,7 @@ GameObject:
   - component: {fileID: 1715450581}
   - component: {fileID: 1715450580}
   - component: {fileID: 1715450579}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56494,13 +56646,13 @@ GameObject:
   - component: {fileID: 1715977335}
   - component: {fileID: 1715977334}
   - component: {fileID: 1715977333}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRanged (15)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1715977332
 Transform:
   m_ObjectHideFlags: 0
@@ -56602,6 +56754,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1715977337
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -56634,7 +56787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1717736276}
   - component: {fileID: 1717736277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (127)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56684,7 +56837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1719454116}
   - component: {fileID: 1719454117}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (106)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56736,7 +56889,7 @@ GameObject:
   - component: {fileID: 1722804340}
   - component: {fileID: 1722804339}
   - component: {fileID: 1722804338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56843,7 +56996,7 @@ GameObject:
   - component: {fileID: 1726825279}
   - component: {fileID: 1726825278}
   - component: {fileID: 1726825277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56950,7 +57103,7 @@ GameObject:
   - component: {fileID: 1731097483}
   - component: {fileID: 1731097482}
   - component: {fileID: 1731097481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57140,7 +57293,7 @@ GameObject:
   - component: {fileID: 1733067844}
   - component: {fileID: 1733067843}
   - component: {fileID: 1733067842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57245,7 +57398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1739173011}
   - component: {fileID: 1739173012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57297,7 +57450,7 @@ GameObject:
   - component: {fileID: 1743720431}
   - component: {fileID: 1743720430}
   - component: {fileID: 1743720429}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -57480,6 +57633,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.96, y: 2.36, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!208 &1743732434
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -57506,7 +57660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749562132}
   - component: {fileID: 1749562133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57558,7 +57712,7 @@ GameObject:
   - component: {fileID: 1750790636}
   - component: {fileID: 1750790635}
   - component: {fileID: 1750790634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57663,7 +57817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1759514456}
   - component: {fileID: 1759514457}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (143)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57713,7 +57867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1760959132}
   - component: {fileID: 1760959133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57763,7 +57917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1765856923}
   - component: {fileID: 1765856924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57815,7 +57969,7 @@ GameObject:
   - component: {fileID: 1768743106}
   - component: {fileID: 1768743105}
   - component: {fileID: 1768743104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58106,7 +58260,7 @@ Transform:
   m_GameObject: {fileID: 1769894282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.79, y: 0, z: 1.24}
+  m_LocalPosition: {x: 0.79, y: 0, z: 1.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58122,7 +58276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1771793361}
   - component: {fileID: 1771793362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58226,7 +58380,7 @@ GameObject:
   - component: {fileID: 1780436338}
   - component: {fileID: 1780436337}
   - component: {fileID: 1780436336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -58331,7 +58485,7 @@ GameObject:
   - component: {fileID: 1788211109}
   - component: {fileID: 1788211108}
   - component: {fileID: 1788211107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58438,7 +58592,7 @@ GameObject:
   - component: {fileID: 1799709619}
   - component: {fileID: 1799709618}
   - component: {fileID: 1799709617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58543,7 +58697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1800924363}
   - component: {fileID: 1800924364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58595,7 +58749,7 @@ GameObject:
   - component: {fileID: 1801740205}
   - component: {fileID: 1801740204}
   - component: {fileID: 1801740203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58702,7 +58856,7 @@ GameObject:
   - component: {fileID: 1808661819}
   - component: {fileID: 1808661818}
   - component: {fileID: 1808661817}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58891,7 +59045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1818266187}
   - component: {fileID: 1818266188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (155)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58943,7 +59097,7 @@ GameObject:
   - component: {fileID: 1822081258}
   - component: {fileID: 1822081257}
   - component: {fileID: 1822081256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59221,7 +59375,7 @@ GameObject:
   - component: {fileID: 1831472077}
   - component: {fileID: 1831472076}
   - component: {fileID: 1831472075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59326,7 +59480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835091920}
   - component: {fileID: 1835091921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (115)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59378,7 +59532,7 @@ GameObject:
   - component: {fileID: 1837983809}
   - component: {fileID: 1837983808}
   - component: {fileID: 1837983807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59485,7 +59639,7 @@ GameObject:
   - component: {fileID: 1842377117}
   - component: {fileID: 1842377116}
   - component: {fileID: 1842377115}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59590,7 +59744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1845371685}
   - component: {fileID: 1845371686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (157)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59640,7 +59794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1845874638}
   - component: {fileID: 1845874639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59692,7 +59846,7 @@ GameObject:
   - component: {fileID: 1847662047}
   - component: {fileID: 1847662046}
   - component: {fileID: 1847662045}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59967,7 +60121,7 @@ GameObject:
   - component: {fileID: 1855082096}
   - component: {fileID: 1855082095}
   - component: {fileID: 1855082094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60074,7 +60228,7 @@ GameObject:
   - component: {fileID: 1855259024}
   - component: {fileID: 1855259023}
   - component: {fileID: 1855259022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60181,7 +60335,7 @@ GameObject:
   - component: {fileID: 1857222544}
   - component: {fileID: 1857222543}
   - component: {fileID: 1857222542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60286,7 +60440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1857315094}
   - component: {fileID: 1857315095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60338,7 +60492,7 @@ GameObject:
   - component: {fileID: 1858261822}
   - component: {fileID: 1858261821}
   - component: {fileID: 1858261820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60445,7 +60599,7 @@ GameObject:
   - component: {fileID: 1859788556}
   - component: {fileID: 1859788555}
   - component: {fileID: 1859788554}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60552,7 +60706,7 @@ GameObject:
   - component: {fileID: 1860630603}
   - component: {fileID: 1860630602}
   - component: {fileID: 1860630601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60659,7 +60813,7 @@ GameObject:
   - component: {fileID: 1861517144}
   - component: {fileID: 1861517143}
   - component: {fileID: 1861517142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60848,7 +61002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1867221112}
   - component: {fileID: 1867221113}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60898,7 +61052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1868878193}
   - component: {fileID: 1868878194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60948,7 +61102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1869317469}
   - component: {fileID: 1869317470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (162)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61276,7 +61430,7 @@ GameObject:
   - component: {fileID: 1879068647}
   - component: {fileID: 1879068646}
   - component: {fileID: 1879068645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61381,7 +61535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1880902316}
   - component: {fileID: 1880902317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (96)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61431,7 +61585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1883076031}
   - component: {fileID: 1883076032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (114)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61483,7 +61637,7 @@ GameObject:
   - component: {fileID: 1883317564}
   - component: {fileID: 1883317563}
   - component: {fileID: 1883317562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -61588,7 +61742,7 @@ GameObject:
   - component: {fileID: 1883372692}
   - component: {fileID: 1883372691}
   - component: {fileID: 1883372690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61695,7 +61849,7 @@ GameObject:
   - component: {fileID: 1883603325}
   - component: {fileID: 1883603324}
   - component: {fileID: 1883603323}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -61798,7 +61952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884360044}
   - component: {fileID: 1884360045}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (117)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61848,7 +62002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888532955}
   - component: {fileID: 1888532956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (129)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61902,13 +62056,13 @@ GameObject:
   - component: {fileID: 1891104589}
   - component: {fileID: 1891104593}
   - component: {fileID: 1891104594}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyRanged (9)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1891104586
 Transform:
   m_ObjectHideFlags: 0
@@ -61967,6 +62121,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &1891104591
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -62057,7 +62212,7 @@ Transform:
   m_GameObject: {fileID: 1891888541}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.04, y: 0, z: -2.81}
+  m_LocalPosition: {x: -2.04, y: 0, z: -3.0899987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -62075,7 +62230,7 @@ GameObject:
   - component: {fileID: 1894077721}
   - component: {fileID: 1894077720}
   - component: {fileID: 1894077719}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62182,7 +62337,7 @@ GameObject:
   - component: {fileID: 1894655066}
   - component: {fileID: 1894655065}
   - component: {fileID: 1894655064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62287,7 +62442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903488386}
   - component: {fileID: 1903488387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (78)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62339,7 +62494,7 @@ GameObject:
   - component: {fileID: 1910439726}
   - component: {fileID: 1910439725}
   - component: {fileID: 1910439724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62444,7 +62599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910468991}
   - component: {fileID: 1910468992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (88)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62494,7 +62649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914696246}
   - component: {fileID: 1914696247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (154)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62544,7 +62699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916243094}
   - component: {fileID: 1916243095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (111)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62594,7 +62749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916347354}
   - component: {fileID: 1916347355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62730,7 +62885,7 @@ GameObject:
   - component: {fileID: 1921046040}
   - component: {fileID: 1921046039}
   - component: {fileID: 1921046038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62837,7 +62992,7 @@ GameObject:
   - component: {fileID: 1921062994}
   - component: {fileID: 1921062993}
   - component: {fileID: 1921062992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63014,7 +63169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924509027}
   - component: {fileID: 1924509028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (98)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63064,7 +63219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1931640061}
   - component: {fileID: 1931640062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (174)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63116,7 +63271,7 @@ GameObject:
   - component: {fileID: 1941569636}
   - component: {fileID: 1941569635}
   - component: {fileID: 1941569634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63223,7 +63378,7 @@ GameObject:
   - component: {fileID: 1946107490}
   - component: {fileID: 1946107489}
   - component: {fileID: 1946107488}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -63328,7 +63483,7 @@ GameObject:
   - component: {fileID: 1948123376}
   - component: {fileID: 1948123375}
   - component: {fileID: 1948123374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63435,7 +63590,7 @@ GameObject:
   - component: {fileID: 1950272727}
   - component: {fileID: 1950272726}
   - component: {fileID: 1950272725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63597,7 +63752,7 @@ GameObject:
   - component: {fileID: 1953290817}
   - component: {fileID: 1953290816}
   - component: {fileID: 1953290815}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -63700,7 +63855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1955438821}
   - component: {fileID: 1955438822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63827,7 +63982,7 @@ GameObject:
   - component: {fileID: 1959557762}
   - component: {fileID: 1959557761}
   - component: {fileID: 1959557760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64018,7 +64173,7 @@ GameObject:
   - component: {fileID: 1966968645}
   - component: {fileID: 1966968644}
   - component: {fileID: 1966968643}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64125,7 +64280,7 @@ GameObject:
   - component: {fileID: 1968158659}
   - component: {fileID: 1968158658}
   - component: {fileID: 1968158657}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64263,7 +64418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1974430633}
   - component: {fileID: 1974430634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64420,7 +64575,7 @@ GameObject:
   - component: {fileID: 1982069228}
   - component: {fileID: 1982069227}
   - component: {fileID: 1982069226}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -64525,7 +64680,7 @@ GameObject:
   - component: {fileID: 1983515233}
   - component: {fileID: 1983515232}
   - component: {fileID: 1983515231}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64630,7 +64785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2002464993}
   - component: {fileID: 2002464994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64680,7 +64835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004949314}
   - component: {fileID: 2004949315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64732,7 +64887,7 @@ GameObject:
   - component: {fileID: 2006365001}
   - component: {fileID: 2006365000}
   - component: {fileID: 2006364999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64852,7 +65007,7 @@ Transform:
   m_GameObject: {fileID: 2011288222}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0400004, y: 0, z: -1.48}
+  m_LocalPosition: {x: -2.0400004, y: 0, z: -1.5899987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64870,7 +65025,7 @@ GameObject:
   - component: {fileID: 2013068313}
   - component: {fileID: 2013068312}
   - component: {fileID: 2013068311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64977,7 +65132,7 @@ GameObject:
   - component: {fileID: 2013507711}
   - component: {fileID: 2013507710}
   - component: {fileID: 2013507709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65205,7 +65360,7 @@ GameObject:
   - component: {fileID: 2021643328}
   - component: {fileID: 2021643327}
   - component: {fileID: 2021643326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65325,7 +65480,7 @@ Transform:
   m_GameObject: {fileID: 2023229676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.61800003, y: 0, z: -0.23000067}
+  m_LocalPosition: {x: -0.61800003, y: 0, z: 0.81999856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65343,7 +65498,7 @@ GameObject:
   - component: {fileID: 2023534744}
   - component: {fileID: 2023534743}
   - component: {fileID: 2023534742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65612,6 +65767,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.96, y: 2.36, z: 0}
   maxHealth: 5
   currentHealth: 5
+  delayDamageTimerCurrent: 0
 --- !u!208 &2030747275
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -65746,7 +65902,7 @@ GameObject:
   - component: {fileID: 2034034252}
   - component: {fileID: 2034034251}
   - component: {fileID: 2034034250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65956,7 +66112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2041163905}
   - component: {fileID: 2041163906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66113,7 +66269,7 @@ GameObject:
   - component: {fileID: 2048566486}
   - component: {fileID: 2048566485}
   - component: {fileID: 2048566484}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66221,7 +66377,7 @@ GameObject:
   - component: {fileID: 2050323278}
   - component: {fileID: 2050323277}
   - component: {fileID: 2050323276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (8)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -66308,6 +66464,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &2050323279
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -66342,7 +66499,7 @@ GameObject:
   - component: {fileID: 2053393801}
   - component: {fileID: 2053393800}
   - component: {fileID: 2053393799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66447,7 +66604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054158462}
   - component: {fileID: 2054158463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (165)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66499,7 +66656,7 @@ GameObject:
   - component: {fileID: 2055734280}
   - component: {fileID: 2055734279}
   - component: {fileID: 2055734278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66690,7 +66847,7 @@ GameObject:
   - component: {fileID: 2057003088}
   - component: {fileID: 2057003087}
   - component: {fileID: 2057003086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66795,7 +66952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2060544789}
   - component: {fileID: 2060544790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66884,7 +67041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2064290359}
   - component: {fileID: 2064290360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66936,7 +67093,7 @@ GameObject:
   - component: {fileID: 2068875913}
   - component: {fileID: 2068875912}
   - component: {fileID: 2068875911}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67043,7 +67200,7 @@ GameObject:
   - component: {fileID: 2073198984}
   - component: {fileID: 2073198983}
   - component: {fileID: 2073198982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67196,7 +67353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2079345603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67405,7 +67562,7 @@ GameObject:
   - component: {fileID: 2091222275}
   - component: {fileID: 2091222274}
   - component: {fileID: 2091222273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67510,7 +67667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2093606563}
   - component: {fileID: 2093606564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (131)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67562,7 +67719,7 @@ GameObject:
   - component: {fileID: 2100465513}
   - component: {fileID: 2100465512}
   - component: {fileID: 2100465511}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67669,7 +67826,7 @@ GameObject:
   - component: {fileID: 2102411005}
   - component: {fileID: 2102411004}
   - component: {fileID: 2102411003}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -67774,7 +67931,7 @@ GameObject:
   - component: {fileID: 2104692385}
   - component: {fileID: 2104692384}
   - component: {fileID: 2104692383}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67881,7 +68038,7 @@ GameObject:
   - component: {fileID: 2105101617}
   - component: {fileID: 2105101616}
   - component: {fileID: 2105101615}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68021,7 +68178,7 @@ GameObject:
   - component: {fileID: 2114225712}
   - component: {fileID: 2114225711}
   - component: {fileID: 2114225710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68129,7 +68286,7 @@ GameObject:
   - component: {fileID: 2120914483}
   - component: {fileID: 2120914482}
   - component: {fileID: 2120914481}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy (13)
   m_TagString: EnemyPosition
   m_Icon: {fileID: 0}
@@ -68216,6 +68373,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 10
   currentHealth: 0
+  delayDamageTimerCurrent: 0
 --- !u!195 &2120914484
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -68250,7 +68408,7 @@ GameObject:
   - component: {fileID: 2121649617}
   - component: {fileID: 2121649616}
   - component: {fileID: 2121649615}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68357,7 +68515,7 @@ GameObject:
   - component: {fileID: 2122930249}
   - component: {fileID: 2122930248}
   - component: {fileID: 2122930247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68462,7 +68620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2123091778}
   - component: {fileID: 2123091779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree (136)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68514,7 +68672,7 @@ GameObject:
   - component: {fileID: 2125039916}
   - component: {fileID: 2125039915}
   - component: {fileID: 2125039914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68621,7 +68779,7 @@ GameObject:
   - component: {fileID: 2134546350}
   - component: {fileID: 2134546349}
   - component: {fileID: 2134546348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68761,7 +68919,7 @@ GameObject:
   - component: {fileID: 2138758182}
   - component: {fileID: 2138758181}
   - component: {fileID: 2138758180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68868,7 +69026,7 @@ GameObject:
   - component: {fileID: 2144808310}
   - component: {fileID: 2144808309}
   - component: {fileID: 2144808308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69070,6 +69228,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 100
   currentHealth: 100
+  delayDamageTimerCurrent: 0
 --- !u!208 &906974522074873662
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -69080,7 +69239,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.965, z: 0.5}
+  m_Extents: {x: 0.00001, y: 0.00001, z: 0.00001}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -69107,7 +69266,7 @@ GameObject:
   - component: {fileID: 6408632761116392479}
   - component: {fileID: 4057656253650365484}
   - component: {fileID: 629138197699197757}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -69264,7 +69423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7358650403069763931}
   - component: {fileID: 5337877353721262702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RangeDottedCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69588,7 +69747,7 @@ GameObject:
   - component: {fileID: 8725702681419278426}
   - component: {fileID: 7025382305470902804}
   - component: {fileID: 906974522074873662}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerCapsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -69632,3 +69791,4 @@ SceneRoots:
   - {fileID: 2056865500}
   - {fileID: 220930096}
   - {fileID: 1660507985}
+  - {fileID: 44888527}

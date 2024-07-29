@@ -1,58 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1594291223056174197
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7267915219000598138}
-  - component: {fileID: 5138159526757189607}
-  m_Layer: 0
-  m_Name: Hitbox
-  m_TagString: Ally
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7267915219000598138
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594291223056174197}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6060088225928536466}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5138159526757189607
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594291223056174197}
-  m_Material: {fileID: 13400000, guid: 5816c2c5dd71a25458939f9597faef0d, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.31, y: 1.33, z: 1.33}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1769080293810714306
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,9 +14,9 @@ GameObject:
   - component: {fileID: 5745612544902933113}
   - component: {fileID: 8525281186614273332}
   - component: {fileID: 7168440784652794347}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AllyRanged
-  m_TagString: AllyPosition
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +34,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7267915219000598138}
   - {fileID: 619873268135786682}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
@@ -116,7 +62,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!195 &5895710882806736062
 NavMeshAgent:
@@ -155,6 +101,7 @@ MonoBehaviour:
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
   maxHealth: 100
   currentHealth: 100
+  delayDamageTimerCurrent: 0
 --- !u!114 &8525281186614273332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +141,7 @@ MonoBehaviour:
   player: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
+  health: 0
 --- !u!1 &7005524850866841838
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,8 +153,8 @@ GameObject:
   - component: {fileID: 619873268135786682}
   - component: {fileID: 5658449745051862532}
   - component: {fileID: 3727745080159103839}
-  - component: {fileID: 881533198896949755}
-  m_Layer: 0
+  - component: {fileID: 2530962081140792953}
+  m_Layer: 6
   m_Name: AllyCube
   m_TagString: Ally
   m_Icon: {fileID: 0}
@@ -278,8 +226,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &881533198896949755
-SphereCollider:
+--- !u!65 &2530962081140792953
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -297,5 +245,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.68
+  m_Size: {x: 2.44, y: 1, z: 2.49}
   m_Center: {x: 0, y: 0, z: 0}

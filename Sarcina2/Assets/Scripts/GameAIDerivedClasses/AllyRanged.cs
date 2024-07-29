@@ -4,5 +4,12 @@ using UnityEngine;
 
 public class AllyRanged : GameAI
 {
+    public int health;
+
+
+    private void Start()
+    {
+        
+    }
 
 }

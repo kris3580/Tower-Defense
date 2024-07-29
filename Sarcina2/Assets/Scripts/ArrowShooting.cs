@@ -137,7 +137,7 @@ public class ArrowShooting : MonoBehaviour
         if (closestEnemy == null) return Color.white;
 
         enemyDistance = Vector3.Distance(transform.position, closestEnemy.transform.position);
-        if (enemyDistance <= radius) { if (gameObject.name.Contains("Ally")) { Debug.Log("HAIAIIIA"); }  return Color.red; }
+        if (enemyDistance <= radius) {  return Color.red; }
         else return Color.yellow;
     }
 
