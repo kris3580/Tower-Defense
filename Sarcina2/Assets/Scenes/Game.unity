@@ -984,6 +984,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!54 &14422704
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2089,93 +2090,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38974022}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &44888527
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1769080293810714306, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_Name
-      value: AllyRanged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1769080293810714306, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_TagString
-      value: Ally
-      objectReference: {fileID: 0}
-    - target: {fileID: 5138159526757189607, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5138159526757189607, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5895710882806736062, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.8577566
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.379
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.998077
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 6060088225928536466, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8260913947725257378, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
-    - target: {fileID: 8525281186614273332, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 881533198896949755, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-    - {fileID: 5138159526757189607, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 1594291223056174197, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7005524850866841838, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 833236201}
-  m_SourcePrefab: {fileID: 100100000, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
 --- !u!1 &57033340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,6 +3516,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &99984766
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3966,6 +3881,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &105107013
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4936,6 +4852,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &124194085
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6046,6 +5963,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &148439457
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10523,6 +10441,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &291351293
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11956,7 +11875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &346938140
 Transform:
   m_ObjectHideFlags: 0
@@ -12016,6 +11935,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &346938145
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13850,7 +13770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &386818260
 Transform:
   m_ObjectHideFlags: 0
@@ -13910,6 +13830,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &386818265
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14552,6 +14473,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!54 &403063390
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15531,6 +15453,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &437200749
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -18183,6 +18106,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!54 &501670529
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18887,7 +18811,7 @@ Transform:
   m_GameObject: {fileID: 531414491}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.95, y: 0.83, z: -1.13}
+  m_LocalPosition: {x: -2.8, y: 0.83, z: -7.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20022,6 +19946,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &558180707
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -23789,6 +23714,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!54 &686253887
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26454,6 +26380,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &775927647
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27780,32 +27707,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829841975}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &833236199 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7005524850866841838, guid: e8453b9260893764aa49d4b99d84124d, type: 3}
-  m_PrefabInstance: {fileID: 44888527}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &833236201
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833236199}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.44, y: 1, z: 2.49}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &836112983
 GameObject:
   m_ObjectHideFlags: 0
@@ -28621,6 +28522,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &852704652
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30804,6 +30706,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &916983577
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -31017,7 +30920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &918832186
 Transform:
   m_ObjectHideFlags: 0
@@ -31120,6 +31023,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &918832191
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -31886,6 +31790,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!208 &947948104
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -32096,7 +32001,7 @@ Transform:
   m_GameObject: {fileID: 955367405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.57, y: 0.83, z: -1.14}
+  m_LocalPosition: {x: -9.21, y: 0.83, z: -7.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32227,6 +32132,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &957629825
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -34228,6 +34134,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!208 &996698039
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -34900,6 +34807,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1017646117
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -37242,6 +37150,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1072258139
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -37457,6 +37366,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!208 &1080485482
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -40549,7 +40459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1163818635
 Transform:
   m_ObjectHideFlags: 0
@@ -40652,6 +40562,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1163818640
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -43464,7 +43375,7 @@ Transform:
   m_GameObject: {fileID: 1262624021}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.48, y: 0.83, z: -8.19}
+  m_LocalPosition: {x: 4.91, y: 0.83, z: -14.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43695,6 +43606,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1292435297
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -43818,6 +43730,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1293821660
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -43991,6 +43904,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!54 &1302247484
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -46064,7 +45978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1383877108
 Transform:
   m_ObjectHideFlags: 0
@@ -46167,6 +46081,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1383877113
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -46896,6 +46811,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!54 &1403769867
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47594,7 +47510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1435175975
 Transform:
   m_ObjectHideFlags: 0
@@ -47654,6 +47570,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1435175980
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -47805,7 +47722,7 @@ MonoBehaviour:
   player: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  enemyInfantryType: 1
+  enemyInfantryType: 0
   targets: []
   distance: 0
 --- !u!54 &1438308490
@@ -47851,6 +47768,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1438308492
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -48800,6 +48718,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1459590348
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -49410,6 +49329,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!208 &1477839573
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -51026,6 +50946,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!54 &1518124150
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -51900,7 +51821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1556323458
 Transform:
   m_ObjectHideFlags: 0
@@ -52003,6 +51924,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1556323463
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -52711,6 +52633,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!54 &1596495790
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -54258,6 +54181,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1639386141
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -54991,6 +54915,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!208 &1652969485
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -55027,7 +54952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1657213777
 Transform:
   m_ObjectHideFlags: 0
@@ -55087,6 +55012,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1657213782
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -56652,7 +56578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1715977332
 Transform:
   m_ObjectHideFlags: 0
@@ -56755,6 +56681,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1715977337
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -57634,6 +57561,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!208 &1743732434
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -62062,7 +61990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1891104586
 Transform:
   m_ObjectHideFlags: 0
@@ -62122,6 +62050,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &1891104591
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -65768,6 +65697,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!208 &2030747275
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -66465,6 +66395,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &2050323279
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -66778,7 +66709,7 @@ Transform:
   m_GameObject: {fileID: 2056865499}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.93, y: 0.83, z: -8.15}
+  m_LocalPosition: {x: -6.93, y: 0.83, z: -1.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -68374,6 +68305,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!195 &2120914484
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -69229,6 +69161,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
 --- !u!208 &906974522074873662
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -69791,4 +69724,3 @@ SceneRoots:
   - {fileID: 2056865500}
   - {fileID: 220930096}
   - {fileID: 1660507985}
-  - {fileID: 44888527}

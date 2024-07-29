@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
     // player
 
     public float delayDamageTimerCurrent;
-    float delayDamageTimerDefault = 1f;
+    public float delayDamageTimerDefault = 1f;
 
 
 
@@ -66,10 +66,6 @@ public class Health : MonoBehaviour
         }
 
 
-        //if (gameObject.name.Contains("Enemy") && other.tag == "Arrow" && other.gameObject.GetComponent<Arrow>().isArrowShotByEnemy)
-        //{
-        //    ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
-        //}
         bool isArrowShotByEnemy = false;
         if (other.tag == "Arrow") isArrowShotByEnemy = other.gameObject.GetComponent<Arrow>().isArrowShotByEnemy;
 
