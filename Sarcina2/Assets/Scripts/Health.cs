@@ -1,3 +1,4 @@
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -46,7 +47,7 @@ public class Health : MonoBehaviour
     {
         healthBar.GetComponent<RectTransform>().position = transform.position + healthBarPositionOffset;
 
-        if (gameObject.name == "Player" || gameObject.name == "BuildingModelHandle" || gameObject.name.Contains("Ally"))
+        if (gameObject.name == "Player" || gameObject.name == "BuildingModelHandle" || gameObject.name.Contains("Ally") || gameObject.name.Contains("Enemy"))
         {
             delayDamageTimerCurrent -= Time.deltaTime;
         }
@@ -64,7 +65,10 @@ public class Health : MonoBehaviour
         {
             return;
         }
-
+        if (gameObject.name.Contains("Ally") && other.name.Contains("Ally"))
+        {
+            return;
+        }
 
         bool isArrowShotByEnemy = false;
         if (other.tag == "Arrow") isArrowShotByEnemy = other.gameObject.GetComponent<Arrow>().isArrowShotByEnemy;
@@ -102,13 +106,16 @@ public class Health : MonoBehaviour
         {
             return;
         }
+        if (gameObject.name.Contains("Ally") && other.name.Contains("Ally"))
+        {
+            return;
+        }
 
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy" || other.tag == "Ally" && !gameObject.name.Contains("BuildingModelHandle") && !gameObject.name.Contains("Player"))
         {
 
             if ( delayDamageTimerCurrent <= 0)
             {
-                Debug.LogWarning(1);
                 delayDamageTimerCurrent = delayDamageTimerDefault;
                 ApplyDamage(other.gameObject.transform.parent.GetComponent<GameAI>().damage);
             }

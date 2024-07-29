@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -153,9 +154,6 @@ public class ArrowShooting : MonoBehaviour
     {
         neareastDistanceChanged = neareastDistance;
 
-        
-
-
         enemies = GameObject.FindGameObjectsWithTag("EnemyPosition");
 
         for (int i = 0; i < enemies.Length; i++)
@@ -210,6 +208,9 @@ public class ArrowShooting : MonoBehaviour
             }
 
         }
+        targetsArray = new GameObject[0];
+        targets = new List<GameObject>();
+
 
     }
 

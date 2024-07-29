@@ -25,7 +25,7 @@ public class Arrow : MonoBehaviour
     public bool isArrowShotByEnemy;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name.Contains("Enemy")  && !isArrowShotByEnemy || other.tag == "Player" && isArrowShotByEnemy || other.tag == "BuildingModel" && isArrowShotByEnemy)
+        if (other.gameObject.name.Contains("Enemy")  && !isArrowShotByEnemy || other.tag == "Player" && isArrowShotByEnemy || other.tag == "BuildingModel" && isArrowShotByEnemy || other.tag == "Ally" && isArrowShotByEnemy)
         {
             DestroyArrow();
         }

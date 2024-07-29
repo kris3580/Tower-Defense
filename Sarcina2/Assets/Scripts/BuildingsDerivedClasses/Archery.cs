@@ -50,7 +50,7 @@ public class Archery : BuildingBase
     public List<GameObject> rangedAllies = new List<GameObject>();
     public GameObject allyRangedPrefab;
 
-    public override void RangedAlliesSetup()
+    public override void AlliesSetup()
     {
         foreach (GameObject rangedAlly in rangedAllies)
         {
