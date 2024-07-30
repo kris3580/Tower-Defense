@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class Health : MonoBehaviour
     private Canvas canvas;
     [SerializeField] Vector3 healthBarPositionOffset;
 
+    public Animator animator;
 
     public int maxHealth;
     public int currentHealth;
@@ -40,19 +42,22 @@ public class Health : MonoBehaviour
         {
             healthBarForeground.color = Color.red;
         }
+
+        try { animator = transform.Find("EnemyHolder").transform.Find("Goblin Minion").GetComponent<Animator>(); } catch { }
+
     }
 
 
     private void Update()
     {
-        healthBar.GetComponent<RectTransform>().position = transform.position + healthBarPositionOffset;
+        try { healthBar.GetComponent<RectTransform>().position = transform.position + healthBarPositionOffset; } catch { }
 
         if (gameObject.name == "Player" || gameObject.name == "BuildingModelHandle" || gameObject.name.Contains("Ally") || gameObject.name.Contains("Enemy"))
         {
             delayDamageTimerCurrent -= Time.deltaTime;
         }
 
-        healthBar.SetActive(currentHealth != maxHealth);
+        try { healthBar.SetActive(currentHealth != maxHealth); } catch { }
         
 
 
@@ -113,15 +118,24 @@ public class Health : MonoBehaviour
 
         if (other.tag == "Enemy" || other.tag == "Ally" && !gameObject.name.Contains("BuildingModelHandle") && !gameObject.name.Contains("Player"))
         {
-
-            if ( delayDamageTimerCurrent <= 0)
+            if (delayDamageTimerCurrent <= 0)
             {
+                if (other.tag == "Enemy")
+                {
+                    try { other.gameObject.transform.GetComponentInParent<Health>().animator.SetBool("isAttacking", true); } catch { }
+                }
                 delayDamageTimerCurrent = delayDamageTimerDefault;
                 ApplyDamage(other.gameObject.transform.parent.GetComponent<GameAI>().damage);
             }
-            
+            else
+            {
+                try { other.gameObject.transform.GetComponentInParent<Health>().animator.SetBool("isAttacking", false); } catch { }
+            }
+
         }
     }
+
+
 
     private void ApplyDamage(int damage = 1)
     {
@@ -145,11 +159,20 @@ public class Health : MonoBehaviour
                 Destroy(healthBar);
                 DropCoin(CoinType.Purple);
             }
-            else if (gameObject.name.Contains("Enemy")) 
+            else if (gameObject.name.Contains("Enemy"))
             {
-                Destroy(gameObject);
-                Destroy(healthBar);
-                DropCoin(CoinType.Yellow);
+
+                if (!hasDied)
+                {
+                    hasDied = true;
+
+                    Debug.Log(12121);
+                    try { animator.SetBool("isDying", true); } catch { };
+                    Destroy(healthBar);
+                    Invoke("DelayEnemyKillForAnimation", 1f);
+                }
+
+
             }
             else if (gameObject.name == "BuildingModelHandle")
             {
@@ -159,11 +182,17 @@ public class Health : MonoBehaviour
             else if (gameObject.name.Contains("Ally"))
             {
                 Destroy(gameObject);
-                Destroy(healthBar);
+                
             }
         }
     }
-
+    public bool hasDied = false;
+    private void DelayEnemyKillForAnimation()
+    {
+        Destroy(gameObject);
+        Destroy(healthBar);
+        DropCoin(CoinType.Yellow);
+    }
 
     private void UpdateHealthBar(float maxHealth, float currentHealth)
     {

@@ -36,6 +36,7 @@ public class EnemyInfantry : GameAI
     private void Start()
     {
         DefaultStatsSetup();
+        
     }
 
     private void Update()
@@ -106,7 +107,16 @@ public class EnemyInfantry : GameAI
 
     private void Follow()
     {
-        agent.SetDestination(closestEnemy.transform.position);
+        
+        if (!healthComponent.hasDied)
+        {
+            agent.SetDestination(closestEnemy.transform.position);
+        }
+        else
+        {
+            agent.isStopped = true;
+        }
+        
     }
     private void ResetLists()
     {
