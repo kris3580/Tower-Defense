@@ -12,10 +12,10 @@ public class FlagPole : MonoBehaviour
     private bool isPlayerInRange = false;
     private GameObject player;
     private bool isFlagPoleTaken;
-    private Vector3 flagPoleOffset = new Vector3(0, 0, -0.8f);
+    private Vector3 flagPoleOffset = new Vector3(0, 1, -0.8f);
     private GameObject joystick;
     private bool joystickStateWhenFlagPoleIsTaken;
-
+    
 
 
     private void Update()

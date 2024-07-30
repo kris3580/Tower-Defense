@@ -60,7 +60,10 @@ public class ArrowShooting : MonoBehaviour
         DrawRayToClosestObject();
         ShootArrowHandler();
 
-
+        if (gameObject.name == "Player" && PlayerMovement.isShooting)
+        {
+            player.transform.LookAt(closestEnemy.transform.position); 
+        }
 
 
     }
@@ -90,8 +93,17 @@ public class ArrowShooting : MonoBehaviour
 
         if (enemyDistance <= radius && currentArrowTimer <= 0)
         {
+            
             currentArrowTimer = arrowTimer;
             SpawnArrow();
+        }
+        else
+        {
+            if (gameObject.name == "Player")
+            {
+                player.transform.Find("PlayerCapsule").GetComponent<Animator>().SetBool("isShooting", false);
+                PlayerMovement.isShooting = false;
+            }
         }
 
     }
@@ -104,10 +116,21 @@ public class ArrowShooting : MonoBehaviour
     [SerializeField] public float arrowSpeed;
     void SpawnArrow()
     {
-        
 
-        if (closestEnemy == null) return;
 
+        if (closestEnemy == null)
+        {
+            
+            return;
+        }
+
+        if (gameObject.name == "Player") 
+        { 
+            
+            player.transform.Find("PlayerCapsule").GetComponent<Animator>().SetBool("isShooting", true);
+            PlayerMovement.isShooting = true;
+        }
+            
 
         GameObject newArrowInstance = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
         newArrowInstance.GetComponent<Arrow>().target = closestEnemy.transform.position;
@@ -164,6 +187,10 @@ public class ArrowShooting : MonoBehaviour
             {
                 closestEnemy = enemies[i];
                 neareastDistanceChanged = distance;
+            }
+            else
+            {
+                //if (gameObject.name == "Player") player.transform.Find("PlayerCapsule").GetComponent<Animator>().SetBool("isShooting", false);
             }
 
         }

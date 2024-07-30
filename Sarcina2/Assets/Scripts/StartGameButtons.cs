@@ -7,12 +7,12 @@ public class StartGameButtons : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject joystick;
     
+
     private GameManager gameManager;
 
     private void Awake()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        
     }
 
 
@@ -45,6 +45,7 @@ public class StartGameButtons : MonoBehaviour
 
         joystick.SetActive(true);
         player.SetActive(true);
+        gameManager.rangeDottedCircle.SetActive(true);
         gameManager.fightButton.SetActive(true);
         gameManager.ChangeCameraToTopDown();
         gameManager.MoveWavesToSpawnPoint();

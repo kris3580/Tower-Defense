@@ -13,15 +13,18 @@ public class GameManager : MonoBehaviour
     public bool wasSpawnPlacementSelected = false;
     [SerializeField] GameObject startGameButtons;
     public GameObject fightButton;
+    public GameObject rangeDottedCircle;
 
     private void Start()
     {
         startGameButtons.SetActive(true);
     }
 
-    private void Update()
+    private void Awake()
     {
 
+        rangeDottedCircle = GameObject.Find("RangeDottedCircle");
+        rangeDottedCircle.SetActive(false);
     }
 
     public void SpawnWave()

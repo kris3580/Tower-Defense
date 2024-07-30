@@ -389,7 +389,7 @@ MonoBehaviour:
     Key: Assets/CompanyPackages
     Ordinal: 31
     Priority: 0
-    IconType: 2080
+    IconType: 10
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
