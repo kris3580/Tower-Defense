@@ -59,7 +59,7 @@ public abstract class BuildingBase : MonoBehaviour
     }
 
 
-    [SerializeField] Vector3 taskLoadingCirclePositionOffset;
+    private Vector3 taskLoadingCirclePositionOffset = new Vector3(-0.8f, -0.5f, 1.1f);
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player" && !FlagPole.isFlagPoleTargeted)
@@ -165,7 +165,7 @@ public abstract class BuildingBase : MonoBehaviour
 
     private Canvas canvas;
     private GameObject buildingInfoPrefab;
-    private Vector3 buildingInfoPositionOffset = new Vector3(0, 2, 0);
+    private Vector3 buildingInfoPositionOffset = new Vector3(2.5f, 3, -1);
     private GameObject buildingInfoPopUp;
 
     private TextMeshProUGUI text_buildingCost;

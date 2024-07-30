@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
         IdleWalkAnimationHandling();
-        
     }
 
     private void IdleWalkAnimationHandling()
@@ -51,26 +50,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyMovement()
     {
-        float moveX = inputY * moveSpeed;
-        float moveZ = inputX * moveSpeed * -1;
+        float moveX = inputX * moveSpeed * -1;
+        float moveZ = inputY * moveSpeed;
 
-        rigidBody.AddForce(new Vector3(moveX, 0, moveZ));
+        rigidBody.velocity = new Vector3(moveZ, 0, moveX);
     }
-
-
 
     public float speed = 5;
     public float rotationSpeed = 720;
 
     private void PlayerRotation()
     {
-
         if (!isShooting)
         {
             Vector3 movementDirection = new Vector3(inputY, 0, inputX * -1);
             movementDirection.Normalize();
-
-            //transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
 
             if (movementDirection != Vector3.zero)
             {
@@ -79,8 +73,4 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
-
-    
-
 }

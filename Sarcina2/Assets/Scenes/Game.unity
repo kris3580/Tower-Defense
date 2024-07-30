@@ -8180,7 +8180,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -8362,7 +8361,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -11545,7 +11543,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -18881,7 +18878,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -21838,7 +21834,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -22872,7 +22867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e4b29645edf4384aa25333b9c6c36e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
+  taskLoadingCirclePositionOffset: {x: -2, y: 5, z: 0}
   taskLoadingCircle: {fileID: 2076899326}
 --- !u!65 &645890990
 BoxCollider:
@@ -23967,7 +23962,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -29317,7 +29311,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -30067,7 +30060,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -32505,7 +32497,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -40059,7 +40050,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -43956,7 +43946,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -45781,7 +45770,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -50271,7 +50259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e4b29645edf4384aa25333b9c6c36e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
+  taskLoadingCirclePositionOffset: {x: -2, y: 5, z: 0}
   taskLoadingCircle: {fileID: 2076899326}
 --- !u!65 &1479665466
 BoxCollider:
@@ -51347,7 +51335,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -54511,7 +54498,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -67757,7 +67743,6 @@ MonoBehaviour:
   buildingModelHandle: {fileID: 0}
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
-  taskLoadingCirclePositionOffset: {x: 0, y: 0, z: 0}
   isBuilt: 0
   taskLoadingCircle: {fileID: 0}
   farmsList: []
@@ -68810,7 +68795,7 @@ CapsuleCollider:
   m_Radius: 0.5324056
   m_Height: 1.87
   m_Direction: 1
-  m_Center: {x: 0, y: 0.92, z: 0}
+  m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &2100465509
 GameObject:
   m_ObjectHideFlags: 0
@@ -70455,7 +70440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7053f1be9b9d36f42baa3c073c60c328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 50
+  moveSpeed: 6
   animator: {fileID: 0}
   speed: 7
   rotationSpeed: 720
