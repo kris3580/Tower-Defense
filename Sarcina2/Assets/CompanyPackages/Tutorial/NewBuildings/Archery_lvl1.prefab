@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7672001704995116125}
   - component: {fileID: 7959510629935797921}
   m_Layer: 0
-  m_Name: TB_ArcherTower_Lvl4_B (11)
+  m_Name: Lable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

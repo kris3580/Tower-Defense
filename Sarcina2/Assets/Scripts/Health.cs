@@ -90,22 +90,22 @@ public class Health : MonoBehaviour
 
         if (isArrowShotByEnemy && other.tag == "Arrow" && gameObject.name == "Player")
         {
-            Debug.Log("player shot by rangedEnemy");
+            //Debug.Log("player shot by rangedEnemy");
             ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
         }
         if (isArrowShotByEnemy && other.tag == "Arrow" && gameObject.name == "BuildingModelHandle")
         {
-            Debug.Log("building shot by rangedEnemy");
+            //Debug.Log("building shot by rangedEnemy");
             ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
         }
         if (!isArrowShotByEnemy && other.tag == "Arrow" && gameObject.name.Contains("Enemy"))
         {
-            Debug.Log("enemy shot by player");
+            //Debug.Log("enemy shot by player");
             ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
         }
         if (isArrowShotByEnemy && other.tag == "Arrow" && gameObject.name.Contains("Ally"))
         {
-            Debug.Log("ally shot by enemy");
+            //Debug.Log("ally shot by enemy");
             ApplyDamage(other.gameObject.GetComponent<Arrow>().damage);
         }
 
@@ -176,7 +176,6 @@ public class Health : MonoBehaviour
                 {
                     hasDied = true;
 
-                    Debug.Log(12121);
                     try { animator.SetBool("isDying", true); } catch { };
                     Destroy(healthBar);
                     Invoke("DelayEnemyKillForAnimation", 1f);
