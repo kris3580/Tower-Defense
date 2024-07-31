@@ -43,7 +43,17 @@ public class Health : MonoBehaviour
             healthBarForeground.color = Color.red;
         }
 
-        try { animator = transform.Find("EnemyHolder").transform.Find("Goblin Minion").GetComponent<Animator>(); } catch { }
+        if (gameObject.name.Contains("EnemyRanged"))
+        {
+            try { animator = transform.Find("EnemyHolder").transform.Find("Devil Bat").GetComponent<Animator>(); } catch { }
+        }
+        else if (gameObject.name.Contains("Enemy"))
+        {
+            try { animator = transform.Find("EnemyHolder").transform.Find("Goblin Minion").GetComponent<Animator>(); } catch { }
+        }
+
+
+    
 
     }
 
@@ -181,6 +191,7 @@ public class Health : MonoBehaviour
             }
             else if (gameObject.name.Contains("Ally"))
             {
+                Destroy(healthBar);
                 Destroy(gameObject);
                 
             }

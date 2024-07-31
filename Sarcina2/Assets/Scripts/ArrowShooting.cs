@@ -104,6 +104,11 @@ public class ArrowShooting : MonoBehaviour
                 player.transform.Find("PlayerCapsule").GetComponent<Animator>().SetBool("isShooting", false);
                 PlayerMovement.isShooting = false;
             }
+            else if (gameObject.name.Contains("EnemyRanged"))
+            {
+                transform.Find("EnemyHolder").transform.Find("Devil Bat").GetComponent<Animator>().SetBool("isShooting", false);
+                //
+            }
         }
 
     }
@@ -126,11 +131,16 @@ public class ArrowShooting : MonoBehaviour
 
         if (gameObject.name == "Player") 
         { 
-            
             player.transform.Find("PlayerCapsule").GetComponent<Animator>().SetBool("isShooting", true);
             PlayerMovement.isShooting = true;
         }
-            
+        else if (gameObject.name.Contains("EnemyRanged"))
+        {
+            transform.Find("EnemyHolder").transform.Find("Devil Bat").GetComponent<Animator>().SetBool("isShooting", true);
+
+        }
+
+
 
         GameObject newArrowInstance = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
         newArrowInstance.GetComponent<Arrow>().target = closestEnemy.transform.position;
@@ -187,10 +197,6 @@ public class ArrowShooting : MonoBehaviour
             {
                 closestEnemy = enemies[i];
                 neareastDistanceChanged = distance;
-            }
-            else
-            {
-                //if (gameObject.name == "Player") player.transform.Find("PlayerCapsule").GetComponent<Animator>().SetBool("isShooting", false);
             }
 
         }
