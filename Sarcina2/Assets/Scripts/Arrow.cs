@@ -10,7 +10,10 @@ public class Arrow : MonoBehaviour
 
     private void Start()
     {
-        transform.forward = target - transform.position;
+        sampleTime = 0f;
+        control = Vector3.Lerp(transform.position, target, 0.5f) + new Vector3(0, 4, 0);
+        // straight line
+        //transform.forward = target - transform.position;
 
         Invoke("DestroyArrow", 1f);
     }
@@ -18,7 +21,12 @@ public class Arrow : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, target, speed * Time.deltaTime);
+        // straight line
+        //transform.position = Vector3.Lerp(transform.position, target, speed * Time.deltaTime);
+
+        sampleTime += Time.deltaTime * speed;
+        transform.position = evaluate(sampleTime);
+        transform.forward = evaluate(sampleTime + 0.001f) - transform.position;
     }
 
 
@@ -35,4 +43,21 @@ public class Arrow : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+
+
+    // curve stuff
+
+    public float arrowTrajectorySpeed;
+    private float sampleTime;
+
+    Vector3 control; 
+    private Vector3 evaluate(float t)
+    {
+        
+        Vector3 ac = Vector3.Lerp(transform.position, control, t);
+        Vector3 cb = Vector3.Lerp(control, target, t);
+        return Vector3.Lerp(ac, cb, t);
+    }
+
 }

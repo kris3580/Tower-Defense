@@ -149,7 +149,7 @@ public abstract class BuildingBase : MonoBehaviour
 
     public void LoadTaskLoadingCircleComponent()
     {
-        if (!isTaskCircleLoadingComponentLoaded & gameManager.wasSpawnPlacementSelected)
+        if (!isTaskCircleLoadingComponentLoaded)
         {
             taskLoadingCircle = GameObject.Find("TaskLoadingCircle").GetComponent<TaskLoadingCircle>();
             taskLoadingCircleObject = GameObject.Find("TaskLoadingCircle");

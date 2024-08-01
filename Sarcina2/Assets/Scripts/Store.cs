@@ -23,7 +23,7 @@ public class Store : MonoBehaviour
     public void ExitStoreButton()
     {
         
-        joystick.SetActive(gameManager.wasSpawnPlacementSelected);
+        joystick.SetActive(true);
         storePanel.SetActive(false);
         inGamePanel.SetActive(true);
         SetStartGameChoicesAvailability(true);
@@ -85,7 +85,7 @@ public class Store : MonoBehaviour
     void RedCoinHandler()
     {
 
-        if (!hasPurpleCoinHandlingBeenInitiated && gameManager.wasSpawnPlacementSelected) 
+        if (!hasPurpleCoinHandlingBeenInitiated) 
         {
 
             hasPurpleCoinHandlingBeenInitiated = true;

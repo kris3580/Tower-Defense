@@ -142,8 +142,8 @@ public class ArrowShooting : MonoBehaviour
 
 
 
-        GameObject newArrowInstance = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
-        newArrowInstance.GetComponent<Arrow>().target = closestEnemy.transform.position;
+        GameObject newArrowInstance = Instantiate(arrowPrefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        newArrowInstance.GetComponent<Arrow>().target = closestEnemy.transform.position + new Vector3(0,0.3f,0);
         newArrowInstance.GetComponent<Rigidbody>().AddForce((closestEnemy.transform.position - transform.position) * 100);
         newArrowInstance.GetComponent<Arrow>().speed = arrowSpeed;
         newArrowInstance.GetComponent<Arrow>().damage = damage;
@@ -193,7 +193,7 @@ public class ArrowShooting : MonoBehaviour
         {
             distance = Vector3.Distance(transform.position, enemies[i].transform.position);
 
-            if (distance < neareastDistanceChanged)
+            if (distance < neareastDistanceChanged && !enemies[i].GetComponent<Health>().hasDied)
             {
                 closestEnemy = enemies[i];
                 neareastDistanceChanged = distance;
@@ -223,9 +223,9 @@ public class ArrowShooting : MonoBehaviour
         {
             distance = Vector3.Distance(transform.position, targets[i].transform.position);
 
-            if (distance < neareastDistanceChanged && targets[i].activeSelf)
+            if (distance < neareastDistanceChanged && targets[i].activeSelf )
             {
-                if (targets[i].name == "Player" && distance <= 3)
+                if (targets[i].name == "Player" && distance <= 3 )
                 {
                     closestEnemy = targets[i];
                     break;

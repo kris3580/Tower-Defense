@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public Animator animator;
     public static bool isShooting = false;
+    public float additionalGravity = 10f;
 
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         ApplyMovement();
         PlayerRotation();
+        ApplyAdditionalGravity();
     }
 
     private void Movement()
@@ -53,7 +55,14 @@ public class PlayerMovement : MonoBehaviour
         float moveX = inputX * moveSpeed * -1;
         float moveZ = inputY * moveSpeed;
 
-        rigidBody.velocity = new Vector3(moveZ, 0, moveX);
+        Vector3 movement = new Vector3(moveZ, rigidBody.velocity.y, moveX);
+        rigidBody.velocity = movement;
+    }
+
+    private void ApplyAdditionalGravity()
+    {
+        Vector3 extraGravityForce = Vector3.down * additionalGravity;
+        rigidBody.AddForce(extraGravityForce, ForceMode.Acceleration);
     }
 
     public float speed = 5;

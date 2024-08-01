@@ -18,7 +18,7 @@ public class DayNightTransition : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T) && !isTransitioning)
         {
-            StartCoroutine(LerpVolumeWeights(postProcessVolumes[0], postProcessVolumes[1], 1f)); // Adjust the duration as needed
+            StartCoroutine(LerpVolumeWeights(postProcessVolumes[0], postProcessVolumes[1], 1f)); 
         }
     }
 
@@ -29,7 +29,7 @@ public class DayNightTransition : MonoBehaviour
         float startWeight1 = volume1.weight;
         float startWeight2 = volume2.weight;
 
-        // Determine the target weights based on the current state
+
         float targetWeight1 = isDay ? 0f : 1f;
         float targetWeight2 = isDay ? 1f : 0f;
 
@@ -48,7 +48,7 @@ public class DayNightTransition : MonoBehaviour
         volume1.weight = targetWeight1;
         volume2.weight = targetWeight2;
 
-        // Toggle the state
+
         isDay = !isDay;
         isTransitioning = false;
     }
