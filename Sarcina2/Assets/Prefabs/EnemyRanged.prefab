@@ -196,11 +196,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 0
   damage: 10
-  radius: 6.3
+  radius: 30
   baseArrowTimerSpeed: 1
   currentArrowTimer: 0.4
   arrowTimer: 0
-  arrowSpeed: 10
+  arrowSpeed: 4
   targets: []
 --- !u!1001 &1836894793997138276
 PrefabInstance:

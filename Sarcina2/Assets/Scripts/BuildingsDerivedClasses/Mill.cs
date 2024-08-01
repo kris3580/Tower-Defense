@@ -32,10 +32,11 @@ public class Mill : BuildingBase
 
     private void UnlockFarmHandler()
     {
+
         for (int i = 0; i < upgradeFarmsCount[currentLevel]; i++)
         {
         repeatUnitlFinished:
-            int x = Random.Range(0, 8);
+            int x = Random.Range(0, farmsList.Count);
             if (!farmsList[x].activeSelf)
             {
                 farmsList[x].SetActive(true);
