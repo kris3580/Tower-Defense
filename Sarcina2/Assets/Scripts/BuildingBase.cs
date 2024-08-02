@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -52,10 +53,18 @@ public abstract class BuildingBase : MonoBehaviour
         }
     }
 
-
+    public GameObject[] modelsLevel = new GameObject[3];
     private void Start()
     {
         BuildingSetup();
+
+        try
+        {
+            modelsLevel[0] = transform.Find("BuildingModelHandle").transform.Find("BuildingModel").transform.Find("lvl1").gameObject;
+            modelsLevel[1] = transform.Find("BuildingModelHandle").transform.Find("BuildingModel").transform.Find("lvl2").gameObject;
+            modelsLevel[2] = transform.Find("BuildingModelHandle").transform.Find("BuildingModel").transform.Find("lvl3").gameObject;
+        } catch { }
+
     }
 
 
@@ -116,7 +125,15 @@ public abstract class BuildingBase : MonoBehaviour
                     Store.currentYellowCoins -= upgradePrices[currentLevel];
                     CurrentStatsSetup();
                     currentLevel++;
-                    SetBuildingInfo();
+
+                try
+                {
+                    modelsLevel[currentLevel - 2].SetActive(false);
+                    modelsLevel[currentLevel - 1].SetActive(true);
+                }
+                catch { }
+
+                SetBuildingInfo();
                     isPlayerInRange = false;
 
                     AlliesSetup();

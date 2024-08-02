@@ -41,7 +41,7 @@ public class TaskLoadingCircle : MonoBehaviour
 
     // TIMER
 
-    [SerializeField] float timeForActionCompletion = 2f;
+    float timeForActionCompletion = 1.2f;
     float timePassed = 0f;
     public bool isTimerActive = false;
 

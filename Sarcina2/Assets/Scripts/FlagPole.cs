@@ -73,7 +73,7 @@ public class FlagPole : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && DayNightTransition.isDay)
         {
             isPlayerInRange = true;
             isFlagPoleTargeted = true;

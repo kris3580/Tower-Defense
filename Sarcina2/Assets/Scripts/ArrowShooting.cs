@@ -45,6 +45,7 @@ public class ArrowShooting : MonoBehaviour
         {
             ClosestEnemyDetectionEnemyRanged();
             IsInShootingRangeCheck();
+            if (closestEnemy != null) transform.LookAt(closestEnemy.transform.position);
         }
         else if (gameObject.name.Contains("Ally"))
         {
@@ -64,6 +65,7 @@ public class ArrowShooting : MonoBehaviour
         {
             player.transform.LookAt(closestEnemy.transform.position); 
         }
+
 
 
     }
@@ -89,6 +91,12 @@ public class ArrowShooting : MonoBehaviour
     
     void ShootArrowHandler()
     {
+        if (gameObject.name.Contains("Enemy") && gameObject.GetComponent<Health>().hasDied)
+        {
+            return;
+        }
+
+
         currentArrowTimer -= Time.deltaTime;
 
         if (enemyDistance <= radius && currentArrowTimer <= 0)
@@ -225,7 +233,7 @@ public class ArrowShooting : MonoBehaviour
 
             if (distance < neareastDistanceChanged && targets[i].activeSelf )
             {
-                if (targets[i].name == "Player" && distance <= 3 )
+                if (targets[i].name == "Player" && distance <= 40 )
                 {
                     closestEnemy = targets[i];
                     break;
