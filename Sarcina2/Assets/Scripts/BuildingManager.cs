@@ -40,7 +40,7 @@ public class BuildingManager : MonoBehaviour
             building.GetComponent<BuildingBase>().isRuined = false;
             building.transform.Find("BuildingModelHandle").GetComponent<Health>().transform.Find("BuildingModel").gameObject.SetActive(true);
             building.transform.Find("BuildingModelHandle").GetComponent<Health>().currentHealth = building.transform.Find("BuildingModelHandle").GetComponent<Health>().maxHealth;
-            
+            building.GetComponent<BuildingBase>().AlliesSetup();
 
         }
     }

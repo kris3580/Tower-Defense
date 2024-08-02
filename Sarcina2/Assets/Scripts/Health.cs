@@ -152,12 +152,17 @@ public class Health : MonoBehaviour
                 {
                     try { other.gameObject.transform.GetComponentInParent<Health>().animator.SetBool("isAttacking", true); } catch { }
                 }
+                if (other.tag == "Ally")
+                {
+                    try { other.gameObject.transform.GetComponentInParent<Animator>().SetBool("isAttacking", true); } catch { }
+                }
                 delayDamageTimerCurrent = delayDamageTimerDefault;
                 ApplyDamage(other.gameObject.transform.parent.GetComponent<GameAI>().damage);
             }
             else
             {
                 try { other.gameObject.transform.GetComponentInParent<Health>().animator.SetBool("isAttacking", false); } catch { }
+                try { other.gameObject.transform.GetComponentInParent<Animator>().SetBool("isAttacking", true); } catch { }
             }
 
         }

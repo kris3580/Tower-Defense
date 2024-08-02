@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2034740243610511803}
   - component: {fileID: 8110915778491648863}
   - component: {fileID: 1194307821180326936}
+  - component: {fileID: 6665146269306315602}
   m_Layer: 6
   m_Name: AllyInfantry
   m_TagString: AllyPosition
@@ -70,6 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fba4e34acb0b4a43a1c3a771003b260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  healthBarForeground: {fileID: 0}
+  healthBarBackground: {fileID: 0}
   healthBarPositionOffset: {x: 0, y: 2.59, z: -0.02}
   animator: {fileID: 0}
   maxHealth: 100
@@ -124,8 +128,30 @@ MonoBehaviour:
   healthComponent: {fileID: 0}
   arrowShooting: {fileID: 0}
   health: 0
+  rigidBody: {fileID: 0}
   targets: []
   distance: 0
+--- !u!95 &6665146269306315602
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117477627271749190}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6676031622537481593
 GameObject:
   m_ObjectHideFlags: 0
