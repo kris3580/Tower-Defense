@@ -45,7 +45,6 @@ public class DayNightTransition : MonoBehaviour
         volume1.weight = targetWeight1;
         volume2.weight = targetWeight2;
 
-        if (isDayLocal) { }
 
     }
 }

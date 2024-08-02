@@ -34,6 +34,8 @@ public abstract class BuildingBase : MonoBehaviour
     public virtual void CurrentStatsSetup() { }
     public virtual void AlliesSetup() { }
 
+    public bool isRuined = false;
+
 
     // UNITY RELATED METHODS
 
@@ -51,6 +53,10 @@ public abstract class BuildingBase : MonoBehaviour
             isCircleCanceled = true;
 
         }
+
+        
+
+
     }
 
     public GameObject[] modelsLevel = new GameObject[3];
@@ -270,6 +276,11 @@ public abstract class BuildingBase : MonoBehaviour
         }
 
         buildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
+
+
+
+
+
 
 
     }

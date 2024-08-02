@@ -8,8 +8,9 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     private GameObject healthBarPrefab;
-    private GameObject healthBar;
-    private Image healthBarForeground;
+    public GameObject healthBar;
+    public Image healthBarForeground;
+    public Image healthBarBackground;
     private Canvas canvas;
     [SerializeField] Vector3 healthBarPositionOffset;
 
@@ -35,8 +36,8 @@ public class Health : MonoBehaviour
 
         healthBar = Instantiate(healthBarPrefab, canvas.transform);
         healthBarForeground = healthBar.transform.Find("Foreground").GetComponent<Image>();
-
-        healthBar.name = $"{gameObject.name}HealthBar"; 
+        healthBarBackground = healthBar.transform.Find("Background").GetComponent<Image>();
+        //healthBar.name = $"{gameObject.transform.parent.name}HealthBar"; 
 
         if (gameObject.name.Contains("Enemy"))
         {
@@ -52,10 +53,27 @@ public class Health : MonoBehaviour
             try { animator = transform.Find("EnemyHolder").transform.Find("Goblin Minion").GetComponent<Animator>(); } catch { }
         }
 
+    }
 
-    
+
+    public void RectivateHealthBar()
+    {
+        healthBarBackground.enabled = true;
+    }
+
+
+
+    public void NewHealthBarInstance()
+    {
+
+        healthBar = Instantiate(healthBarPrefab, canvas.transform);
+        healthBarForeground = healthBar.transform.Find("Foreground").GetComponent<Image>();
+        healthBarBackground = healthBar.transform.Find("Background").GetComponent<Image>();
+        healthBar.name = $"{gameObject.name}HealthBar";
 
     }
+
+
 
 
     private void Update()
@@ -171,13 +189,12 @@ public class Health : MonoBehaviour
             }
             else if (gameObject.name.Contains("Enemy"))
             {
-
+                Destroy(healthBar);
                 if (!hasDied)
                 {
                     hasDied = true;
-
+                    
                     try { animator.SetBool("isDying", true); } catch { };
-                    Destroy(healthBar);
                     Invoke("DelayEnemyKillForAnimation", 1f);
                 }
 
@@ -185,8 +202,10 @@ public class Health : MonoBehaviour
             }
             else if (gameObject.name == "BuildingModelHandle")
             {
-                healthBar.SetActive(false);
-                gameObject.SetActive(false);
+                
+                gameObject.transform.Find("BuildingModel").gameObject.SetActive(false);
+                transform.parent.gameObject.GetComponent<BuildingBase>().isRuined = true;
+                healthBarBackground.enabled = false;
             }
             else if (gameObject.name.Contains("Ally"))
             {
@@ -194,6 +213,11 @@ public class Health : MonoBehaviour
                 Destroy(gameObject);
                 
             }
+            
+        }
+        else if (gameObject.name == "BuildingModelHandle")
+        {
+            healthBarBackground.enabled = true;
         }
     }
     public bool hasDied = false;
@@ -207,6 +231,7 @@ public class Health : MonoBehaviour
     private void UpdateHealthBar(float maxHealth, float currentHealth)
     {
         healthBarForeground.fillAmount = currentHealth / maxHealth;
+
     }
 
 

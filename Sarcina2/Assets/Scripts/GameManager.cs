@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
                 fightButton.GetComponent<Button>().interactable = true;
                 StartCoroutine(dayNightTransition.StartTransition());
                 buildingManager.DayNightSetup(true);
+                buildingManager.RepairBuildings();
             }
         } catch { }
         

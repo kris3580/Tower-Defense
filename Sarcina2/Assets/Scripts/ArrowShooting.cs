@@ -240,14 +240,19 @@ public class ArrowShooting : MonoBehaviour
                 }
                 else if (targets[i].name != "Player")
                 {
+                    if (targets[i].transform.parent.gameObject.GetComponent<BuildingBase>() != null)
+                    {
+                        if (targets[i].transform.parent.gameObject.GetComponent<BuildingBase>().isRuined)
+                        {
+                            goto restart;
+                        }
+                    }
+
                     closestEnemy = targets[i];
                     neareastDistanceChanged = distance;
                 }
-
-
-
             }
-
+            restart:;
         }
         targetsArray = new GameObject[0];
         targets = new List<GameObject>();

@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BuildingManager : MonoBehaviour
 {
-    private List<GameObject> buildings = new List<GameObject>();
+    public List<GameObject> buildings = new List<GameObject>();
     public BuildingBase castle;
     public bool isCastleBuilt = false;
     private bool isCastleBuiltAlready = false;
     private GameManager gameManager;
-    //public bool isRuined;
+    
 
 
     private void Awake()
@@ -20,15 +21,32 @@ public class BuildingManager : MonoBehaviour
     }
 
 
+
+
     private void Update()
     {
         HasCastleBeenBuiltCheck();
 
-        //if (castle)
-        //{
-
-        //}
     }
+
+
+
+    public void RepairBuildings()
+    {
+        foreach (GameObject building in buildings)
+        {
+
+            
+            building.GetComponent<BuildingBase>().isRuined = false;
+            building.transform.Find("BuildingModelHandle").GetComponent<Health>().transform.Find("BuildingModel").gameObject.SetActive(true);
+            building.transform.Find("BuildingModelHandle").GetComponent<Health>().currentHealth = building.transform.Find("BuildingModelHandle").GetComponent<Health>().maxHealth;
+            
+
+        }
+    }
+
+
+
 
     private void HasCastleBeenBuiltCheck()
     {
