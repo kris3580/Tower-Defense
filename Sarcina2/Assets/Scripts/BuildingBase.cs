@@ -59,10 +59,10 @@ public abstract class BuildingBase : MonoBehaviour
     }
 
 
-    private Vector3 taskLoadingCirclePositionOffset = new Vector3(-0.8f, -0.5f, 1.1f);
+    private Vector3 taskLoadingCirclePositionOffset = new Vector3(0.68f, 8.63f, -1f);
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && !FlagPole.isFlagPoleTargeted)
+        if(other.tag == "Player" && !FlagPole.isFlagPoleTargeted && DayNightTransition.isDay)
         {
             if (!isBuildingAtMaxLevel()) { dottedSquareAreaIcon.enabled = true; }
             ShowBuildingInfoPopUp(true);
@@ -165,7 +165,7 @@ public abstract class BuildingBase : MonoBehaviour
 
     private Canvas canvas;
     private GameObject buildingInfoPrefab;
-    private Vector3 buildingInfoPositionOffset = new Vector3(2.5f, 3, -1);
+     Vector3 buildingInfoPositionOffset = new Vector3(-0.07f, 11.61f, -1);
     private GameObject buildingInfoPopUp;
 
     private TextMeshProUGUI text_buildingCost;

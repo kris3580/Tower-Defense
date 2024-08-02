@@ -52,10 +52,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyMovement()
     {
-        float moveX = inputX * moveSpeed * -1;
+        float moveX = inputX * moveSpeed;
         float moveZ = inputY * moveSpeed;
 
-        Vector3 movement = new Vector3(moveZ, rigidBody.velocity.y, moveX);
+        Vector3 movement = new Vector3(moveX, rigidBody.velocity.y, moveZ);
         rigidBody.velocity = movement;
     }
 
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isShooting)
         {
-            Vector3 movementDirection = new Vector3(inputY, 0, inputX * -1);
+            Vector3 movementDirection = new Vector3(inputX, 0, inputY);
             movementDirection.Normalize();
 
             if (movementDirection != Vector3.zero)

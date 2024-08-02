@@ -99,9 +99,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarPositionOffset: {x: 0.26, y: 1.73, z: -0.02}
+  animator: {fileID: 0}
   maxHealth: 100
   currentHealth: 100
   delayDamageTimerCurrent: 0
+  delayDamageTimerDefault: 1
+  hasDied: 0
 --- !u!114 &8525281186614273332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 0
   damage: 50
-  radius: 6.3
+  radius: 30
   baseArrowTimerSpeed: 1
   currentArrowTimer: 1
   arrowTimer: 0

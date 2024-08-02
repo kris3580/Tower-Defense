@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fba4e34acb0b4a43a1c3a771003b260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarPositionOffset: {x: 0.14, y: 4.82, z: 0}
+  healthBarPositionOffset: {x: -0.13, y: 9.44, z: 0}
   animator: {fileID: 0}
   maxHealth: 5
   currentHealth: 5

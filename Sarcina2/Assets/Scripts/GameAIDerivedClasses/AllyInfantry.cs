@@ -7,10 +7,14 @@ public class AllyInfantry : GameAI
 
     public int health;
 
+    public Rigidbody rigidBody;
 
     private void Start()
     {
         DefaultStatsSetup();
+
+        rigidBody = GetComponent<Rigidbody>();
+        CancelFallingOffSlope(true);
     }
 
     private void Update()
@@ -21,6 +25,20 @@ public class AllyInfantry : GameAI
         DrawRayToClosestObject();
 
     }
+
+
+    private void CancelFallingOffSlope(bool setConstraints)
+    {
+        if (setConstraints)
+        {
+            rigidBody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+        }
+        else
+        {
+            rigidBody.constraints = RigidbodyConstraints.None;
+        }
+    }
+
 
 
 
@@ -71,10 +89,12 @@ public class AllyInfantry : GameAI
         {
             agent.isStopped = false;
             agent.SetDestination(closestEnemy.transform.position);
+            CancelFallingOffSlope(false);
 
         }
         else
         {
+            CancelFallingOffSlope(true);
             agent.isStopped = true;
         }
     }

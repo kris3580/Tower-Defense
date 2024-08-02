@@ -17,10 +17,6 @@ public class BuildingManager : MonoBehaviour
         GetBuildings();
     }
 
-    private void Start()
-    {
-        
-    }
 
     private void Update()
     {
@@ -57,10 +53,13 @@ public class BuildingManager : MonoBehaviour
     }
 
     
-
-
-
-
+    public void DayNightSetup(bool isSettingUpForDay)
+    {
+        foreach (GameObject building in buildings)
+        {
+            building.transform.Find("BuildingTypeInfo").gameObject.SetActive(isSettingUpForDay);
+        }
+    }
 
 
 }

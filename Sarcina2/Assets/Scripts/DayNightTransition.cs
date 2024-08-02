@@ -6,32 +6,31 @@ using UnityEngine.Rendering.PostProcessing;
 public class DayNightTransition : MonoBehaviour
 {
     private PostProcessVolume[] postProcessVolumes;
-    private bool isTransitioning = false;
-    private bool isDay = true; // Initial state
+    private bool isDayLocal = true; 
+    public static bool isDay = true;
 
     private void Awake()
     {
         postProcessVolumes = GameObject.Find("PostProcessing").GetComponents<PostProcessVolume>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T) && !isTransitioning)
-        {
-            StartCoroutine(LerpVolumeWeights(postProcessVolumes[0], postProcessVolumes[1], 1f)); 
-        }
-    }
 
-    private IEnumerator LerpVolumeWeights(PostProcessVolume volume1, PostProcessVolume volume2, float duration)
+
+    public IEnumerator StartTransition()
     {
-        isTransitioning = true;
+        isDay = !isDay;
+
+        PostProcessVolume volume1 = postProcessVolumes[0];
+        PostProcessVolume volume2 = postProcessVolumes[1];
+        float duration = 2f;
+
         float elapsedTime = 0f;
         float startWeight1 = volume1.weight;
         float startWeight2 = volume2.weight;
 
 
-        float targetWeight1 = isDay ? 0f : 1f;
-        float targetWeight2 = isDay ? 1f : 0f;
+        float targetWeight1 = isDayLocal ? 0f : 1f;
+        float targetWeight2 = isDayLocal ? 1f : 0f;
 
         while (elapsedTime < duration)
         {
@@ -48,8 +47,6 @@ public class DayNightTransition : MonoBehaviour
         volume1.weight = targetWeight1;
         volume2.weight = targetWeight2;
 
-
-        isDay = !isDay;
-        isTransitioning = false;
+        
     }
 }

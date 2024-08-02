@@ -36,7 +36,7 @@ public class EnemyInfantry : GameAI
     private void Start()
     {
         DefaultStatsSetup();
-        
+
     }
 
     private void Update()
@@ -123,6 +123,10 @@ public class EnemyInfantry : GameAI
         targets.Clear();
         targetsArray = new GameObject[0];
     }
+
+
+
+
 }
 
 enum EnemyInfantryType 
