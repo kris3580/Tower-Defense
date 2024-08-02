@@ -14,20 +14,19 @@ public class DayNightTransition : MonoBehaviour
         postProcessVolumes = GameObject.Find("PostProcessing").GetComponents<PostProcessVolume>();
     }
 
-
-
     public IEnumerator StartTransition()
     {
         isDay = !isDay;
 
-        PostProcessVolume volume1 = postProcessVolumes[0];
-        PostProcessVolume volume2 = postProcessVolumes[1];
+        PostProcessVolume volume1 = postProcessVolumes[1]; 
+        PostProcessVolume volume2 = postProcessVolumes[0]; 
         float duration = 2f;
 
         float elapsedTime = 0f;
         float startWeight1 = volume1.weight;
         float startWeight2 = volume2.weight;
 
+        bool isDayLocal = isDay;
 
         float targetWeight1 = isDayLocal ? 0f : 1f;
         float targetWeight2 = isDayLocal ? 1f : 0f;
@@ -43,10 +42,10 @@ public class DayNightTransition : MonoBehaviour
             yield return null;
         }
 
-        // Ensure the final values are set
         volume1.weight = targetWeight1;
         volume2.weight = targetWeight2;
 
-        
+        if (isDayLocal) { }
+
     }
 }

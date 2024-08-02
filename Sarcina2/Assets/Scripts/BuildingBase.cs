@@ -105,7 +105,7 @@ public abstract class BuildingBase : MonoBehaviour
     //BUILDING SPAWNER
 
     private bool isPlayerInRange = false;
-    private GameObject buildingShowcase;
+    public GameObject buildingShowcase;
     public bool isBuilt = false;
     private BuildingManager buildingManager;
 
@@ -117,7 +117,12 @@ public abstract class BuildingBase : MonoBehaviour
         {
 
             buildingModelHandle.SetActive(true);
-            buildingShowcase.SetActive(false);
+
+            for (int i = 0; i < buildingShowcase.transform.childCount; i++) 
+            { 
+                buildingShowcase.transform.GetChild(i).gameObject.SetActive(false);
+            }
+
             isBuilt = true;
 
                 if (isAllowedToBuild() && !isBuildingAtMaxLevel())
@@ -224,7 +229,8 @@ public abstract class BuildingBase : MonoBehaviour
 
         buildingModelHandle.SetActive(false);
         buildingShowcase = transform.Find("BuildingTypeInfo").gameObject;
-        
+
+
 
         text_buildingCost = buildingInfoPopUp.transform.Find("BuildingCost").transform.Find("CoinText").GetComponent<TextMeshProUGUI>();
         text_buildingName = buildingInfoPopUp.transform.Find("BuildingNameAndLevel").transform.Find("BuildingName").GetComponent<TextMeshProUGUI>();
@@ -322,9 +328,6 @@ public abstract class BuildingBase : MonoBehaviour
                 {
                     text_upgradeInfo.text = $" {profitPerLevel[currentLevel-1]} +{Math.Abs(profitPerLevel[currentLevel - 1] - profitPerLevel[currentLevel])}";
                 }
-                    
-                
-                
             }
         }
         else

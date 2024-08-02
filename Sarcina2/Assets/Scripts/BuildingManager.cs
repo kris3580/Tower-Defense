@@ -10,6 +10,8 @@ public class BuildingManager : MonoBehaviour
     public bool isCastleBuilt = false;
     private bool isCastleBuiltAlready = false;
     private GameManager gameManager;
+    //public bool isRuined;
+
 
     private void Awake()
     {
@@ -21,6 +23,11 @@ public class BuildingManager : MonoBehaviour
     private void Update()
     {
         HasCastleBeenBuiltCheck();
+
+        //if (castle)
+        //{
+
+        //}
     }
 
     private void HasCastleBeenBuiltCheck()

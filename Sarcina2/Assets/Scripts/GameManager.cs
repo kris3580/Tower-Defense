@@ -21,6 +21,24 @@ public class GameManager : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        try
+        {
+            if (waves[spawnedWaves - 1].transform.childCount == 0 && !DayNightTransition.isDay)
+            {
+
+                fightButton.GetComponent<Button>().interactable = true;
+                StartCoroutine(dayNightTransition.StartTransition());
+                buildingManager.DayNightSetup(true);
+            }
+        } catch { }
+        
+    }
+
+
+
+
     public void SpawnWave()
     {
         try
