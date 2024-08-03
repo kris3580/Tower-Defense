@@ -37,7 +37,7 @@ public class Health : MonoBehaviour
         healthBar = Instantiate(healthBarPrefab, canvas.transform);
         healthBarForeground = healthBar.transform.Find("Foreground").GetComponent<Image>();
         healthBarBackground = healthBar.transform.Find("Background").GetComponent<Image>();
-        //healthBar.name = $"{gameObject.transform.parent.name}HealthBar"; 
+        healthBar.name = $"{gameObject.transform.name}HealthBar"; 
 
         if (gameObject.name.Contains("Enemy"))
         {

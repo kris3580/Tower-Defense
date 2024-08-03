@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(dayNightTransition.StartTransition());
                 buildingManager.DayNightSetup(true);
                 buildingManager.RepairBuildings();
+                GameObject.Find("Player").GetComponent<Health>().currentHealth = GameObject.Find("Player").GetComponent<Health>().maxHealth;
             }
         } catch { }
         

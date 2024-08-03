@@ -52,6 +52,19 @@ public class Barracks : BuildingBase
 
     public override void AlliesSetup()
     {
+
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.name == "AllyInfantry(Clone)HealthBar")
+            {
+                Destroy(obj);
+            }
+        }
+        allObjects = new GameObject[0];
+
+
         foreach (GameObject rangedAlly in rangedAllies)
         {
             Destroy(rangedAlly.gameObject);
@@ -72,7 +85,7 @@ public class Barracks : BuildingBase
             newAllyRangedInstance.GetComponent<Health>().maxHealth = newAllyRangedInstance.GetComponent<AllyInfantry>().health;
             newAllyRangedInstance.GetComponent<Health>().currentHealth = newAllyRangedInstance.GetComponent<AllyInfantry>().health;
             
-
+    
         }
 
 

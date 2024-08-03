@@ -59,7 +59,6 @@ public abstract class BuildingBase : MonoBehaviour
 
         if (gameObject.name.Contains("Barracks"))
         {
-            Debug.Log(respawnTimer);
             respawnTimer -= Time.deltaTime;
             if (isBuilt && !isRuined && respawnTimer <= 0 && allyCounterObject.transform.childCount < profitPerLevel[currentLevel - 1])
             {
