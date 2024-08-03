@@ -27,17 +27,20 @@ public abstract class BuildingBase : MonoBehaviour
 
     public ArrowShooting arrowShooting;
 
-
-
+    public GameObject allyCounterObject;
+    public float respawnTimer = 3f;
+    private float defaultRespawnTimer = 3f;
 
     public virtual void DefaultStatsSetup() { }
     public virtual void CurrentStatsSetup() { }
     public virtual void AlliesSetup() { }
 
+    public virtual void RespawnAllyDuringBattle() { }
     public bool isRuined = false;
 
 
-    // UNITY RELATED METHODS
+
+    
 
     private void Update()
     {
@@ -54,14 +57,30 @@ public abstract class BuildingBase : MonoBehaviour
 
         }
 
-        
+        if (gameObject.name.Contains("Barracks"))
+        {
+            Debug.Log(respawnTimer);
+            respawnTimer -= Time.deltaTime;
+            if (isBuilt && !isRuined && respawnTimer <= 0 && allyCounterObject.transform.childCount < profitPerLevel[currentLevel - 1])
+            {
+                respawnTimer = defaultRespawnTimer;
+                RespawnAllyDuringBattle();
+            }
+
+        }
 
 
     }
 
+
+
+
     public GameObject[] modelsLevel = new GameObject[3];
     private void Start()
     {
+
+        if (gameObject.name.Contains("Barracks")) { allyCounterObject = transform.Find("AllyCounter").gameObject; }
+
         BuildingSetup();
 
         try
@@ -388,7 +407,7 @@ public abstract class BuildingBase : MonoBehaviour
         }
     }
 
-
+    
 
 }
 

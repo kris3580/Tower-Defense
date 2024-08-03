@@ -141,7 +141,7 @@ Animator:
   m_GameObject: {fileID: 5117477627271749190}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3ac23a41b337b94ea2984f28220efb0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -241,6 +241,26 @@ PrefabInstance:
     - target: {fileID: 1851833391912218, guid: 888d6a6e6ac1f244ab8b0a3a6c59ae6e, type: 3}
       propertyPath: m_Name
       value: TB_Soldier_Swordman_Violet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050935857073786, guid: 888d6a6e6ac1f244ab8b0a3a6c59ae6e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99881464
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050935857073786, guid: 888d6a6e6ac1f244ab8b0a3a6c59ae6e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.048675474
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050935857073786, guid: 888d6a6e6ac1f244ab8b0a3a6c59ae6e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050935857073786, guid: 888d6a6e6ac1f244ab8b0a3a6c59ae6e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050935857073786, guid: 888d6a6e6ac1f244ab8b0a3a6c59ae6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 5.58
       objectReference: {fileID: 0}
     - target: {fileID: 4702384794070732, guid: 888d6a6e6ac1f244ab8b0a3a6c59ae6e, type: 3}
       propertyPath: m_LocalScale.x

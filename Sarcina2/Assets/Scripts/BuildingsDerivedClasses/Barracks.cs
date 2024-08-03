@@ -35,7 +35,6 @@ public class Barracks : BuildingBase
 
 
 
-
     public GameObject[] spawnPoints = new GameObject[12];
     private void SpawnPointsSetup()
     {
@@ -65,6 +64,9 @@ public class Barracks : BuildingBase
             GameObject newAllyRangedInstance;
             rangedAllies.Add(newAllyRangedInstance = Instantiate(allyRangedPrefab, spawnPoints[i].transform.position, Quaternion.identity));
 
+            newAllyRangedInstance.transform.SetParent(transform.Find("AllyCounter").transform, true);
+
+
             newAllyRangedInstance.GetComponent<AllyInfantry>().health = aiHpPerLevel[currentLevel - 1];
 
             newAllyRangedInstance.GetComponent<Health>().maxHealth = newAllyRangedInstance.GetComponent<AllyInfantry>().health;
@@ -76,7 +78,19 @@ public class Barracks : BuildingBase
 
     }
 
+    public override void RespawnAllyDuringBattle()
+    {
+        GameObject newAllyRangedInstance;
+        rangedAllies.Add(newAllyRangedInstance = Instantiate(allyRangedPrefab, transform.Find("RespawnPointDuringBattle").position, Quaternion.identity));
 
+        newAllyRangedInstance.transform.SetParent(transform.Find("AllyCounter").transform, true);
+
+
+        newAllyRangedInstance.GetComponent<AllyInfantry>().health = aiHpPerLevel[currentLevel - 1];
+
+        newAllyRangedInstance.GetComponent<Health>().maxHealth = newAllyRangedInstance.GetComponent<AllyInfantry>().health;
+        newAllyRangedInstance.GetComponent<Health>().currentHealth = newAllyRangedInstance.GetComponent<AllyInfantry>().health;
+    }
 
 
 
